@@ -1,0 +1,12 @@
+# Metas, continuidade, memória e snapshots
+- Uma meta tem ID estável `META-NNN`, plano versionado, estado e critérios de aceite.
+- `goal create` cria plano v001; alterações materiais exigem preservar versão aprovada.
+- `goal record` documenta atividade e passa para `in_progress`; não implica aprovação.
+- `goal accept` exige arquivo de evidência local sanitizada para cada critério; execute verificação real antes de marcar.
+- `goal close` cria snapshot documental com SHA-256 e estado concluído.
+- `snapshot verify` acusa corrupção; snapshot documental NÃO restaura a conta Kommo.
+- `goal resume` fornece texto para novo chat. Use contexto de disco, não memória da conversa.
+- Projeto `.kommo-engineer/state.json` é fonte para meta ativa; logs não precisam ser relidos.
+- Arquivos `.runtime/write.lock` ou `pending-operation.json` bloqueiam novas mutações até diagnóstico.
+- Não remova locks nem marcadores manualmente sem verificar escritor ativo e integridade.
+- A implementação inicial suporta fechamento e evidências locais; edição formal de planos e dependências complexas continuam limitadas.

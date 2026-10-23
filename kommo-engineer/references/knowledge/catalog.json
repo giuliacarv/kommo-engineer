@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "procedures": [
+    {
+      "id": "PROC-KOMMO-001",
+      "title": "Diagnóstico inicial da conta",
+      "keywords": [
+        "diagnostico",
+        "conta",
+        "ambiente",
+        "leitura",
+        "inventario"
+      ],
+      "path": "references/knowledge/procedures/PROC-KOMMO-001-diagnostico.md",
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "PROC-KOMMO-002",
+      "title": "Conexão segura à API Kommo",
+      "keywords": [
+        "api",
+        "oauth",
+        "token",
+        "login",
+        "autenticacao",
+        "conectar",
+        "verificar"
+      ],
+      "path": "references/knowledge/procedures/PROC-KOMMO-002-conexao-api.md",
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "PROC-KOMMO-003",
+      "title": "Campos personalizados",
+      "keywords": [
+        "campos",
+        "personalizados",
+        "leads",
+        "contacts",
+        "companies",
+        "api",
+        "criar",
+        "campo"
+      ],
+      "path": "references/knowledge/procedures/PROC-KOMMO-003-campos.md",
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "PROC-KOMMO-004",
+      "title": "Pipelines e etapas",
+      "keywords": [
+        "pipeline",
+        "funil",
+        "etapas",
+        "status",
+        "leads",
+        "criar",
+        "configurar"
+      ],
+      "path": "references/knowledge/procedures/PROC-KOMMO-004-pipeline.md",
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "PROC-KOMMO-005",
+      "title": "Salesbot visual e JSON",
+      "keywords": [
+        "salesbot",
+        "bot",
+        "visual",
+        "workflow",
+        "json",
+        "gatilho",
+        "condicionais",
+        "mensagens"
+      ],
+      "path": "references/knowledge/procedures/PROC-KOMMO-005-salesbot.md",
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    }
+  ]
+}

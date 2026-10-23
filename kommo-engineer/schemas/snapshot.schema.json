@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "snapshot",
+  "type": "object",
+  "required": [
+    "snapshot_id",
+    "goal_id",
+    "documents",
+    "capture_phase"
+  ],
+  "properties": {
+    "snapshot_id": {
+      "type": "string"
+    },
+    "goal_id": {
+      "type": "string"
+    },
+    "documents": {
+      "type": "array"
+    },
+    "capture_phase": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

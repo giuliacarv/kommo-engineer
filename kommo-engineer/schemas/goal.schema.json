@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "goal",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "status",
+    "revision",
+    "dependencies"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "revision": {
+      "type": "integer"
+    },
+    "dependencies": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

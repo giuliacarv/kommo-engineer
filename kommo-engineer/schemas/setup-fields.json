@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "description": "Contrato estável de coleta do setup. Campos obrigatórios para setup completo; opcionais podem ser bloqueadores de uma operação específica.",
+  "groups": {
+    "pessoa": "Perfil e experiência",
+    "empresa": "Negócio e entrega",
+    "comercial": "Processo e objetivos comerciais",
+    "sucesso": "Critérios de sucesso",
+    "restricoes": "Limites e autorização",
+    "ambiente": "Ferramentas e conta",
+    "prioridades": "Prioridades"
+  },
+  "planning_core": [
+    "role",
+    "business",
+    "product",
+    "sales_process",
+    "goal"
+  ],
+  "fields": {
+    "role": {
+      "required": true,
+      "group": "pessoa",
+      "question": "Qual é seu papel na empresa ou no projeto Kommo?",
+      "example": "Sou responsável pelo comercial e aprovo as configurações."
+    },
+    "skill_level": {
+      "required": true,
+      "group": "pessoa",
+      "question": "Qual sua familiaridade com Kommo e automações?",
+      "example": "Iniciante; prefiro instruções guiadas."
+    },
+    "business": {
+      "required": true,
+      "group": "empresa",
+      "question": "Qual é a empresa ou tipo de negócio?",
+      "example": "Clínica de serviços com equipe de vendas."
+    },
+    "product": {
+      "required": true,
+      "group": "empresa",
+      "question": "Que produto ou serviço vocês vendem?",
+      "example": "Consultorias com proposta comercial."
+    },
+    "delivery": {
+      "required": false,
+      "group": "empresa",
+      "question": "Como é feita a entrega após a venda?",
+      "example": "Onboarding e acompanhamento por um consultor."
+    },
+    "sales_process": {
+      "required": true,
+      "group": "comercial",
+      "question": "Como um cliente passa de primeiro contato até a venda hoje?",
+      "example": "Mensagem → qualificação → proposta → fechamento."
+    },
+    "goal": {
+      "required": true,
+      "group": "comercial",
+      "question": "Qual problema prioritário você quer resolver no Kommo?",
+      "example": "Reduzir o tempo de resposta aos leads."
+    },
+    "expectations": {
+      "required": false,
+      "group": "comercial",
+      "question": "Qual mudança você espera observar no processo?",
+      "example": "Todos os leads recebendo retorno no mesmo dia."
+    },
+    "acceptance": {
+      "required": true,
+      "group": "sucesso",
+      "question": "Como saberemos que esta implantação ficou pronta e correta?",
+      "example": "Simulação de um lead de teste passando por todas as etapas."
+    },
+    "restrictions": {
+      "required": true,
+      "group": "restricoes",
+      "question": "Quais limites ou soluções você quer evitar? Se nenhum, diga isso explicitamente.",
+      "example": "Não disparar mensagens a leads reais nos testes."
+    },
+    "budget": {
+      "required": false,
+      "group": "restricoes",
+      "question": "Existe limite de investimento para ferramentas ou integrações?",
+      "example": "Preferimos recursos nativos antes de serviços pagos."
+    },
+    "permissions": {
+      "required": false,
+      "group": "restricoes",
+      "question": "Quem pode aprovar mudanças na conta e em produção?",
+      "example": "A gerente aprova alterações antes da publicação."
+    },
+    "tools": {
+      "required": false,
+      "group": "ambiente",
+      "question": "Que ferramentas vocês já usam junto ao Kommo?",
+      "example": "WhatsApp, n8n e planilhas."
+    },
+    "plan": {
+      "required": false,
+      "group": "ambiente",
+      "question": "Qual é o plano da conta Kommo, se souber?",
+      "example": "Ainda não sei; confirmar antes de usar recurso restrito."
+    },
+    "channels": {
+      "required": false,
+      "group": "ambiente",
+      "question": "Quais canais de atendimento serão integrados?",
+      "example": "WhatsApp e Instagram."
+    },
+    "account": {
+      "required": false,
+      "group": "ambiente",
+      "question": "Qual é a conta/subdomínio Kommo a ser utilizado? Não informe credenciais.",
+      "example": "empresa.kommo.com (confirmar antes de executar)."
+    },
+    "integrations": {
+      "required": false,
+      "group": "ambiente",
+      "question": "Existem integrações que precisam ser mantidas?",
+      "example": "Integração com ERP da empresa."
+    },
+    "priority": {
+      "required": false,
+      "group": "prioridades",
+      "question": "Qual entrega deve acontecer primeiro e por quê?",
+      "example": "Organizar a entrada de leads antes de criar bots."
+    }
+  }
+}
