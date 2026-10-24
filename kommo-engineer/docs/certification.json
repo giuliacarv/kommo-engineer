@@ -1,0 +1,74 @@
+{
+  "version": "0.5.0-rc.1",
+  "release_1_0": false,
+  "levels": [
+    "undocumented",
+    "documented",
+    "syntax_validated",
+    "offline_tested",
+    "account_homologated",
+    "deployed"
+  ],
+  "features": [
+    {
+      "id": "M00",
+      "status": "offline_tested",
+      "remaining": "Métricas comparáveis de conta/tokens não disponíveis"
+    },
+    {
+      "id": "M01",
+      "status": "offline_tested",
+      "remaining": "Ativação em duas conversas por plataforma"
+    },
+    {
+      "id": "M02",
+      "status": "offline_tested",
+      "remaining": "Entrevista real com leigo/especialista e aceite humano"
+    },
+    {
+      "id": "M03",
+      "status": "offline_tested",
+      "remaining": "Continuidade em clientes externos"
+    },
+    {
+      "id": "M04",
+      "status": "offline_tested",
+      "remaining": "Submenus não observados e conta atual"
+    },
+    {
+      "id": "M05",
+      "status": "offline_tested",
+      "remaining": "Comparação custo por tarefa aceita real"
+    },
+    {
+      "id": "M06",
+      "status": "offline_tested",
+      "remaining": "Homologação API read/write controlada; permissão real"
+    },
+    {
+      "id": "M07",
+      "status": "documented",
+      "remaining": "Importação/editor/canal, execução bot e entrega real"
+    },
+    {
+      "id": "M08",
+      "status": "documented",
+      "remaining": "Integração composta em conta e versões n8n"
+    },
+    {
+      "id": "M09",
+      "status": "offline_tested",
+      "remaining": "Usuário leigo reproduzir três tarefas homologadas"
+    },
+    {
+      "id": "M10",
+      "status": "documented",
+      "remaining": "Smoke de duas conversas Codex/Claude/Antigravity"
+    },
+    {
+      "id": "M11",
+      "status": "offline_tested",
+      "remaining": "E2E CRM e critérios humanos de lançamento"
+    }
+  ]
+}

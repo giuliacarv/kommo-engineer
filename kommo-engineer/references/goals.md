@@ -9,7 +9,7 @@
 - Projeto `.kommo-engineer/state.json` é fonte para meta ativa; logs não precisam ser relidos.
 - Arquivos `.runtime/write.lock` ou `pending-operation.json` bloqueiam novas mutações até diagnóstico.
 - Não remova locks nem marcadores manualmente sem verificar escritor ativo e integridade.
-- A implementação inicial suporta fechamento e evidências locais; edição formal de planos e dependências complexas continuam limitadas.
+- A CLI oferece revisão formal de planos e contratos de dependência; observação semântica continua responsabilidade do teste e operador.
 
 
 ## Atualização 0.5 RC

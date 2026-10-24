@@ -1,0 +1,87 @@
+{
+  "kind": "composed_design_not_importable",
+  "status": "offline_specification",
+  "activation_enabled": false,
+  "stages": [
+    {
+      "name": "Instagram",
+      "owner": "canal",
+      "input_source": "evento recebido autorizado",
+      "output_contract": "conta/canal/conversa/consentimento",
+      "idempotency_key": "account_id:event_id:stage",
+      "timeout": "definir com operação",
+      "on_error": "Registrar, suprimir repetição e transferir ao humano",
+      "evidence": "evento sanitizado + pós-leitura do consumidor",
+      "validation": "pending_account"
+    },
+    {
+      "name": "Triagem",
+      "owner": "Salesbot",
+      "input_source": "mensagem/contato elegível",
+      "output_contract": "intenção + próximo responsável",
+      "idempotency_key": "account_id:event_id:stage",
+      "timeout": "definir com operação",
+      "on_error": "Registrar, suprimir repetição e transferir ao humano",
+      "evidence": "evento sanitizado + pós-leitura do consumidor",
+      "validation": "pending_account"
+    },
+    {
+      "name": "Conhecimento",
+      "owner": "IA",
+      "input_source": "fontes aprovadas e válidas",
+      "output_contract": "resposta fundamentada ou fallback",
+      "idempotency_key": "account_id:event_id:stage",
+      "timeout": "definir com operação",
+      "on_error": "Registrar, suprimir repetição e transferir ao humano",
+      "evidence": "evento sanitizado + pós-leitura do consumidor",
+      "validation": "pending_account"
+    },
+    {
+      "name": "Handoff",
+      "owner": "vendedor",
+      "input_source": "contexto mínimo e consentimento",
+      "output_contract": "dono humano e automação pausada",
+      "idempotency_key": "account_id:event_id:stage",
+      "timeout": "definir com operação",
+      "on_error": "Registrar, suprimir repetição e transferir ao humano",
+      "evidence": "evento sanitizado + pós-leitura do consumidor",
+      "validation": "pending_account"
+    },
+    {
+      "name": "Follow-up",
+      "owner": "operação",
+      "input_source": "janela permitida e ausência de resposta",
+      "output_contract": "mensagem aprovada ou supressão",
+      "idempotency_key": "account_id:event_id:stage",
+      "timeout": "definir com operação",
+      "on_error": "Registrar, suprimir repetição e transferir ao humano",
+      "evidence": "evento sanitizado + pós-leitura do consumidor",
+      "validation": "pending_account"
+    },
+    {
+      "name": "Registro",
+      "owner": "CRM",
+      "input_source": "resultado observado",
+      "output_contract": "campos confirmados, tarefas, etapa e origem",
+      "idempotency_key": "account_id:event_id:stage",
+      "timeout": "definir com operação",
+      "on_error": "Registrar, suprimir repetição e transferir ao humano",
+      "evidence": "evento sanitizado + pós-leitura do consumidor",
+      "validation": "pending_account"
+    }
+  ],
+  "exclusions": [
+    "opt-out",
+    "humano ativo",
+    "evento duplicado",
+    "canal não homologado"
+  ],
+  "tests": [
+    "silêncio",
+    "dado ausente",
+    "falha IA",
+    "evento duplicado",
+    "resposta após handoff",
+    "opt-out"
+  ]
+}

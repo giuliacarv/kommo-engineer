@@ -1,4 +1,8 @@
-# Kommo Engineer 0.4.0-dev — revisão cumulativa em desenvolvimento
+# Histórico de versões — Kommo Engineer
+
+Estado atual: 0.5.0-rc.1. As seções anteriores abaixo registram o estado histórico, não os recursos atuais.
+
+## 0.4.0-dev — revisão cumulativa em desenvolvimento
 
 ## Incluído
 - Skill Codex unificada com estratégia comercial, engenharia Kommo e recuperação seletiva de módulos.
@@ -40,3 +44,16 @@ Preservados CLI, schemas, templates, procedimentos, recursos visuais e guias ant
 ## Expansão por referências externas — 23/10/2026
 
 Nove repositórios locais foram examinados por documentação e trechos de implementação relevantes. A skill recebeu nove aprofundamentos próprios, um contrato reutilizável e busca ampliada, preservando o conteúdo anterior. A revisão registra o que já existia, o que foi expandido e limitações dos exemplos, inclusive deploy simulado, cache sem isolamento por conta, perda de zero em transformação e cobertura limitada de tracking por navegador. Veja o [relatório desta expansão](external-reference-review.md).
+
+
+## 0.5.0-rc.1
+
+Veja [escopo, compatibilidade e pendências](upgrade-plan-status.md). API experimental com mocks; escritas desativadas. Aceite separa anexo de observação; CLI v1 preservada por migração explícita. Sem declaração de versão 1.0 ou homologação multiplataforma.
+
+## Acesso MCP: atualização de 24/10/2026
+
+- Novo [guia de acesso MCP](../references/integrations/mcp-access-setup.md): integração privada na UI Kommo, token longo no cofre Windows, build do servidor, configuração Codex/Agy/Claude Code, confirmação por camadas e diagnóstico de falhas.
+- `scripts/kommo-credential-windows.ps1` recebe token com entrada mascarada por subdomínio e confirma gravação no Gerenciador de Credenciais; `scripts/launch-kommo-mcp-windows.ps1` injeta o segredo apenas no processo local do servidor.
+- Removido do guia do conector o exemplo que colocava token literal em JSON. O catálogo de ferramentas continua dependente da versão efetivamente instalada.
+- A publicação da skill e a validação estrutural não certificam autenticação de uma conta nem direitos de escrita. Cada cliente precisa de verificação própria de identidade.
+
