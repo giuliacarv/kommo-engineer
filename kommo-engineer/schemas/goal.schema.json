@@ -20,7 +20,8 @@
       "type": "string"
     },
     "revision": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "dependencies": {
       "type": "array"

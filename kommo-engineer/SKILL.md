@@ -7,6 +7,12 @@ description: "Planejar, configurar, diagnosticar e melhorar operações no Kommo
 
 Conduza o trabalho de Kommo do objetivo comercial ao resultado verificável. Combine estratégia comercial, desenho do CRM e engenharia de implementação, mas mantenha cada tarefa proporcional: responda dúvidas pontuais sem criar um projeto ou carregar todos os módulos. Conhecimento ou documentação não comprovam acesso, disponibilidade ou configuração na conta.
 
+## Ativação e continuidade
+
+Na ativação sem pedido concreto, apresente o menu de `scripts/ke.py menu`: **1 Setup · 2 Diagnóstico · 3 Planejar · 4 Executar · 5 Salesbots/IA · 6 API/integrações · 7 Metas · 8 Auditoria · 9 Relatórios · 0 Ajuda**. Destaque setup quando não houver projeto. Pedido claro segue direto; pergunta pontual dispensa entrevista.
+
+Primeira pergunta da entrevista: **O que você quer que mude no resultado da sua empresa após implementar o Kommo?** Consulte `setup interview`, preserve os 18 campos e não confirme hipóteses automaticamente. Em decisões materiais, ofereça A econômico / B intermediário / C maior controle, não sei, adiar ou escolha técnica. Para comandos novos e aceite por nível, veja [workflow operacional](references/operational-workflow.md).
+
 ## Como decidir
 
 A Kommo Engineer reúne conteúdo próprio de estratégia, operação, engenharia de conta, IA e integração. Aprofunde a tarefa pelas referências abaixo; não dependa da instalação ou ativação das quatro skills que originaram esse conhecimento.
@@ -68,7 +74,7 @@ Para pedido estratégico com configuração, mantenha o mesmo contrato do diagn�
 
 Use a memória local apenas quando a tarefa for um projeto recorrente. Em primeiro uso, consulte [setup](references/setup.md), execute `scripts/ke.py doctor` e confira `schemas/setup-fields.json`. Para projeto existente, use `project resume --project PATH`, leia o `AGENTS.md` do projeto e retome apenas a meta e os registros relevantes. Não imponha setup, meta ou snapshot a perguntas pontuais.
 
-Utilitários requerem Python 3.11+; no Windows use `py -3 "<SKILL>/scripts/ke.py" ...` ou `python -X utf8 "<SKILL>/scripts/ke.py" ...` conforme o runtime disponível; em Linux/macOS, `python3 ...`. Nunca instale dependências sem combinar. Os schemas publicados são referências de formato; não afirme validação JSON Schema em runtime. O CLI verifica integridade local, não a verdade da evidência nem o estado remoto da conta. Veja comandos e limites em [setup](references/setup.md), [metas](references/goals.md) e [auditoria](references/audit.md).
+Utilitários requerem Python 3.11+; no Windows use `py -3 "<SKILL>/scripts/ke.py" ...` ou `python -X utf8 "<SKILL>/scripts/ke.py" ...` conforme o runtime disponível; em Linux/macOS, `python3 ...`. Nunca instale dependências sem combinar. O CLI valida em runtime o subconjunto de JSON Schema publicado e suportado por scripts/schema_runtime.py; não é um validador geral Draft 2020-12. O CLI verifica integridade local, não a verdade da evidência nem o estado remoto da conta. Veja comandos e limites em [setup](references/setup.md), [metas](references/goals.md) e [auditoria](references/audit.md).
 
 ## Entrega
 

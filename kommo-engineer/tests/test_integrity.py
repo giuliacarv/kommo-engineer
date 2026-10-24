@@ -9,7 +9,7 @@ class TestPackageIntegrity(unittest.TestCase):
     def test_manifest(self):
         manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
         self.assertEqual(manifest["name"], "kommo-engineer")
-        self.assertEqual(manifest["version"], "0.4.0-dev")
+        self.assertEqual(manifest["version"], "0.5.0-rc.1")
         actual = {
             str(p.relative_to(ROOT)).replace("\\", "/"): hashlib.sha256(p.read_bytes()).hexdigest()
             for p in ROOT.rglob("*") if p.is_file()

@@ -10,3 +10,8 @@
 - Arquivos `.runtime/write.lock` ou `pending-operation.json` bloqueiam novas mutações até diagnóstico.
 - Não remova locks nem marcadores manualmente sem verificar escritor ativo e integridade.
 - A implementação inicial suporta fechamento e evidências locais; edição formal de planos e dependências complexas continuam limitadas.
+
+
+## Atualização 0.5 RC
+
+Consulte [workflow operacional](operational-workflow.md). O aceite por arquivo foi substituído por anexo + teste/observação explícitos. Schemas são validados em runtime no subconjunto documentado; relatórios têm releases imutáveis.

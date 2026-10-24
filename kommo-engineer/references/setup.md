@@ -65,3 +65,8 @@ Não informe credenciais em CLI, respostas ou documentos. Argumentos de processo
 ## Entrada opcional por conversas ou materiais existentes
 
 Se o usuário fornecer conversas para orientar o projeto, complemente o setup com [onboarding baseado em evidência](strategy/conversation-led-onboarding.md). Preserve o contrato atual de respostas propostas/confirmadas: extração por LLM, planilha gerada e IDs simulados não confirmam decisão humana nem recurso criado na conta.
+
+
+## Atualização 0.5 RC
+
+Consulte [workflow operacional](operational-workflow.md). O aceite por arquivo foi substituído por anexo + teste/observação explícitos. Schemas são validados em runtime no subconjunto documentado; relatórios têm releases imutáveis.

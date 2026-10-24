@@ -13,3 +13,8 @@ Não use a presença destes arquivos, nem uma resposta bem-sucedida de `project 
 ## Compatibilidade
 
 Os schemas declaram JSON Schema Draft 2020-12. Alterações neles não mudam por si só o comportamento da CLI; qualquer mudança de contrato deve atualizar a implementação e os critérios de aceitação correspondentes.
+
+
+## Atualização 0.5 RC
+
+Consulte [workflow operacional](../references/operational-workflow.md). O aceite por arquivo foi substituído por anexo + teste/observação explícitos. Schemas são validados em runtime no subconjunto documentado; relatórios têm releases imutáveis.
