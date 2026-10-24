@@ -1,6 +1,6 @@
 Origem: `runitsolutions/kommo-mcp`, versão documental 1.1.0, licença declarada MIT. Guia incorporado como referência interna; não instala servidor, ferramentas ou credenciais. Os nomes, a quantidade de ferramentas e os limites abaixo descrevem essa versão documental; confira a instalação e as ferramentas atuais antes de usá-los.
 
-> **Codex portability note:** This package contains skill instructions only. It does not install, build, or configure the runitsolutions MCP server or credentials. In Codex, use only Kommo tools actually present in the current session. Treat setup commands as documentation and never expose tokens.
+Para criar integração, guardar o token e configurar Codex, Agy ou Claude Code sem segredo no arquivo do cliente, siga [Acessar Kommo por MCP](mcp-access-setup.md). Os scripts Windows dessa referência fazem parte da skill; este arquivo descreve capacidades documentadas de um servidor específico.
 
 
 # Kommo MCP
@@ -18,35 +18,9 @@ Server repo: https://github.com/runitsolutions/kommo-mcp
 
 Prefer MCP tools over inventing raw `curl` calls once the server is configured.
 
-## Install the MCP in Cursor
+## Instalação e configuração
 
-1. Clone and build:
-
-```bash
-git clone git@github.com:runitsolutions/kommo-mcp.git
-cd kommo-mcp
-npm install
-npm run build
-```
-
-2. Create a private integration in Kommo (**Settings → Integrations**) and generate a **long-lived token** (leave Redirect URL empty), or use OAuth refresh credentials.
-
-3. Add to Cursor MCP settings:
-
-```json
-{
-  "mcpServers": {
-    "kommo": {
-      "command": "node",
-      "args": ["/absolute/path/to/kommo-mcp/dist/index.js"],
-      "env": {
-        "KOMMO_SUBDOMAIN": "your-subdomain",
-        "KOMMO_ACCESS_TOKEN": "your-long-lived-token"
-      }
-    }
-  }
-}
-```
+O guia [Acessar Kommo por MCP](mcp-access-setup.md) fornece comandos e configurações para Windows, Codex, Agy e Claude Code. Nunca coloque o token em `mcpServers.env`, TOML, JSON, argumentos ou prompts; use o cofre local e o launcher. Um exemplo antigo do conector usava token literal no JSON do cliente e foi retirado por expor o segredo.
 
 ### Auth options
 
@@ -163,7 +137,7 @@ Este guia documenta um servidor específico; as ferramentas e os schemas dispon�
 
 - O diagnóstico `scripts/connection-doctor.mjs` recebe `KOMMO_TOKEN`; este servidor documenta `KOMMO_ACCESS_TOKEN`. São contratos de clientes diferentes. Configure a referência segura no processo correto; não renomeie nem duplique segredos por rotina.
 - Token de longa duração não tem refresh token. O refresh automático descrito acima pertence ao modo OAuth. Em 401, interrompa chamadas e identifique o modo antes de escolher substituição ou refresh.
-- O exemplo `mcpServers` acima é de Cursor. Para Codex, use o formato suportado pelo cliente instalado; não sobrescreva configuração de outro cliente nem instale o servidor por apenas consultar esta referência.
+- Para Codex, Agy e Claude Code, use os formatos específicos do [guia de acesso](mcp-access-setup.md); não sobrescreva configuração de outro cliente nem instale o servidor por apenas consultar esta referência.
 - Recursos `kommo://`, prompts e famílias de ferramentas só são utilizáveis quando o servidor os expõe. Não derive uma operação inexistente pelo padrão do nome.
 - Uma resposta pode ser normalizada pelo MCP; não misture seu envelope com o HAL bruto da REST API. Identifique paginação, valores vazios e erros pelo schema observado.
 - A instalação da antiga skill via `npx skills add` é uma instrução de distribuição da fonte, preservada no registro de integração; não é necessária para a Kommo Engineer.

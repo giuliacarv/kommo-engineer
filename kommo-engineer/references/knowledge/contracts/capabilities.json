@@ -1,0 +1,80 @@
+{
+  "checked_at": "2026-10-23",
+  "capabilities": [
+    {
+      "resource": "field",
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": "outside_executor_subset",
+      "definition_crud": "documented",
+      "documentary_status": "verified_documentation",
+      "account_status": "not_homologated",
+      "permission": "administrator",
+      "plan": "unknown",
+      "channel": "confirm_if_applicable",
+      "sources": [
+        "https://developers.kommo.com/reference/custom-field-by-entity",
+        "https://developers.kommo.com/reference/add-custom-fields",
+        "https://developers.kommo.com/reference/update-custom-fields"
+      ],
+      "executor": "limited_fields_names_sort_types"
+    },
+    {
+      "resource": "pipeline",
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": "outside_executor_subset",
+      "definition_crud": "documented",
+      "documentary_status": "verified_documentation",
+      "account_status": "not_homologated",
+      "permission": "administrator",
+      "plan": "unknown",
+      "channel": "confirm_if_applicable",
+      "sources": [
+        "https://developers.kommo.com/reference/pipelines-list",
+        "https://developers.kommo.com/reference/add-pipelines",
+        "https://developers.kommo.com/reference/edit-pipeline"
+      ],
+      "executor": "names_sort_only"
+    },
+    {
+      "resource": "stage",
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": "outside_executor_subset",
+      "definition_crud": "documented",
+      "documentary_status": "verified_documentation",
+      "account_status": "not_homologated",
+      "permission": "administrator",
+      "plan": "unknown",
+      "channel": "confirm_if_applicable",
+      "sources": [
+        "https://developers.kommo.com/reference/stages-list",
+        "https://developers.kommo.com/reference/add-stages",
+        "https://developers.kommo.com/reference/edit-stage"
+      ],
+      "executor": "names_sort_only"
+    },
+    {
+      "resource": "bot",
+      "read": true,
+      "create": false,
+      "update": false,
+      "delete": "outside_executor_subset",
+      "definition_crud": "indeterminate",
+      "documentary_status": "verified_documentation",
+      "account_status": "not_homologated",
+      "permission": "confirm_permission",
+      "plan": "unknown",
+      "channel": "confirm_if_applicable",
+      "sources": [
+        "https://developers.kommo.com/reference/salesbots-list",
+        "https://developers.kommo.com/docs/salesbot-dp"
+      ],
+      "executor": "list_only"
+    }
+  ]
+}

@@ -77,7 +77,7 @@ class Upgrade(unittest.TestCase):
         a=ke.report_build(self.root);b=ke.report_build(self.root)
         self.assertNotEqual(a['release'],b['release']);self.assertTrue(Path(a['files'][0]).exists())
     def test_runtime_rejects_invalid_revision(self):
-        p=ke.data_dir(self.root)/'state.json';s=ke.readj(p);s['revision']='corrupt';ke.putj(p,s)
+        p=ke.data_dir(self.root)/'state.json';s=ke.readj(p);s['revision']='corrupt';p.write_text(json.dumps(s),encoding='utf-8')
         self.assertFalse(ke.project_validate(self.root)['valid'])
     def test_python311_grammar(self):
         for p in (ROOT/'scripts').rglob('*.py'):ast.parse(p.read_text(encoding='utf-8'),feature_version=(3,11))

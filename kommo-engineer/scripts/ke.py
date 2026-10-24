@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Kommo Engineer CLI — ações locais; nenhuma requisição remota."""
+"""Kommo Engineer CLI: local workflow and explicitly invoked API operations."""
 from __future__ import annotations
 import argparse
 import contextlib
@@ -34,9 +34,23 @@ def sanitize(s: str):
 
 def readj(path: Path):
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
+        value=json.loads(path.read_text(encoding="utf-8"))
+        validate_record(path,value)
+        return value
     except (OSError, json.JSONDecodeError) as e:
         raise KEError(f"Não foi possível ler JSON válido: {path.name}: {e}")
+
+def validate_record(path,value):
+    if '.kommo-engineer' not in path.parts:return
+    schema=None
+    if path.name=='project.json':schema='project'
+    elif path.name=='state.json':schema='goal' if GOAL_RE.fullmatch(path.parent.name) else 'state'
+    elif path.name=='acceptance.json':schema='acceptance'
+    elif path.parent.name=='events':schema='event'
+    elif path.name=='manifest.json' and path.parent.parent.name=='snapshots':schema='snapshot'
+    if schema:
+        from schema_runtime import validate
+        validate(value,json.loads((SKILL/'schemas'/(schema+'.schema.json')).read_text(encoding='utf-8')))
 
 def write_bytes_once(path: Path, data: bytes):
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -61,6 +75,7 @@ def atomic_write(path: Path, data: bytes):
         if tmp and tmp.exists(): tmp.unlink()
 
 def putj(path: Path, data, once=False):
+    validate_record(path,data)
     raw=(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True)+"\n").encode("utf-8")
     if once: write_bytes_once(path,raw)
     else: atomic_write(path,raw)
@@ -380,7 +395,7 @@ def goal_record(root,goal,summary):
     p=gp(root,goal)
     with locked(root):
         g=readj(p/"state.json")
-        if g["status"] in ("completed","cancelled"): raise KEError("Meta fechada; não reescrever histórico")
+        if g["status"] in ("completed","cancelled","deferred"): raise KEError("Reabra a meta formalmente antes de registrar execução")
         g.update(status="in_progress",next_action="Validar execução e registrar evidências",revision=g["revision"]+1,updated_at=now())
         putj(p/"state.json",g)
         ev=event(root,"goal_action",summary,goal=goal)
@@ -404,6 +419,7 @@ def goal_accept(root,goal,criterion,evidence):
         entries[criterion-1]["status"]="evidence_attached"
         entries[criterion-1].pop("observation",None)
         entries[criterion-1]["test_executed"]=False
+        g["status"]="in_progress"
         entries[criterion-1]["evidence"]=evpath.relative_to(root).as_posix()
         entries[criterion-1]["hash"]=sha(evpath)
         putj(p/"acceptance.json",acc)
@@ -554,7 +570,11 @@ def goal_close(root,goal):
         from ke_extended import dependencies
         if dependencies(sys.modules[__name__],root,goal)["blocked"]:raise KEError("Dependências não satisfeitas")
         acc=readj(p/"acceptance.json")
+        gs=readj(p/"state.json")
+        if gs["status"] not in ("ready_for_acceptance","in_progress") or not acc["criteria"]:raise KEError("Meta não está pronta para fechamento")
         if any(c["status"] not in ("observed_pass","human_approved") for c in acc["criteria"]):raise KEError("Registre teste e resultado observado antes de fechar")
+        for c in acc["criteria"]:
+            if sha(ensure_safe_relative(root,Path(c["evidence"])))!=c["hash"]:raise KEError("Evidência alterada antes de fechar")
         # Marker permits diagnosing partial multi-file completion.
         marker=begin_pending(root,"goal_close",goal=goal)
         try:
@@ -734,9 +754,12 @@ def main(argv=None):
         s=ms.add_parser(action);s.add_argument("--project",required=True);s.add_argument("--offline",action="store_true",required=True)
     import ke_extended
     ke_extended.configure(sub,psub,ssub,gsub,ks,rs)
+    import execution_tools
+    execution_tools.configure(sub)
     args=ap.parse_args(argv)
     try:
-        if ke_extended.handles(args):result=ke_extended.run(args,sys.modules[__name__])
+        if args.command in ("api","method","salesbot","release"):result=execution_tools.run(args,sys.modules[__name__])
+        elif ke_extended.handles(args):result=ke_extended.run(args,sys.modules[__name__])
         elif args.command=="doctor":
             result=dict(version=VERSION,python=sys.version.split()[0],compatible=sys.version_info>=(3,11),
                         skill=str(SKILL),local_only=True)
@@ -770,7 +793,7 @@ def main(argv=None):
         if isinstance(result,dict) and (result.get("valid") is False or result.get("all_valid") is False):
             return 1
         return 0
-    except (KEError,OSError,ValueError,KeyError,IndexError) as e:
+    except (KEError,OSError,ValueError,KeyError,IndexError,TypeError) as e:
         print(json.dumps(dict(error=sanitize(str(e))),ensure_ascii=False),file=sys.stderr)
         return 2
 
