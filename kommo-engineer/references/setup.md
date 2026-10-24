@@ -60,3 +60,8 @@ Não informe credenciais em CLI, respostas ou documentos. Argumentos de processo
 - A própria presença de um ID de conta em texto livre não comprova o ID remoto; validar em preflight.
 - A segurança do estado local não impede um editor externo de adulterar arquivos. Evite edições manuais não verificadas.
 - Esta etapa não implementa o entrevistador autônomo no CLI nem acesso Kommo; a conversa é responsabilidade da skill no Codex.
+
+
+## Entrada opcional por conversas ou materiais existentes
+
+Se o usuário fornecer conversas para orientar o projeto, complemente o setup com [onboarding baseado em evidência](strategy/conversation-led-onboarding.md). Preserve o contrato atual de respostas propostas/confirmadas: extração por LLM, planilha gerada e IDs simulados não confirmam decisão humana nem recurso criado na conta.

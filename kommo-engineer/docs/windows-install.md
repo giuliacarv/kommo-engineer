@@ -2,27 +2,32 @@
 
 Versão `0.4.0-dev`; **homologação Windows ainda não executada**. O ZIP definitivo desta revisão ainda não foi gerado.
 
-## 1. Extrair
-O ZIP tem pasta única `kommo-engineer/` com `SKILL.md` diretamente dentro dela.
+## 1. Instalar a pasta da skill
+A pasta `kommo-engineer/` contém `SKILL.md` diretamente dentro dela e todas as referências necessárias.
 Selecione somente UM escopo de instalação:
-- Global: `%USERPROFILE%\.agents\skills\kommo-engineer\`
+- Global neste ambiente Codex: `%USERPROFILE%\.codex\skills\kommo-engineer\`
 - Projeto: `<PROJETO>\.agents\skills\kommo-engineer\`
 
-No PowerShell (exemplo global), adapte o caminho do ZIP:
+No PowerShell (exemplo global), adapte a pasta fonte:
 ```powershell
-$zip = "C:\caminho\kommo-engineer.zip"
-$dest = Join-Path $HOME ".agents\skills"
-New-Item -ItemType Directory -Force -Path $dest | Out-Null
-Expand-Archive -LiteralPath $zip -DestinationPath $dest -Force
-Test-Path (Join-Path $dest "kommo-engineer\SKILL.md")
+$skillSource = "C:\caminho\kommo-engineer"
+$skillDestination = Join-Path $env:USERPROFILE ".codex\skills\kommo-engineer"
+if (Test-Path -LiteralPath $skillDestination) { throw "Destino existente: compare a instalação antes de atualizar." }
+if (-not (Test-Path -LiteralPath (Join-Path $skillSource "SKILL.md"))) { throw "Fonte de skill inválida." }
+New-Item -ItemType Directory -Force -Path (Split-Path -Parent $skillDestination) | Out-Null
+Copy-Item -LiteralPath $skillSource -Destination $skillDestination -Recurse
+Test-Path -LiteralPath (Join-Path $skillDestination "SKILL.md")
 ```
-Se a skill não aparecer, reinicie o Codex. Evite duas cópias com o mesmo nome.
+O pacote é autocontido; não é necessário copiar a pasta externa `legado`.
+Se a skill não aparecer no seletor, abra um novo chat ou reinicie o Codex. Evite duas cópias com o mesmo nome.
 
 ## 2. Python
-Os recursos de gerenciamento de projeto exigem **Python 3.11+**, padrão biblioteca.
+Os recursos de gerenciamento de projeto exigem **Python 3.11+**, somente biblioteca padrão. Nos exemplos abaixo, se `py` não estiver instalado, substitua `py -3` por `python -X utf8`.
 Valide no PowerShell:
 ```powershell
 Get-Command py, python -ErrorAction SilentlyContinue
+python -X utf8 --version
+# Ou, quando o launcher estiver instalado:
 py -3 --version
 ```
 Um alias da Microsoft Store sem runtime funcional não serve. Se ausente, consulte
@@ -31,15 +36,15 @@ Não desative ExecutionPolicy global nem sandbox do Codex.
 
 ## 3. Diagnóstico
 ```powershell
-& "$HOME\.agents\skills\kommo-engineer\scripts\doctor.ps1"
-py -3 "$HOME\.agents\skills\kommo-engineer\scripts\ke.py" doctor
+& "$env:USERPROFILE\.codex\skills\kommo-engineer\scripts\doctor.ps1"
+py -3 "$env:USERPROFILE\.codex\skills\kommo-engineer\scripts\ke.py" doctor
 ```
 Se a política local impedir o `.ps1`, realize as sondas manuais indicadas acima.
 
 ## 4. Smoke offline SEM Kommo
 A pasta de teste deve estar ausente:
 ```powershell
-$cli = "$HOME\.agents\skills\kommo-engineer\scripts\ke.py"
+$cli = "$env:USERPROFILE\.codex\skills\kommo-engineer\scripts\ke.py"
 $teste = Join-Path $env:TEMP ("ke-test-" + [guid]::NewGuid().ToString("N"))
 py -3 $cli smoke prepare --project $teste --offline
 py -3 $cli smoke verify --project $teste --offline

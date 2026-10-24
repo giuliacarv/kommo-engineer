@@ -30,3 +30,8 @@ Use the organization's own forecast categories and historical snapshots. If snap
 ## Prioritization
 
 Locate the earliest constraint supported by evidence. Compare plausible causes such as demand quality, qualification, speed, stage definitions, owner capacity, follow-up, data completeness, or customer fit. Rank interventions by expected user value, evidence, effort, dependencies, reversibility, and risk. Do not assign numeric scores unless the scoring rubric is defined and calibrated for this business.
+
+
+## Reconstruct before comparing
+
+For stage-duration work, use [stage time and SLA](../analytics/stage-time-and-sla.md) to define visits, re-entry, owner intervals, unknown starts and still-open observations. For calculated sales reports, use [MCP report semantics](../integrations/mcp-transport-and-capabilities.md): creation cohorts, closure cohorts and closed-deal win rate answer different questions.

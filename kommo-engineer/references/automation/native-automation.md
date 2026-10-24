@@ -1,10 +1,10 @@
 # Kommo native AI agents and Salesbots
 
-Use this guide when a request involves the native Kommo AI agent, Salesbots, AI reply suggestions, AI task suggestions, or coordination between them. It helps select and design the right Kommo capability. For live account state, API/UI mechanics, and technical execution, follow the internal `../../kommo-crm/SKILL.md` module and current official Kommo documentation.
+Use this guide when a request involves the native Kommo AI agent, Salesbots, AI reply suggestions, AI task suggestions, or coordination between them. It helps select and design the right Kommo capability. For live account state, API/UI mechanics, and technical execution, follow the internal `../crm/account-engineering.md` module and current official Kommo documentation.
 
-For a detailed feature reference covering Kommo AI tools and the native AI agent, load [agentes-ia.md](agentes-ia.md). This guide remains the short architecture overview for selecting and combining AI agents, Salesbots, and deterministic pipeline automation.
+For a detailed feature reference covering Kommo AI tools and the native AI agent, load [../ai/native-agents.md](../ai/native-agents.md). This guide remains the short architecture overview for selecting and combining AI agents, Salesbots, and deterministic pipeline automation.
 
-For the operating pattern of saving reusable Salesbots without an automatic trigger, manually launching one from a chat, working with JSON, or deciding what belongs in the public API, load [kommo-bots-playbooks-and-api.md](kommo-bots-playbooks-and-api.md).
+For the operating pattern of saving reusable Salesbots without an automatic trigger, manually launching one from a chat, working with JSON, or deciding what belongs in the public API, load [salesbot-playbooks-and-api.md](salesbot-playbooks-and-api.md).
 
 ## Select the right capability
 

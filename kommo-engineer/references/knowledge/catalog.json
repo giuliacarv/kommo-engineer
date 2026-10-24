@@ -80,6 +80,324 @@
       "path": "references/knowledge/procedures/PROC-KOMMO-005-salesbot.md",
       "status": "documented_not_tested",
       "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-001",
+      "title": "Decisão comercial e técnica",
+      "path": "references/decision-model.md",
+      "keywords": [
+        "diagnostico",
+        "causa",
+        "arquitetura",
+        "decisao",
+        "estrategia"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-002",
+      "title": "Conta, conexão e capacidades",
+      "path": "references/crm/account-engineering.md",
+      "keywords": [
+        "conta",
+        "acesso",
+        "campos",
+        "crm",
+        "permissao"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-003",
+      "title": "RevOps e métricas",
+      "path": "references/strategy/revops-and-pipeline.md",
+      "keywords": [
+        "revops",
+        "funil",
+        "conversao",
+        "metricas",
+        "forecast"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-004",
+      "title": "Operações e triagem comercial",
+      "path": "references/strategy/sales-operations.md",
+      "keywords": [
+        "triagem",
+        "higiene",
+        "ganhos",
+        "perdas",
+        "oportunidade",
+        "forecast",
+        "contas",
+        "contexto",
+        "limpeza",
+        "atualizar"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-005",
+      "title": "Salesbot e biblioteca de playbooks",
+      "path": "references/automation/salesbot-playbooks-and-api.md",
+      "keywords": [
+        "salesbot",
+        "playbook",
+        "manual",
+        "gatilho",
+        "json",
+        "api"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-006",
+      "title": "Agentes de IA e ferramentas Kommo",
+      "path": "references/ai/native-agents.md",
+      "keywords": [
+        "ia",
+        "agente",
+        "persona",
+        "fontes",
+        "copilot",
+        "resumo",
+        "creditos"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-007",
+      "title": "MCP e contratos do conector",
+      "path": "references/integrations/kommo-mcp.md",
+      "keywords": [
+        "mcp",
+        "oauth",
+        "autenticacao",
+        "ferramentas",
+        "conector"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-008",
+      "title": "Integrações e canais",
+      "path": "references/crm/automation-integrations.md",
+      "keywords": [
+        "webhook",
+        "n8n",
+        "make",
+        "whatsapp",
+        "formulario",
+        "widget",
+        "atribuicao"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-009",
+      "title": "Execução, lote e recuperação",
+      "path": "references/crm/safe-execution.md",
+      "keywords": [
+        "escrita",
+        "lote",
+        "retry",
+        "timeout",
+        "incidente",
+        "rollback"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-010",
+      "title": "Retenção e expansão",
+      "path": "references/strategy/customer-lifecycle.md",
+      "keywords": [
+        "retencao",
+        "onboarding",
+        "churn",
+        "renovacao",
+        "expansao"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-011",
+      "title": "Guia visual Salesbot existente",
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/Guia_Salesbot_Kommo.md",
+      "keywords": [
+        "salesbot",
+        "visual",
+        "prints",
+        "menus",
+        "botoes"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-EXTERNO-001",
+      "title": "MCP: transportes, capacidades e relatórios",
+      "path": "references/integrations/mcp-transport-and-capabilities.md",
+      "keywords": [
+        "mcp",
+        "stdio",
+        "http",
+        "readiness",
+        "capacidades",
+        "relatorio",
+        "Kommo-MCP",
+        "miguel",
+        "streamable",
+        "compatibilidade"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-EXTERNO-002",
+      "title": "Widgets React, callbacks e empacotamento",
+      "path": "references/engineering/widgets-and-react.md",
+      "keywords": [
+        "widget",
+        "react",
+        "callback",
+        "manifest",
+        "i18n",
+        "pacote",
+        "create-kommo-integration"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-EXTERNO-003",
+      "title": "Nós n8n, itens, tipos e isolamento",
+      "path": "references/integrations/n8n-community-nodes.md",
+      "keywords": [
+        "n8n",
+        "community",
+        "zero",
+        "array",
+        "cache",
+        "itens",
+        "n8n-nodes-kommo"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-EXTERNO-004",
+      "title": "Auditoria estrutural e funcional de Salesbots",
+      "path": "references/automation/salesbot-graph-audit.md",
+      "keywords": [
+        "auditoria",
+        "grafo",
+        "salesbot",
+        "ciclo",
+        "alcancabilidade",
+        "dependencias",
+        "kommo-crm-audit"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-EXTERNO-005",
+      "title": "Sincronização CRM e Google Sheets",
+      "path": "references/integrations/google-sheets-sync.md",
+      "keywords": [
+        "sheets",
+        "planilha",
+        "sincronizacao",
+        "conflito",
+        "baseline",
+        "kommoCRM-GS-API-sync"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-EXTERNO-006",
+      "title": "Onboarding baseado em conversas e desenho tipado",
+      "path": "references/strategy/conversation-led-onboarding.md",
+      "keywords": [
+        "onboarding",
+        "conversas",
+        "transcript",
+        "desenho",
+        "mapping",
+        "implantacao",
+        "kommo-onboarding"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-EXTERNO-007",
+      "title": "Agentes externos, RAG, memória e áudio",
+      "path": "references/ai/external-rag-agents.md",
+      "keywords": [
+        "rag",
+        "embedding",
+        "memoria",
+        "tool",
+        "audio",
+        "llm",
+        "agente externo",
+        "Agente-Conversacional-Kommo-CRM-LMStudio-VS-OpenAI",
+        "lm studio",
+        "lmstudio",
+        "tool calling",
+        "qdrant",
+        "transcricao"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-EXTERNO-008",
+      "title": "Extração, modelos, eventos e qualidade de dados",
+      "path": "references/data/extraction-and-modeling.md",
+      "keywords": [
+        "etl",
+        "extracao",
+        "pydantic",
+        "dataframe",
+        "watermark",
+        "schema",
+        "eventos",
+        "kommo-sdk-data-engineer"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-EXTERNO-009",
+      "title": "Tempo por etapa, reentrada e SLA",
+      "path": "references/analytics/stage-time-and-sla.md",
+      "keywords": [
+        "sla",
+        "tempo por etapa",
+        "aging",
+        "duracao",
+        "reentrada",
+        "percentil",
+        "KommoCRM-Integracao-de-analise-de-tempo-por-etapa-kmm"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
     }
   ]
 }

@@ -55,7 +55,7 @@ Antes de iniciar manualmente, confira o lead/conversa selecionado, o conteúdo f
 
 ## Integrações e API: o que afirmar
 
-Codex, Claude Code, Antigravity, VS Code ou um script podem consumir a API quando o cliente estiver configurado com transporte, rede, autenticação e credencial seguros. Isso não significa que esses produtos tenham uma integração Kommo nativa pronta. Para conectar ou operar a conta, consulte o módulo interno `../../kommo-crm/SKILL.md`, que contém o procedimento de identidade, conexão e armazenamento seguro de credenciais.
+Codex, Claude Code, Antigravity, VS Code ou um script podem consumir a API quando o cliente estiver configurado com transporte, rede, autenticação e credencial seguros. Isso não significa que esses produtos tenham uma integração Kommo nativa pronta. Para conectar ou operar a conta, consulte o módulo interno `../crm/account-engineering.md`, que contém o procedimento de identidade, conexão e armazenamento seguro de credenciais.
 
 Na documentação pública da Kommo consultada, os endpoints específicos de Salesbot listados permitem:
 
@@ -66,11 +66,11 @@ Na documentação pública da Kommo consultada, os endpoints específicos de Sal
 
 O índice oficial consultado não lista endpoints CRUD para criar, editar ou apagar a definição completa do bot/gatilhos. Não prometa que a API REST pública gerencia o editor visual ou aceita JSON arbitrário do Salesbot só porque existem endpoints para listar, iniciar e parar bots. Use a UI/importação/código documentados ou confirme uma superfície oficialmente suportada antes de projetar a gravação. A documentação também afirma que métodos não descritos na referência pública não têm suporte garantido.
 
-A API CRM tem operações próprias para entidades e campos, incluindo métodos documentados para adicionar, atualizar e apagar campos personalizados. Isso não implica que qualquer usuário do Codex tenha permissão para executá-los ou que um token de CRM acesse API de chat, canais ou configurações de automação. Confirme endpoint, escopo, conta e autorização por operação; o módulo `../../kommo-crm/SKILL.md` é a autoridade para implementação.
+A API CRM tem operações próprias para entidades e campos, incluindo métodos documentados para adicionar, atualizar e apagar campos personalizados. Isso não implica que qualquer usuário do Codex tenha permissão para executá-los ou que um token de CRM acesse API de chat, canais ou configurações de automação. Confirme endpoint, escopo, conta e autorização por operação; o módulo `../crm/account-engineering.md` é a autoridade para implementação.
 
 ### Tratamento do token
 
-Uma integração privada e um token de longa duração podem viabilizar chamadas ao workspace; a documentação da Kommo alerta que tokens de longa duração são para integrações privadas e operam com direitos administrativos. OAuth 2.0 oferece escopos de acesso autorizados. A credencial deve ser provisionada em cofre/ambiente local do processo cliente, fora de prompt, chat, JSON versionado, código, log e pasta sincronizada. Não solicite nem reproduza o valor do token. Para setup, identidade, privilégio e armazenamento, siga a referência de conexão da `kommo-crm`.
+Uma integração privada e um token de longa duração podem viabilizar chamadas ao workspace; a documentação da Kommo alerta que tokens de longa duração são para integrações privadas e operam com direitos administrativos. OAuth 2.0 oferece escopos de acesso autorizados. A credencial deve ser provisionada em cofre/ambiente local do processo cliente, fora de prompt, chat, JSON versionado, código, log e pasta sincronizada. Não solicite nem reproduza o valor do token. Para setup, identidade, privilégio e armazenamento, siga a referência interna de [conexão](../crm/connection.md).
 
 ## Fluxo de trabalho para desenhar um bot
 
@@ -112,6 +112,11 @@ Qualquer alteração real continua sujeita à autorização para a conta e para 
 
 ## Referências internas
 
-- [Arquitetura entre Agente de IA e Salesbot](kommo-native-automation.md)
-- [Detalhes do agente de IA e ferramentas Kommo](agentes-ia.md)
-- Para execução da conta e autenticação, use o módulo técnico integrado `../../kommo-crm/SKILL.md`.
+- [Arquitetura entre Agente de IA e Salesbot](native-automation.md)
+- [Detalhes do agente de IA e ferramentas Kommo](../ai/native-agents.md)
+- Para execução da conta e autenticação, use o módulo técnico integrado `../crm/account-engineering.md`.
+
+
+## Auditoria de fluxo existente
+
+Quando o problema depender de ramificações ou várias automações, use a [auditoria por grafo](salesbot-graph-audit.md). Analise entradas reais, passos, alternativas, timeout, chamadas entre bots e consumidores dos campos. Um `goto` para passo anterior é uma pista de ciclo; a comprovação exige caminho e condição de saída. Um validador que passa não autoriza ativação nem comprova política do canal.

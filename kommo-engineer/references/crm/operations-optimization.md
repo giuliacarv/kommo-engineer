@@ -45,7 +45,7 @@ Para experimento, registrar hipótese, segmento, baseline, mudança, métrica pr
 
 ## Apoio de outras skills
 
-Consultar a skill disponível pelo nome/caminho instalado quando a especialidade for necessária. A kommo-crm mantém o contrato de conta, dado e execução; a especialista aprofunda a tarefa, sem autorizar ações em outro sistema.
+Consultar a skill disponível pelo nome/caminho instalado quando a especialidade for necessária. A Kommo Engineer mantém o contrato de conta, dado e execução; a especialista aprofunda a tarefa, sem autorizar ações em outro sistema.
 
 | Skill indicada pelo usuário | Contribuição para Kommo | Limite da contribuição |
 |---|---|---|
@@ -61,3 +61,8 @@ Consultar a skill disponível pelo nome/caminho instalado quando a especialidade
 | `find-skills` | Procurar lacuna especializada que as ferramentas/skills atuais não resolvem | Não instalar pacotes por rotina; verificar qualidade e dependências antes de propor |
 
 Prefira a cópia específica do projeto quando aplicável; verifique divergências materiais com a instrução atual. Não importe o funil, ICP, IDs, playbook ou sistemas da Metha para outra conta.
+
+
+## Duração, reentrada e atribuição de tempo
+
+Aprofunde métricas de aging em [tempo por etapa e SLA](../analytics/stage-time-and-sla.md): distinga criação, entrada real, visita concluída, reentrada e intervalo de responsável. Compare coortes e cobertura antes de atribuir demora a uma pessoa; um painel local ou média de durações abertas/fechadas não comprova o histórico completo.

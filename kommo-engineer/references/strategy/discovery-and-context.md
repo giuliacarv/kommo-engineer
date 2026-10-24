@@ -36,3 +36,8 @@ A context pack is a concise working summary, not a new source of truth. Keep sou
 | What is not known? | Missing facts, access, and owner decisions |
 | What is the main constraint? | Evidence-backed bottleneck or competing explanations |
 | What is the smallest next decision? | Specific question, read-only validation, or proposed plan |
+
+
+## Conversation evidence
+
+When the user supplies transcripts, use [conversation-led onboarding](conversation-led-onboarding.md) to separate participant roles, observed process, exceptions and proposals. Preserve sample coverage and counterexamples. Do not require transcripts for every project or turn recurring wording into a universal qualification rule.

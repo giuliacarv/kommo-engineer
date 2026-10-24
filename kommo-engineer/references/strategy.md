@@ -6,3 +6,5 @@ proposta, fechamento e retenção quando aplicável.
 Use conceitos de SDR/BDR, SPIN/BANT/MEDDIC apenas quando ajudarem o processo.
 Evite disparos em massa, atribuição equivocada e regras que gerem sobreposição entre vendas e bots.
 Nunca invente impacto percentual ou atribuição causal. Separe ganhos esperados de medidos.
+
+Para aprofundar: [discovery](strategy/discovery-and-context.md), [RevOps](strategy/revops-and-pipeline.md), [operações](strategy/sales-operations.md), [ciclo do cliente](strategy/customer-lifecycle.md) e [modelo de decisão](decision-model.md).

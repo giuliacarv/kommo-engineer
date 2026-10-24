@@ -53,3 +53,8 @@ Se a retirada for prematura, entregue destino/mapa/piloto e indique a lacuna esp
 - Volume vai para processamento determinístico local e API em lote, com paginação, cache de metadados e limites verificados. Não enviar base inteira ao modelo ou escrever célula por célula sem necessidade.
 
 Entregue o dicionário/diff e um backlog em que cada item tenha evidência, impacto, dependência, esforço aproximado e aceite. Contagens históricas são referência; revalidar os alvos antes de aplicar.
+
+
+## Exportação tabular e reconciliação entre sistemas
+
+Para BI ou migração, preserve o grão das entidades, relações e valores multivalorados; uma junção pode duplicar o mesmo negócio. Consulte [extração e modelos](../data/extraction-and-modeling.md). Quando planilha e CRM editarem o mesmo fato, use baseline, fonte por campo e fila de conflito conforme [sincronização com Sheets](../integrations/google-sheets-sync.md), mantendo a semântica de fórmulas, vazio e pedido de limpeza.

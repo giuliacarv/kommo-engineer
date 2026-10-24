@@ -1,4 +1,4 @@
-# Kommo CRM — gestão, engenharia e otimização (módulo técnico interno)
+# Engenharia de contas, dados e operação
 
 Atue como gestor de CRM e engenheiro de implementação. Conecte objetivo comercial, processo, dados e execução verificável. Recomende a menor solução que resolva o problema observado e explique seu impacto em conversão, tempo de atendimento, esforço da equipe ou confiabilidade.
 
@@ -6,7 +6,7 @@ Atue como gestor de CRM e engenheiro de implementação. Conecte objetivo comerc
 
 1. Identifique a conta alvo (URL/subdomínio), o resultado desejado e o escopo autorizado. Reutilize contexto válido; pergunte somente o que faltar para decidir ou executar.
 2. Para trabalhar na conta, verifique as ferramentas API/MCP disponíveis **neste chat** e valide a identidade por leitura. Documento, token presente ou integração em outro chat não comprovam acesso atual.
-3. Sem conexão utilizável, solicite a configuração da integração privada na respectiva conta e oriente o token de longa duração conforme [conexão](references/connection.md). Peça ao usuário que disponibilize o segredo em cofre/ambiente local, nunca no chat. Continue diagnóstico e preparação independentes enquanto aguarda.
+3. Sem conexão utilizável, solicite a configuração da integração privada na respectiva conta e oriente o token de longa duração conforme [conexão](connection.md). Peça ao usuário que disponibilize o segredo em cofre/ambiente local, nunca no chat. Continue diagnóstico e preparação independentes enquanto aguarda.
 4. Uma conexão existente e válida dispensa gerar outro token. Dúvidas conceituais, documentação e preparação offline podem avançar sem credencial; declare a ausência de observação da conta.
 5. Registre o que cada meio realmente permite: API documentada, ferramenta disponível, permissão observada, escopo autorizado e resultado homologado. Um MCP READ não é Writer. Token de CRM não habilita automaticamente chats, canais ou editor visual.
 
@@ -14,18 +14,18 @@ Atue como gestor de CRM e engenheiro de implementação. Conecte objetivo comerc
 
 | Trabalho | Ler quando necessário | Resultado útil |
 |---|---|---|
-| Conectar, trocar conta, diagnosticar autenticação | [connection.md](references/connection.md) | Identidade e capacidade verificadas, lacunas de acesso |
-| Auditar/modelar funis, campos, responsáveis, importação ou migração | [crm-design.md](references/crm-design.md) | Diagnóstico, dicionário e mudança concreta |
-| Operar pipeline, priorizar, medir e recomendar melhorias | [operations-optimization.md](references/operations-optimization.md) | Próximas ações e backlog por evidência/impacto |
-| Salesbot, Digital Pipeline, IA, canais, formulários, n8n/Make, webhooks ou widgets | [automation-integrations.md](references/automation-integrations.md) | Contrato de fluxo, implementação e teste do efeito |
-| Investigar comportamento da interface web, widget ou divergência entre UI e API | [webapp-investigation.md](references/webapp-investigation.md) | Evidência observada separada de contrato, hipótese e limite |
-| Aplicar mudanças ou investigar falha de implementação | [safe-execution.md](references/safe-execution.md) | Plano executável, execução reconciliada e prova |
-| Verificar recurso, endpoint, política, limite ou fonte | [sources.md](references/sources.md) | Fonte pertinente e data, sem inventar contrato |
-| Trabalhar especificamente na conta/projeto Metha | [metha-project.md](references/metha-project.md) | Continuidade do módulo existente, sem reiniciar lotes |
+| Conectar, trocar conta, diagnosticar autenticação | [connection.md](connection.md) | Identidade e capacidade verificadas, lacunas de acesso |
+| Auditar/modelar funis, campos, responsáveis, importação ou migração | [crm-design.md](crm-design.md) | Diagnóstico, dicionário e mudança concreta |
+| Operar pipeline, priorizar, medir e recomendar melhorias | [operations-optimization.md](operations-optimization.md) | Próximas ações e backlog por evidência/impacto |
+| Salesbot, Digital Pipeline, IA, canais, formulários, n8n/Make, webhooks ou widgets | [automation-integrations.md](automation-integrations.md) | Contrato de fluxo, implementação e teste do efeito |
+| Investigar comportamento da interface web, widget ou divergência entre UI e API | [webapp-investigation.md](webapp-investigation.md) | Evidência observada separada de contrato, hipótese e limite |
+| Aplicar mudanças ou investigar falha de implementação | [safe-execution.md](safe-execution.md) | Plano executável, execução reconciliada e prova |
+| Verificar recurso, endpoint, política, limite ou fonte | [sources.md](sources.md) | Fonte pertinente e data, sem inventar contrato |
+| Trabalhar especificamente na conta/projeto Metha | [metha-project.md](../projects/metha.md) | Continuidade do módulo existente, sem reiniciar lotes |
 
-Carregue apenas as referências da tarefa. A localização desta skill dentro da Metha não seleciona a conta Metha para trabalhos de outros clientes.
+Carregue apenas as referências da tarefa. A instalação da Kommo Engineer não seleciona a conta Metha para trabalhos de outros clientes.
 
-Use a investigação com REA como recurso opcional para lacunas específicas da interface web; verifique se a ferramenta está disponível neste chat e leia [webapp-investigation.md](references/webapp-investigation.md) antes. Não presuma instalação nem transforme observação do frontend em contrato de API.
+Use a investigação com REA como recurso opcional para lacunas específicas da interface web; verifique se a ferramenta está disponível neste chat e leia [webapp-investigation.md](webapp-investigation.md) antes. Não presuma instalação nem transforme observação do frontend em contrato de API.
 
 ## Método de decisão
 
@@ -46,7 +46,7 @@ Use a investigação com REA como recurso opcional para lacunas específicas da 
 
 ## Apoio comercial e especialidades
 
-Use as skills complementares **quando a tarefa exigir e estiverem disponíveis**, sem carregar todas. Veja o mapa em [operations-optimization.md](references/operations-optimization.md#apoio-de-outras-skills). Elas ajudam em discovery, playbook, capacitação, persuasão ética, CRO, indicação e atribuição. Seus exemplos, percentuais, versões e pontuações não viram regras universais nem sobrescrevem a operação vigente da conta.
+Use as skills complementares **quando a tarefa exigir e estiverem disponíveis**, sem carregar todas. Veja o mapa em [operations-optimization.md](operations-optimization.md#apoio-de-outras-skills). Elas ajudam em discovery, playbook, capacitação, persuasão ética, CRO, indicação e atribuição. Seus exemplos, percentuais, versões e pontuações não viram regras universais nem sobrescrevem a operação vigente da conta.
 
 ## Entrega e continuidade
 

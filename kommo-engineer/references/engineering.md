@@ -18,3 +18,5 @@ Webhooks gerais Kommo usam x-www-form-urlencoded; parseie segundo documentação
 
 ## Resultado
 Considere entregue somente com evidência observável, método e ambiente identificados.
+
+Detalhes: [engenharia de conta](crm/account-engineering.md), [integrações](crm/automation-integrations.md), [conexão](crm/connection.md), [execução](crm/safe-execution.md) e [MCP](integrations/kommo-mcp.md).

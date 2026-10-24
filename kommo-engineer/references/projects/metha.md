@@ -4,7 +4,7 @@ Aplicar somente quando a conta/tarefa alvo for a Metha ou o pedido tratar explic
 
 ## Retomar o módulo
 
-A partir da pasta da skill, `../../..` resolve a raiz do checkout. Ler `kommo-crm/README.md`, `kommo-crm/PLANO_TATICO.md`, `kommo-crm/execution/STATE.json` e `kommo-crm/AGENTS.md`; consultar `RULES.md`, `SOURCES.md` e documentos do lote quando necessários. O cursor único é `STATE.json`; `CHECKPOINT.md` explica evidência e próxima ação. Não reiniciar etapa concluída nem criar plano concorrente.
+Localize o checkout Metha pelo contexto do projeto e confirme a existência do módulo `kommo-crm/`; o caminho de instalação desta skill não identifica a raiz do checkout. Os caminhos abaixo são relativos a esse checkout e os comandos devem ser executados nele. Ler `kommo-crm/README.md`, `kommo-crm/PLANO_TATICO.md`, `kommo-crm/execution/STATE.json` e `kommo-crm/AGENTS.md`; consultar `RULES.md`, `SOURCES.md` e documentos do lote quando necessários. Se o checkout não estiver disponível, trate este adaptador como referência histórica e peça sua localização somente se necessária para o trabalho. O cursor único é `STATE.json`; `CHECKPOINT.md` explica evidência e próxima ação. Não reiniciar etapa concluída nem criar plano concorrente.
 
 ```powershell
 node kommo-crm/scripts/cli.mjs validate

@@ -4,11 +4,11 @@ Este módulo reúne uma síntese operacional original da documentação oficial 
 
 O material não reproduz os artigos integralmente. Use os links do índice no final para consultar a versão oficial atualizada quando a pergunta depender de disponibilidade, planos, limites, nomes de controles ou comportamento recente.
 
-## Como carregar este módulo
+## Como usar esta referência
 
-- Na skill mestre, leia este arquivo para dúvidas sobre configuração, comportamento, desenho ou diagnóstico de recursos nativos de IA.
-- Para tarefas focadas em IA nativa, carregue o módulo integrado `../kommo-strategic-automation-architect-agentes-ia/SKILL.md`; este arquivo continua sendo a referência detalhada única para o produto.
-- Para estado de uma conta, configurações, permissões ou execução técnica, use o módulo interno [`kommo-crm`](../../kommo-crm/SKILL.md) como autoridade técnica. Uma proposta de configuração não prova o estado atual da conta.
+- Na Kommo Engineer, leia este arquivo para dúvidas sobre configuração, comportamento, desenho ou diagnóstico de recursos nativos de IA.
+- Para tarefas focadas em IA nativa, carregue o guia interno [operação de IA](operating-guide.md); este arquivo é a referência detalhada única para o produto, acessível diretamente pela Kommo Engineer.
+- Para estado de uma conta, configurações, permissões ou execução técnica, use a [engenharia de contas](../crm/account-engineering.md) como autoridade técnica. Uma proposta de configuração não prova o estado atual da conta.
 
 ## Mapa dos recursos de IA
 
@@ -167,7 +167,7 @@ A documentação de agendamentos também descreve consulta, reagendamento e canc
 - A Kommo documenta o trigger “Parar agente de IA” para interromper um agente específico quando o lead entra numa etapa. Confirme quais conversas e agentes são afetados antes de usar.
 - Transferência ao atendente, encerramento do chat e desativação do agente têm semânticas diferentes. Defina o ponto de transferência, responsável, alerta, contexto compartilhado e condição de parada.
 - O material de uso consultado indicava uma espera de cinco minutos depois que um chat era encerrado antes de iniciar nova conversa. Trate isso como comportamento versionado, não como contrato permanente.
-- Se o agente iniciar Salesbot, audite o grafo completo do bot, os demais triggers e a tomada de controle. Use [kommo-native-automation.md](kommo-native-automation.md) para projetar a fronteira Agente de IA/Salesbot.
+- Se o agente iniciar Salesbot, audite o grafo completo do bot, os demais triggers e a tomada de controle. Use [../automation/native-automation.md](../automation/native-automation.md) para projetar a fronteira Agente de IA/Salesbot.
 
 ## Voz, teste e lançamento
 
@@ -243,7 +243,7 @@ O Power-up/Ativação de IA associado a Salesbot é descrito pela Kommo como rec
 4. Antes de escrever dados, confira o campo, a semântica, permissões, duplicidade, retries e preservação de valores existentes.
 5. Evite dois agentes, Salesbots e regras de pipeline respondendo ao mesmo evento. Prove exclusão mútua e regra de parada.
 6. Meça resolução, transferência, lacunas, demora, qualidade, erros de gravação, gasto de créditos e reabertura de conversa. Não use volume de respostas como medida suficiente de sucesso.
-7. Para decisões que mudam estado ou contactam clientes, siga a proposta e o gate de aprovação da skill mestre e confirme a autorização específica do usuário.
+7. Para decisões que mudam estado ou contactam clientes, siga a proposta e o regra de autorização da Kommo Engineer e confirme a autorização específica do usuário.
 
 ## Índice de documentação oficial consultada
 
@@ -294,6 +294,11 @@ Os links são fontes da Kommo, não conteúdo embarcado. As páginas abaixo fora
 
 ## Referências internas
 
-- [Guia de arquitetura entre Agente de IA e Salesbot](kommo-native-automation.md)
-- [Controle, aprovação, piloto e reversão](automation-governance.md)
-- [Handoff técnico para Kommo](kommo-handoff.md)
+- [Guia de arquitetura entre Agente de IA e Salesbot](../automation/native-automation.md)
+- [Controle, aprovação, piloto e reversão](../automation/governance.md)
+- [Handoff técnico para Kommo](../strategy/execution-contract.md)
+
+
+## Fronteira com agentes externos
+
+Quando o usuário pedir backend próprio, modelo local/nuvem, memória persistente ou recuperação vetorial, consulte [agentes externos e RAG](external-rag-agents.md). Os componentes desse desenho não pertencem automaticamente ao Agente de IA nativo Kommo. Compare custo, manutenção, privacidade, ferramentas e controle de envio antes de escolher; não exija instalar uma stack externa para usar as funções nativas.

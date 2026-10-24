@@ -7,7 +7,7 @@
 - Smoke sem rede, verificações estruturais limitadas e diagnósticos.
 - Schemas JSON publicados como referência do formato; a CLI ainda não executa validação por schema.
 - Cinco procedimentos iniciais documentados com fontes oficiais.
-- Conteúdo das skills `kommo-crm`, `kommo-strategic-automation-architect` e `kommo-strategic-automation-architect-agentes-ia` transferido para módulos internos; `kommo-mcp` permanece como guia legado específico de um servidor.
+- Conhecimento das quatro fontes Kommo consolidado em referências próprias de CRM, estratégia, automação, IA, integração e projeto; um único ponto de entrada `SKILL.md`. Mapeamento e hashes em `content-integration.json`.
 - Biblioteca de busca textual de procedimentos e lacuna visual explícita.
 - Relatório, treinamento e Playbook derivados de entregas registradas.
 - Guia de instalação Windows e scripts PowerShell/Python.
@@ -23,7 +23,7 @@ O relatório de revisão recebido junto a esta atualização registra 42/42 test
 - Migração dos 19 arquivos da v0.2.0 do Work: não fornecidos.
 - Homologação da instalação, ativação e PowerShell no Windows.
 - Homologação de API, Salesbot ou n8n numa conta real autorizada.
-- Capturas reais da interface e mapa completo de todos os nós Salesbot.
+- Homologação atual das capturas fornecidas e cobertura completa de todos os nós Salesbot. Os arquivos existentes estão indexados no catálogo visual.
 - Cliente HTTP autenticado, disparos ou mutações remotas automáticas.
 - Migração de esquemas entre versões, recuperação automática de operações interrompidas.
 - Instrumentação confiável de tokens por modelo/ferramenta.
@@ -31,3 +31,12 @@ O relatório de revisão recebido junto a esta atualização registra 42/42 test
 
 Os procedimentos documentados não são componentes remotos testados; use a skill como
 orquestradora dos módulos estratégicos e técnicos, além de gerenciadora local, e valide os recursos Kommo conforme cada ambiente. Esta revisão não foi homologada numa conta Kommo; nenhuma conta foi acessada ou alterada e o ZIP definitivo não foi gerado.
+
+## Integração de conteúdo em 23/10/2026
+
+Preservados CLI, schemas, templates, procedimentos, recursos visuais e guias anteriores. Acrescentados modelo de decisão entre áreas, referências nativas por assunto, conhecimento do conector MCP e busca textual ampliada. Conteúdo de produto continua versionado: esta manutenção não revalida funcionalidades numa conta Kommo. Veja o [registro de cobertura](content-integration.json).
+
+
+## Expansão por referências externas — 23/10/2026
+
+Nove repositórios locais foram examinados por documentação e trechos de implementação relevantes. A skill recebeu nove aprofundamentos próprios, um contrato reutilizável e busca ampliada, preservando o conteúdo anterior. A revisão registra o que já existia, o que foi expandido e limitações dos exemplos, inclusive deploy simulado, cache sem isolamento por conta, perda de zero em transformação e cobertura limitada de tracking por navegador. Veja o [relatório desta expansão](external-reference-review.md).

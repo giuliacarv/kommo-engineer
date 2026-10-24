@@ -64,3 +64,8 @@ Widget: usar SDK/contexto público e lifecycle suportados. Segredo privilegiado 
 Definir evento de negócio (qualificado, ganho, receita), instante real, valor/moeda, origem e IDs de clique/campanha disponíveis. Contratar normalização/consentimento dos dados, deduplicação por identificador estável e reconciliação CRM ↔ plataforma. Não contar contato duplicado como nova conversão nem marcar toda resposta como lead qualificado.
 
 Kommo, Google Ads, Meta Marketing API e Meta CAPI exigem conexões/autorizações próprias. Revalidar versão, janela, elegibilidade e schema nas docs atuais. Envio de conversão/alteração de mídia só integra o escopo quando solicitado; preparar o contrato pode avançar offline.
+
+
+## Aprofundamento por componente
+
+Para decisões de implementação, consulte [nó community n8n](../integrations/n8n-community-nodes.md) para tipos/itens/cache, [Google Sheets](../integrations/google-sheets-sync.md) para sincronização bilateral e [widgets React](../engineering/widgets-and-react.md) para callback, pacote e backend. Para LLM fora da Kommo, use [agente externo](../ai/external-rag-agents.md), com memória e envio próprios; esses mecanismos não são capacidades implícitas do agente nativo.

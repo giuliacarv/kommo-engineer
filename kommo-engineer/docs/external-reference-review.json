@@ -1,0 +1,1526 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-23",
+  "purpose": "Aproveitar individualmente nove fontes externas para ampliar conteúdo próprio da Kommo Engineer, preservando a revisão anterior.",
+  "baseline_skill_files": {
+    "manifest.json": "9b6815391c37385a8e70a93566e76079f89ac34eb1ca4c7e1f277cb88a4b3fa4",
+    "SKILL.md": "587b525c78299c65f15dd2e8610eb641e19d2464851c774031495b929dea4697",
+    "agents/openai.yaml": "a98d9b52d51f0f622cceb5345bc9cbeb670e737fb1bc3295a369c23e823f19ea",
+    "docs/content-integration.json": "27dadea86d12143b9c1db60ff24083ce0a86f39791dd8f1d51e6d40315eef1d6",
+    "docs/content-integration.md": "b9eece2fdd643dc5945904481e0f803c42dddafc82feeeb96022bad1c21b08ad",
+    "docs/release-notes.md": "8b4dfb7e1519193aef62ecd6fed7efb202b8c6199e4ae4ddc45908acdb400afd",
+    "docs/windows-install.md": "01b98bf770435b7cc2289d7755b271fd650f5c5a4a841d8608159a98669bdc89",
+    "references/architecture.md": "cfc9b5e9df66f55553f1e2e6549ddbbbc97f64821b8c92b53cb29c13096b0da9",
+    "references/audit.md": "d858b2dfef1bd7fed5141842e1d3fd2c499aa09172165c455b7656b85a425a23",
+    "references/decision-model.md": "c6bfad3d62dcb2d2e479c72c55a688cc3988f6ce813829ae28e774151456e6c9",
+    "references/documentation.md": "30947f5ef50d956141e9c06e9770ff8ad37a5b7c90377d2336c9e8f31fc72652",
+    "references/engineering.md": "ff69bab92c1545087e001bcb574324e7b6e2efa521f5564a55cd8bfcb65d4aac",
+    "references/execution.md": "729cf8a2fb4e5d253dc519ecc3076a66862ddbc26de2a95d8d077ad4d235f9b1",
+    "references/goals.md": "18c577591e58946b6ceb215ca49b1b2685690915cadc303e5e73bb8f03315c79",
+    "references/knowledge.md": "982bd99b93427d1877709be16a90c93b67627f76cba82aa5580890d2f1cc3667",
+    "references/routing.md": "34f4427d77ff6c0581615f212be796b970a7bf0e3adef906dfd41d370dc553b5",
+    "references/setup.md": "7322b8d16e2ff6e2d6fb7d95cf365879b62d5a3b4fdb2753af22b904d10d11d0",
+    "references/strategy.md": "481573ef2d349dfc18861f495a4acd522a40d865f35c4ae087fd487455853887",
+    "schemas/event.schema.json": "292e9b6cd0d46b8ad985901c164d7d0beb8342d7d021a3af01fbe002910d662d",
+    "schemas/goal.schema.json": "d21d1f396c11315198b17577aecec10e2600278ed3328423f4f3e2473dd94bbf",
+    "schemas/project.schema.json": "8f62456c9625e55e0c94e8b4c17ded1e6a7614b8621777a18b3e8cd554e46637",
+    "schemas/README.md": "493d17c91b403ab8644dfeb9603cc7d276c4bbfd3aeaecc293c7c68aac2972f4",
+    "schemas/setup-fields.json": "194b13c0511d2e54dc0928762dfc40ead672e595781028a6c88d840bb92dd8d9",
+    "schemas/snapshot.schema.json": "97b29f2849333909232a7283b603bf12b0d1388a10f7efb88127b22d2d7a77ac",
+    "schemas/state.schema.json": "e879699e8f1372d7d3f3a4896e7340e7c74b49108179f233d0ddc6fb36e9afec",
+    "scripts/connection-doctor.mjs": "1026ca918964a69e6606a7dd5f60cb4272891608d9d99b2f3fa6eac57174529f",
+    "scripts/connection-doctor.test.mjs": "57df4413affefe04a1ba610ad8801db37b3c613f69ed5756e9765c9e6cb86e5a",
+    "scripts/doctor.ps1": "7b313ed66f17c3789c4d10dc5355b5f75e18af0c1e386bc21a73a16d886d865c",
+    "scripts/ke.py": "300e0ef3f3121464bf041382076ce6ea98e9a4928ead654ad4efe3bc030ad375",
+    "tests/acceptance.md": "ea1b6145c0303bc06891077d70fd0d5972e0e72c41407a6c5f3e59c997eb69d3",
+    "tests/test_cli.py": "b060830e26aa96aa2d6fdaed161d08a08978e8367c79c29405a5dba6693d6ebc",
+    "tests/test_integrity.py": "9d65d9e5337e8d513eac11d65c7b6f2929b5d9fac06a70e96ad3a9cb30453a53",
+    "tests/test_stage3.py": "adbd9a614091f34b1810640ee4c063bd35ae65e8fc4172d789199be2ca717b21",
+    "references/ai/native-agents.md": "5e23522b2ec27ed86710c0cd29616b74927a73011b3e72b022f7036029f85c58",
+    "references/ai/operating-guide.md": "da20c45a463dd005ebfa219c613588271c535c3cb9fe4d53f3800abf5da8b8a8",
+    "references/automation/governance.md": "2906ade3528a40161b40f3ddac505587c09c43f3c7fb0382fd6943ea9ee7e2e1",
+    "references/automation/native-automation.md": "e8ea044cdd34a80260be890e6b72ecf0838e6bc9ec9923cdd90a0c95a8d591aa",
+    "references/automation/salesbot-playbooks-and-api.md": "419f76a5acd022d0278c720e3644b0956c19c0dd5d6193375ffd37577b262533",
+    "references/crm/account-engineering.md": "72c9a014afb600eba93760d207b43517b0d1173337f33efb402ace88b6bd9a64",
+    "references/crm/automation-integrations.md": "39597dbfe0bbad78a5a546c335b7f927d9f597337d88c5c55374eee67112266b",
+    "references/crm/connection.md": "0157d6ad7b4f68bbe502f2617cd5366f3b3987d5193f62de6e4e9cd4ba0dc784",
+    "references/crm/crm-design.md": "2baedaa041aa687bea439d313bfc9c816a5b741bb501c4d65bd3bc9fe6425164",
+    "references/crm/operations-optimization.md": "341fc059e9d8a67b22541178ac49f77db94cbf4bf398997ab33cbee1446ba517",
+    "references/crm/safe-execution.md": "940ab2182d270774564e837f594ba9c6cd8f1568727690d7b7293244237e3305",
+    "references/crm/sources.md": "c6c9020ab34dc9aae160d7999127dc3bd060ce5a7742bc425398b925759f657f",
+    "references/crm/webapp-investigation.md": "6171c8bfcf2f29092698bd6b8973cd1deae40c0ea1bd54c4a2086323d6dab473",
+    "references/integrations/kommo-mcp.md": "de5e17fd985c95d9d28e0a912f897396ed733d41ff6531486d3fb999a3f0020b",
+    "references/knowledge/catalog.json": "bac445398182952d1129dfcd6b114a4a8efd60b2773fe6857e4306c4b7a37b46",
+    "references/knowledge/sources.json": "1c79728e91ff60d8b99aa99e15dea94cbeb3303fdd496c2e97c2884cb906fa71",
+    "references/projects/metha.md": "19ba4c98a18a092bdac6a7e3f9f170841776a7c5bbef5a87828bba4cbb17f5ca",
+    "references/strategy/commercial-design.md": "632868530123eaf5ffd9e31b6398e01aea2616f5c2367c5b496f7cefb83b41f1",
+    "references/strategy/customer-lifecycle.md": "ab17dd04a62b509723ef566af55293e2d665b5b004ed31f8f8cc8433dd0db826",
+    "references/strategy/discovery-and-context.md": "2880ec0dbc288b2bd649d20e826b72102a161d03417b4a9d2d7a64000e097c7b",
+    "references/strategy/documentation-and-visuals.md": "c25752739d9dab23d007ec1a1602681457a7df6676fc8d1d422e053ea712a899",
+    "references/strategy/execution-contract.md": "4b11e2eb417dd909d652030286ef93768e441d7a2042850560eaa2363ffc3bc4",
+    "references/strategy/proposal-and-approval.md": "abc22b69d15818deaafd27008e10cfc4dcb9428be8b488f0c66360be3e90eaa4",
+    "references/strategy/revops-and-pipeline.md": "bf8b9682c091d6d4daba10e1a8b3caef89d2dc7e06d35f36c468e1a7cea01119",
+    "references/strategy/routing-and-activation.md": "ff26e3c60d5157d56df9f6b8ffd40a1d5f83762429e85edb59b1990595f0edff",
+    "references/strategy/sales-operations.md": "6f46bf592432fc92362abd29dfe87c70d0483dc6bef3eb626a3a6da23bc127ba",
+    "references/strategy/workflow-architecture.md": "30cf60cb159bd04ccc99a3cb18d4a9bacf7cdb738b0d97ddd39459b01d255198",
+    "references/knowledge/contracts/n8n.md": "4a39a6ce1506453a8dd945e5a82270932378c16e5c0c2970c1622575d4306071",
+    "references/knowledge/contracts/rest-api.md": "d70b5d600b4fa225b92cea851595de5ec99e29fea8f059908adcbc05aff210b9",
+    "references/knowledge/contracts/salesbot.md": "469e986bc73d90e8c98be36e4e3c4ff0d3a0cc2fc4d55e440b5432b82ec4b0c1",
+    "references/knowledge/contracts/webhooks.md": "127b87e89ca2f934e82d11af2954b389cc9d3627e945fc8a49db86261d4a724b",
+    "references/knowledge/procedures/PROC-KOMMO-001-diagnostico.md": "c75c8155cdb74f7566c1385f9b3ed0692ac8f4289732aafbee3c688ff97f6c0f",
+    "references/knowledge/procedures/PROC-KOMMO-002-conexao-api.md": "69524fb03be768aed8356f313e014c1ba346dd040c88dd6754fde7cf3c98d83c",
+    "references/knowledge/procedures/PROC-KOMMO-003-campos.md": "327f47c874d2ac2807fbd04953dcc714161382b79dfc783afb3078cc71a2706d",
+    "references/knowledge/procedures/PROC-KOMMO-004-pipeline.md": "0fd71086a96fb44a737848f9d6e8e94071a5f847fcb62d00109dcaf32b5dc722",
+    "references/knowledge/procedures/PROC-KOMMO-005-salesbot.md": "7e6bcea310e82ead864e18294523abb7da9de3a008d99585754340bf583b2355",
+    "references/knowledge/visual/catalog.json": "7d62477a08389a49d0174bf91c0423a44352c93fba3d115fd50f1b4e5fbf3939",
+    "references/knowledge/visual/README.md": "5df55a364459ff2f4648d27f825627f959b97ceba4a3767c841a1a09f1fa0614",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/Guia_Salesbot_Kommo.md": "b228250cd15f540fa9f2bd20bb349f64385112ac78273b06f058a994af5b4bd6",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/LEIA-ME.md": "eb25f4d8e958fab9ec793916fe2ebeef25d5ea123eba5049415e08da8e734016",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/opcoes_gatilhos/Captura de tela 2026-10-23 153631.png": "bd18b0326e69ff1738e603cf25785aaac7ee6df3cdb277a69dc54debc2cdae91",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/opcoes_gatilhos/Captura de tela 2026-10-23 153832.png": "1563fd88b8282ef43fe988a7f1f1e68ed18f8b217f1c5e7bbba1c0f55af03445",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/opcoes_gatilhos/Captura de tela 2026-10-23 154103.png": "eb428e4e00a48b0a29b5536fbeba57613a7ed320b0afa12fb7ee3a4c342ff363",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/opcoes_gatilhos/Captura de tela 2026-10-23 154749.png": "7e9f5147f3ecfabf3fe8facd9803ec4ff36b00d85f2b8f9036baa21fceb21fd1",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155407.png": "8bc249a9eb7e62ae3a1677f402c502de037cd43716fcd2e33ab5afae81a93097",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155424.png": "d15e1ef0cacd69ef3c17f7c808f7b97cc0d23748f2e6baee0d8ca2e084e18eef",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155438.png": "c6ad31efc05be17c3f2beb3feb48cfd3b5b3138c04b82323dd696f318cb9d8ae",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155447.png": "0fd9bb4befac5a827ae052a6ea80bb73b1105a18edd9fea2adbe860661504c30",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155454.png": "482e47a85c46bde821d8a949ca327426f704d13baa144eb76e724bc2d9ff0956",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155518.png": "1b15bdc8c0614cda002c90db0c5aefecec29113090288d1496ea9f87ffc4e761",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155526.png": "a13fe56e4ceda3690f6b7d4197bbab0887bb66a9b244f00a3788bac646101641",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155536.png": "7206a2683fa963314832b2745596d370844e5e9ad35c8bceb2c115e1eb5e59e7",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155539.png": "34228bfce6af2480ab6c0c768585374351e61afc01264586b99e9d0318601b2a",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155627.png": "3eb7fee607edc17adfc2b4009f9ef68ad161561ad8acfe5778bab36c0ca915c0",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155722.png": "5a0b82c70e4767c78d9f4969c94bfc2e4756a70c37bb584a65832f3cec0d1009",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155741.png": "65a2d0d29df9d8e84739e94a5baecc220b1ded87634e24a2d01c5b8f3d7d1c3b",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155824.png": "e073ac87a94fae0498ebc4ed9bb65ef9caa5d361007f96261599d4dc8d0160ca",
+    "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/salesbot_passos.png": "04b0e0b3096911200ed313cd53f9b26a396ce30d3ce887c5684ebcf0c2e79430",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/00_menu_de_passos.png": "67f7633c4f4c3fd1b8cb3cba5672766961e202529d3b38d81c30da61e59bcabb",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/01_enviar_mensagem_botoes.png": "0fd9bb4befac5a827ae052a6ea80bb73b1105a18edd9fea2adbe860661504c30",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/01_enviar_mensagem_url.png": "c6ad31efc05be17c3f2beb3feb48cfd3b5b3138c04b82323dd696f318cb9d8ae",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/02_reacao.png": "8bc249a9eb7e62ae3a1677f402c502de037cd43716fcd2e33ab5afae81a93097",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/03_comentario.png": "d15e1ef0cacd69ef3c17f7c808f7b97cc0d23748f2e6baee0d8ca2e084e18eef",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/04_mensagem_interna_menu.png": "db692a9053876748a6a985204e11faf8d3f83845a873d50d96b22f3a48e9b6f3",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/05_mensagem_lista.png": "482e47a85c46bde821d8a949ca327426f704d13baa144eb76e724bc2d9ff0956",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/06_condicao_ia.png": "1b15bdc8c0614cda002c90db0c5aefecec29113090288d1496ea9f87ffc4e761",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/07_pausar.png": "a13fe56e4ceda3690f6b7d4197bbab0887bb66a9b244f00a3788bac646101641",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/08_inscrever_meta_expandido.png": "34228bfce6af2480ab6c0c768585374351e61afc01264586b99e9d0318601b2a",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/08_inscrever_meta_resumo.png": "7206a2683fa963314832b2745596d370844e5e9ad35c8bceb2c115e1eb5e59e7",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/09_acao_menu.png": "df068c6ac94bf9903b399d7c774df730c1796e5f38ac86f4a8e418c4b1e9f83c",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/10_condicao.png": "3eb7fee607edc17adfc2b4009f9ef68ad161561ad8acfe5778bab36c0ca915c0",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/11_validacao_menu.png": "b57b28a3b2d84f214832424cf94afd0b63efd24d3da1669fc3ad1e6265bdf690",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/12_ir_outra_etapa_menu.png": "0c20b4faf4a365528354d4dca946b9c46c1f08de0ddc3353b1417012bf773c18",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/13_iniciar_salesbot_menu.png": "43e237b33911dd91de37048641fd1337e249879f46afee005e9b7f1ae7d8306a",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/14_codigo.png": "65a2d0d29df9d8e84739e94a5baecc220b1ded87634e24a2d01c5b8f3d7d1c3b",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/15_widget_menu.png": "6fe1b586db4d08e57cf6b0fbda4482a75ec1c9514eee71c6c38525e91fc7af97",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/16_round_robin.png": "5a0b82c70e4767c78d9f4969c94bfc2e4756a70c37bb584a65832f3cec0d1009",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/17_parar_salesbot_menu.png": "1bcde86fa5053c6b596e79b5faa6c5bcb1763362131512e4797999e37f136d69",
+    "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/extra_canais.png": "e073ac87a94fae0498ebc4ed9bb65ef9caa5d361007f96261599d4dc8d0160ca",
+    "assets/templates/decision.md": "b8e8197b44153c23b33959ff2e94542bbb195c1c42ffd8e1a6afecf83a2dbde4",
+    "assets/templates/procedure.md": "fce917b11ce0515c1d2a9c021892f48e304e6f763010f5d5d62aa9469052d530",
+    "assets/templates/screenshot.md": "6d906c5838f8e536d5603bcb86f62b439c7c65f5c039d86a02648cf467c094e2",
+    "assets/templates/goal/plan.md": "7d4ab21b361845e82d6e68f938fccd6957d546db6f05ee0b6e597c2ad7f4eacb",
+    "assets/templates/project/AGENTS.md": "5c2482c7c842a315f8a6a466b304ace7bf8254a4946ccea3cb770bc56f4eb9d2"
+  },
+  "sources": [
+    {
+      "id": "EXT-001",
+      "directory": "Kommo-MCP",
+      "repo": "Miguelgbastos/Kommo-MCP",
+      "topic": "references/integrations/mcp-transport-and-capabilities.md",
+      "title": "MCP: transportes, capacidades e relatórios",
+      "license": "MIT, arquivo LICENSE presente",
+      "already": [
+        "Identidade por leitura, ferramentas disponíveis e segurança de credenciais",
+        "Retries e evidência de execução"
+      ],
+      "add": [
+        "Perfis de servidores MCP, stdio/HTTP e matriz de compatibilidade",
+        "Health/readiness versus identidade autenticada",
+        "Relatório calculado: população, fechamento, fuso e denominador"
+      ],
+      "cautions": [
+        "Nomes e schemas deste servidor diferem de runitsolutions/kommo-mcp",
+        "Compatibilidade automatizada declarada não é validação neste Codex"
+      ],
+      "commit": "97eaab686ad6a19c10b074cdad2d57cdaa74d915",
+      "inventory_sha256": {
+        ".dockerignore": "f1be2f946c86290ac9094044a0f933aea768bbc5238ff14e4e2f7128e99dd3e8",
+        ".editorconfig": "4179d24597c53611185228473574664e703ee0773a88c6f6c026d3bd57cd2259",
+        ".gitignore": "77fdfa5ead5e07f8b819e24e4c8a04cd531adddbe1d1a9f70485f457634d3c34",
+        ".prettierignore": "30519396ed38cec8a2a0b8d76dd77e4808b1136369980e94c21b6b29df4d35d9",
+        ".prettierrc.json": "0ae54efffafc5e869556d8310eecb88e87880c02db544700d55ce3afa0a0f59d",
+        "CHANGELOG.md": "fc96adf14f24533c913a76bfcbee76a741f078acaf3d372f59f80453f1228c9b",
+        "CODE_OF_CONDUCT.md": "4cf05e349f9844ab16d8339df825cb7f57401ea70e96f364d651e0dbb29ae6d0",
+        "CONTRIBUTING.md": "0566c4925b23167c69f88401a3c77ec387667bb321467d001dd7f35c49caebd0",
+        "Dockerfile": "a4cfc0c0f35c36a391ba69f235e8bd3498da293f5801caa1a35fde3ce345de27",
+        "env.example": "0c5bdbde4420f53cb97e2be838f75f7ec638189024ea7ab46b97a491d3e6ed95",
+        "eslint.config.js": "cb2a6c6f56e1893ff6c25cfd24809a0f2d66a3c0111fe55ec42f5e762cf1294b",
+        "LICENSE": "f6a242811fd938e51185d362622df49d21699feb56c263a1db96673941cacd41",
+        "MAINTAINERS.md": "0f2201f8d12a101d5d58215c13c87993ef6de14613dbb656c01aa272578cca56",
+        "package-lock.json": "61ccd43dbcc25a8cdb8326acb180d86be55a39d658c4b64dc363ae8b10944f51",
+        "package.json": "9045eccf76f0f8e514bc2348d32e2d087b2e23c6a2ddfe0bfaa61918bee9d116",
+        "README.en.md": "89a436a7225dccc95e38f99e5f8c4cd38300f120d2df53ffce8feafce8af0710",
+        "README.md": "caf3bdf6ac153d392f4d73e807a2771ae11929c769291af0f37fb200be3c2ecc",
+        "ROADMAP.md": "9b6b8f77fee65df02b132cf8819a3bfb8fc32fed3088c78eac822f77d65d440d",
+        "SECURITY.md": "0fe34deb548debc0b2a7b95666bfaff172591ad5319ac6efa9e373c65e0e78b9",
+        "tsconfig.json": "a74f57c17c1e673a7ac5488c71dfc125a8689396b0e3b026aeeaaf1b71b71474",
+        ".github/CODEOWNERS": "cb40fdfa1636fdab4b405fd7fbdf45f41cc80e000b524932e3e599949ed4246a",
+        ".github/dependabot.yml": "ea0cafbd307d98150048e357b3db444a0f9f9e740a92a4e099d199c0a3e0e5e0",
+        ".github/PULL_REQUEST_TEMPLATE.md": "ae7bba08455ab9caf17097c90349ad9199e1160466062c002802b478eab6c81a",
+        "docs/COMPATIBILITY.md": "5b9bcf81ccbc469a85eb1b8a0c5019442e7d7b719d867838873a2628de0736a6",
+        "docs/KOMMO_API_EVOLUCAO.md": "bf14627d22f96f697809dca0236008d82b433e1b09733c34ac54be557a1e98a9",
+        "docs/MCP_EVOLUCAO.md": "c1c3e3ff1afce6057d4cde7607d0ffba9049794d47bc0af1c9caad85e54eba05",
+        "src/ask-kommo.ts": "1fb87ba6582cefbc510a4d16dbd93303330cbf8c6578f452f860a7f354201952",
+        "src/http-streamable.ts": "2dd3384699f9d181ad59c11cd11199e0e04820c9a7fb8465f22539f40df1a0a4",
+        "src/kommo-api.ts": "5c9aeee9d0bb2230b11b0a63d8b4dc9c49bc81cc5ff30c147dce7906ff6673a7",
+        "src/stdio.ts": "6d21b969d5240f95d4ac418b7ee39bb87104135a443acb4d0bcb94233c2a8d82",
+        "test/http-streamable.test.mjs": "2c511772f524da366a53746511764bf807e2842eb7384660a7bd663fd57a621b",
+        "test/kommo-api.test.mjs": "2ccd440c962c6a2783555bebc928e3b7b1f2ae57d9660588122d8ed606a8d98e",
+        "test/official-client.test.mjs": "5bec87489ab95a60a6e97491e2ae58e2eaab83adfee06422cf6a90503b58c42c",
+        "test/stdio.test.mjs": "935776d5e996a5995c033c06c1e70c21342c0995e200021f0a1e439213ecc9b5",
+        "test/tool-handlers.test.mjs": "ff30d2360f354cf7f1bcf7ded2882ca73c80ff1baea0b90a9a2041c20cea0c01",
+        "src/mcp/prompts.ts": "8276e643cf450b84c2010f93655e97bf802a370e37f680f256a935ee1139ff14",
+        "src/mcp/resources.ts": "7120e4d22f5ce14bc068c5bf566d88025e5b4c1a94096f697d325dbe1a842dad",
+        "src/mcp/server.ts": "68dde52e178fa1d0bc9588c7ba8ef0ba0c69e95478a75d0cd2b0230fe701c4cd",
+        "src/mcp/tool-definitions.ts": "37127ae0ad1cca7ed228eb37406e18b39b2eb4d6a250acf0ed6daf2f43990f43",
+        "src/mcp/tool-handlers.ts": "224a9b64c83eed8696b0c1757f81f45c4ed966ce34251db5391f2374202b4596",
+        "src/mcp/types.ts": "28e17a9ed640833d6effebcc14ba1130ed7748f9446506eb5b1d345f593426d0",
+        ".github/ISSUE_TEMPLATE/bug_report.yml": "9703007912cf6da334dfdf372e90e8a0f112ca757404aa3aa3ee2e5af3e42aac",
+        ".github/ISSUE_TEMPLATE/config.yml": "60c97d3fcf20e5899418088c062ab115d7d84a2541cd1fc4b117b9e8e5e3c580",
+        ".github/ISSUE_TEMPLATE/feature_request.yml": "8e75ea42e37a80eacb1781f791f2140e79e7695a8c0490eeb993547fb2f11a85",
+        ".github/workflows/ci.yml": "24ebc43abaad9613448a936711cf533c09daf2ff2a846253ca70e46235790fd8",
+        ".github/workflows/codeql.yml": "0ba777d4ddbe27a311b2cc527f48e49614f869877f46bff4e856343f35248e4d",
+        ".github/workflows/release.yml": "b3e67e4e5aa73c02807edddefe994645e74d90d7e6210541def9155c6e8a66ee"
+      },
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "caf3bdf6ac153d392f4d73e807a2771ae11929c769291af0f37fb200be3c2ecc",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "f6a242811fd938e51185d362622df49d21699feb56c263a1db96673941cacd41",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "docs/COMPATIBILITY.md",
+          "sha256": "5b9bcf81ccbc469a85eb1b8a0c5019442e7d7b719d867838873a2628de0736a6",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "src/kommo-api.ts",
+          "sha256": "5c9aeee9d0bb2230b11b0a63d8b4dc9c49bc81cc5ff30c147dce7906ff6673a7",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "src/mcp/tool-definitions.ts",
+          "sha256": "37127ae0ad1cca7ed228eb37406e18b39b2eb4d6a250acf0ed6daf2f43990f43",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "src/mcp/tool-handlers.ts",
+          "sha256": "224a9b64c83eed8696b0c1757f81f45c4ed966ce34251db5391f2374202b4596",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "src/http-streamable.ts",
+          "sha256": "2dd3384699f9d181ad59c11cd11199e0e04820c9a7fb8465f22539f40df1a0a4",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "src/stdio.ts",
+          "sha256": "6d21b969d5240f95d4ac418b7ee39bb87104135a443acb4d0bcb94233c2a8d82",
+          "method": "static_document_or_selected_code_sections"
+        }
+      ],
+      "execution": "not_executed_no_dependencies_installed",
+      "treatment": "original_portuguese_synthesis_of_patterns_and_limitations_no_third_party_source_code_copied"
+    },
+    {
+      "id": "EXT-002",
+      "directory": "create-kommo-integration",
+      "repo": "kommo-crm/create-kommo-integration",
+      "topic": "references/engineering/widgets-and-react.md",
+      "title": "Widgets React, callbacks e empacotamento",
+      "license": "Licença customizada QSOFT baseada em MIT, com restrições adicionais no arquivo LICENCE",
+      "already": [
+        "SDK público, segredo no backend e teste de lifecycle"
+      ],
+      "add": [
+        "Manifest, locais, i18n e bundle de produção como contratos separados",
+        "Callback do SDK versus adaptação do wrapper React",
+        "Desmontagem, isolamento da UI e retorno de Salesbot validado"
+      ],
+      "cautions": [
+        "Gerador instala dependências; ler o projeto não autoriza executá-lo",
+        "Servidor exemplo armazena token em JSON e faz POST para return_url recebido; não transportar como padrão de produção"
+      ],
+      "commit": "421df75de1b9ce9d608d7c64da4f7b6424c21f92",
+      "inventory_sha256": {
+        ".editorconfig": "e11417fc0a2d849fd534377d6af3c1a2cb55917c7a9f185a72ee3c7c8b80b0f6",
+        ".gitignore": "0c0e96354db5f51d59cdf60787d38ec8fce9e465f7a254d94030bac2ed474f94",
+        ".prettierrc": "527bda966565e85191e6114b5f259bf04279a67055c04fbaad4a017da7a3e832",
+        "eslint.config.mjs": "1182fc101ede59f1e95312e56e07a50beb1f0e1b6346d8592a3c8d6634e9a01b",
+        "LICENCE": "420418de662406e1218b1db8f47bc56098b60027f068efa2cf716fc1d5746328",
+        "package.json": "781fc3a5918972018539a79d029e3a9419f140bf135321801dbc9c0fd0fe2f18",
+        "README.md": "2c640a351090d28808fc66b85b5138f03aea425336c8353a70910a064488a593",
+        "tsconfig.json": "d0d8411864315bb5c6dd56cbcf2b7493e554b427474ae6c096c607103b047733",
+        "tsup.config.ts": "9bc7b4a32cce72b46168a9fba9425540ac70cd6fa67bba8ad5acaacd097a7550",
+        "yarn.lock": "920d7b53d9561c7096e31336e1e1e5ea05ae764e6369a9ecea1862e1d8595fcb",
+        ".github/CODE_OF_CONDUCT.md": "50038ae4c6831a1d0dd7e35eb87fcae94065f57fece507eb2e3a86440cd29fc3",
+        ".github/CONTRIBUTING.md": "0596feb11b27e4cc6c6250e0dc3a49a81eade727f68408afdbd8350eece7ab95",
+        "cli/build.ts": "183de6ed70e9d952b6a6a9a2a9ead12bc61f6f8d7c0ad821a0cc7f6ffd9ede56",
+        "cli/index.ts": "1f3662fb75df233af7ee5c335d9e4fd6b70289da9fc037635eee3b9bc7789ac9",
+        "cli/types.ts": "5b2d723c03bfbadf61124cb7018c4e6f435c8625cd668c045ee71a27360e47ad",
+        "templates/kommo-react-integration/.editorconfig": "e11417fc0a2d849fd534377d6af3c1a2cb55917c7a9f185a72ee3c7c8b80b0f6",
+        "templates/kommo-react-integration/.gitignore": "5cf59bf7d117a5881e5bdf2fca3567fdc59227f6d32f97c569e7006b6b997361",
+        "templates/kommo-react-integration/.prettierrc": "527bda966565e85191e6114b5f259bf04279a67055c04fbaad4a017da7a3e832",
+        "templates/kommo-react-integration/README.md": "e1ccf52f8286c1901f29c9c35e1d7cd9307e80913055ab868678e19074b37102",
+        "templates/kommo-react-integration/client/.dockerignore": "d0cee1933a14515372956c67fafff876f8aca682ce8c62b46752939afc14f8ab",
+        "templates/kommo-react-integration/client/docker-compose.yml": "380c7221086b7710bfb2c703fe012d03cf0d89dab74a062b2a9750a0d9f18ad5",
+        "templates/kommo-react-integration/client/eslint.config.mjs": "fe8e5704d194ef0b4347bcd03e5b469b0f689d52ba092c988bec57288cd7948e",
+        "templates/kommo-react-integration/client/Makefile": "e6fd2627ee6c72d593230bc283b6e67e23fa28baf2e1ef56dff3732859735165",
+        "templates/kommo-react-integration/client/package.json": "80e3ae2ab5e191901bbd8f1659a1e97927de305c01ba38caf2dd79151e98552a",
+        "templates/kommo-react-integration/client/tsconfig.json": "81be0adb55402207fbed55e790ccf7d443c38af12d3b5f7f858495dd0950f8e4",
+        "templates/kommo-react-integration/client/webpack.config.ts": "9ebf881c143b5bbaf0ac8e3da883e809eb1f1f7bffc205e3e37f685fdde67975",
+        "templates/kommo-react-integration/client/yarn.lock": "252f2aad0fd61e77737bd052383e23fcfb467e7a0004b1fe2d650eda1c17d6db",
+        "templates/kommo-react-integration/server/.env.example": "af2ea6bab85395fdcefed4e50504421f5c2c58877c1df1c607d23ed44a44e2b8",
+        "templates/kommo-react-integration/server/package.json": "07f13d48b680ff69ab5158c847a876726b6d08fa2df2c9e19497a691d0763033",
+        "templates/kommo-react-integration/server/README.md": "a98ccadde10d9741b2dbb2dd915ea1f5a28e37b80d2dd6963f5cd9581cb006cd",
+        "templates/kommo-react-integration/server/tsconfig.json": "727a2c5ffcd97c372faa82bf1e295cdb3d4f4494a7fe7557b2c66abfb836f7dd",
+        "templates/kommo-react-integration/server/yarn.lock": "e73decf7faf5e979c8e8af80a3e79a202c526fa0a382d197c488a17c6e5a86a6",
+        "templates/kommo-react-integration/server/src/server.ts": "a1a834d1cda904dc72a7ea1892ac48d7db7155adb2fa782d36afa8381478aa34",
+        "templates/kommo-react-integration/server/src/server.types.ts": "e0af728025b34bbb3cb5205410d0db8339468515dee7b25b755ccf5526d657ec",
+        "templates/kommo-react-integration/client/public/manifest.json": "200b8d4c4f7a76098a51e6a42921259b03d3583a42bc9b6a59632af4129772b6",
+        "templates/kommo-react-integration/client/src/crmModuleAliases.ts": "65f0dbe885216ee0a5fd92a67334391bb1aaeb92cfd1982948c98aee0a69aa94",
+        "templates/kommo-react-integration/client/src/dev.index.ts": "26784d2b8cf7ce6d52fe121a6f286e330a826a705aa2b1e4d63ae58764a2784e",
+        "templates/kommo-react-integration/client/src/index.ts": "4b550db43bedd594b0cdde390bba37f0a8d5053a9bdd796c69b662cefb1f7a3e",
+        "templates/kommo-react-integration/client/src/integration.css": "a1954cd7518fef3d2fcc24817648ab6a69b28b24eb6b2bed2e689c001e2b5dcb",
+        "templates/kommo-react-integration/client/src/integration.ts": "e157ccec15a3a34a685803360596ff90d9701bb531257a25bad5a671c50773f6",
+        "templates/kommo-react-integration/client/vendor/Integration.ts": "ed48396041e92e0fdc1794259c367ee94debd6fa6b2f921db8488f20b2c19f5c",
+        "templates/kommo-react-integration/client/vendor/types/app.ts": "9614868e5895634ab40a891b414d2936655845455a159430476f5c264b4a5a56",
+        "templates/kommo-react-integration/client/vendor/types/declaration.d.ts": "91e6173ae29d3fa742ad1a9d7623a78aefa8b87bdc5794e3ee7c03cc1da611cf",
+        "templates/kommo-react-integration/client/vendor/types/global.d.ts": "9bcc0afdbd4027124803a2c4bac4d900fc3c2078dec4af4e47aa46695c9e8d3a",
+        "templates/kommo-react-integration/client/vendor/types/integration-types.ts": "807580a553e6fa7ef750e309343d7125bb055f2bc55a31cbdd47e75b04b0c7ff",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/advancedSettingsCallback/advancedSettingsCallback.tsx": "7dad49d4703f6a875f8b376099afd2c9b1b3f73d316660f47fc9850973368fa4",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/advancedSettingsCallback/index.ts": "6b2b4361ca391fc24a3253fe9c598c4a73f8a0fe4c2a8d059668f7f3d8db0e75",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/bindActionsCallback/bindActionsCallback.tsx": "f768f0dbdbb75e050308456023a3657d2fed6208feded1c0ae4fb19c17153ea2",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/bindActionsCallback/index.ts": "af8607d6e782594ca5ff2f0b92226531228b9eaf0d14d199030540b8c33e8518",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/contactsSelectedCallback/contactsSelectedCallback.tsx": "e030ffeb0fea94b63614152b2c665c5f731dce6370d47bdb0f355ae8bc7afbc5",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/contactsSelectedCallback/index.ts": "c16f89a03d214923435ed3029ef4e7f60fe8dfda324de5d7032a53a0512f6ced",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/destroyCallback/destroyCallback.tsx": "ace60ddc9bed9c94f2e7757f75996066b432e7905c07f69108dc252eebf56934",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/destroyCallback/index.ts": "6c685c012e990366c5943c7d387ed1bd7d68fcc0a02f36da1287e2ba72163d37",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/dpSettingsCallback/dpSettingsCallback.tsx": "5d6dd76d6b42922313fc18d28bb9f60d04590f39abf2d5a55f99436cf412203a",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/dpSettingsCallback/index.ts": "bc61351d8c8d91a51f15d6fd61832f8247fc3fdc4a40dc38e180b94b4706dade",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/initCallback/index.ts": "fb4213d33a1576049ac88aec5e141219de1007c595fea2bca1785091f95da217",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/initCallback/initCallback.tsx": "3aa8b002effe4cc5d76eed41746106474810fb45a875846ee0d3309fb2cb41c4",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/initMenuPageCallback/index.ts": "72b7dd0bd309d5e101987aedfd4ddba4138b207566ba15e86b11c3d46bafaf92",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/initMenuPageCallback/initMenuPageCallback.tsx": "013d98335dbf4843b1408cde3abb2cdd34a7b256145ff8c8837d03d40e5b969d",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/leadsSelectedCallback/index.ts": "d0307cef5997bee51737d2eef5e41ee9e403c2673ab282ccb5921cced0a4fd54",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/leadsSelectedCallback/leadsSelectedCallback.tsx": "3b7420d34b4fe00e9cd6a5457a61d14f96eb9a742dc215b7db0d730dbbc5f6ea",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/linkCardCallback/index.ts": "704d8d34f62672c3256d31660138ef300d12095c12552be94f3395dfe96a4e0e",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/linkCardCallback/linkCardCallback.tsx": "1b29446ebf77bfce5b0dfbc118b5a71799744abb3283c76f058fe0f3273f1d15",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/loadCatalogElementCallback/index.ts": "b5d6a15efecad6d63d5e5efd3f54f2dc7cc2a6ef66cfb3df21bf9c5eaf8e3432",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/loadCatalogElementCallback/loadCatalogElementCallback.tsx": "ec568802023f6117b1f54a4e867d8400a80accdc6a0e029fdf0fd8fcd0c04114",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/loadElementsCallback/index.ts": "0a444a53c35ccff0a18130129108002ee8e377e4d300818542d87492c3d64e0e",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/loadElementsCallback/loadElementsCallback.tsx": "a48000c7a0d9b8cd9a8f9682822d590ba12c908e19b4321b392dd79994bad86e",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/loadPreloadedDataCallback/index.ts": "ee7bfc7658196f760c6054618a4d0bddd375fe1fb58e8ce088e977abd63b17a8",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/loadPreloadedDataCallback/loadPreloadedDataCallback.tsx": "d0788e215f5677fb13a2fec0fa057263e708268d79a797a47e197eb00757d5eb",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/onAddAsSourceCallback/index.ts": "f87b286732003cd7da0e27f6fe24d664e548c4f0b91c77076e9efdbca2181e29",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/onAddAsSourceCallback/onAddAsSourceCallback.tsx": "c588a081f56b7d47488a979604b80a593b9bc32405b5c7b5126edd04e6898ae1",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/onSalesbotDesignerSaveCallback/index.ts": "711717439dd247d512b738a6dda2325d38e2a0acb1b788c2701a046da1f06686",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/onSalesbotDesignerSaveCallback/onSalesbotDesignerSaveCallback.tsx": "ef667ebbf9d0f3d5f50805afdcfefcc5fcc1ca845fc44c6f2f724dc4bd4c39eb",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/onSaveCallback/index.ts": "8a5507201afec5ee3d6f2a56a944b133ccfa29e0641bc9c4aeead99bd46f1864",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/onSaveCallback/onSaveCallback.tsx": "929faedf41d0848017db52a3cb309516c549e79f87bec5c251eb8d618c59f14d",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/renderCallback/index.ts": "0cf56e71fb14006412eee9124baa4e70f4ba5d0fdd1f281799e1d28729f51a5d",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/renderCallback/renderCallback.tsx": "4e4c883ff5384946cec16ed5f092349a99c79b2616fa255678dd3f02a0d6fe57",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/salesbotDesignerSettingsCallback/index.ts": "45ca03761721882e4092ddb3ad1b0e3002849f9157c5bddf65b1dfcc4d26180a",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/salesbotDesignerSettingsCallback/salesbotDesignerSettingsCallback.tsx": "ff2160c09c7b8e15067967e1d5f62100eea6dec22d34e902a59e473252e74b90",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/settingsCallback/index.ts": "615d0ac06b541309fca0e24e57c74f717a202725bd05695089f5d4ed645c8b4a",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/settingsCallback/settingsCallback.tsx": "c5a15919ea12a5506d421b54f19146524fd975c14372e85bf02447142df04461",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/todoSelectedCallback/index.ts": "a8e95f7e20de9bfd7ce54921c1d39c3cbdb681a3b3888f289bb462d39ca23099",
+        "templates/kommo-react-integration/client/src/__emptyCallbacks__/todoSelectedCallback/todoSelectedCallback.tsx": "b6f067d4b00d45e7836cc565c53f5a7269fd5c2be443630cc40412ff3c5ec60c",
+        "templates/kommo-react-integration/client/src/utils/camelize/camelize.ts": "93266749c2450aa215b1389336e2bac7109a5e9b13f3ec82aa3b37e5cbd10d63",
+        "templates/kommo-react-integration/client/src/utils/http/http.ts": "ffff8e7618d521552762cd5894eca27daa7b41126cfb3b5147e35350e96eec92",
+        "templates/kommo-react-integration/client/src/utils/http/http.types.ts": "6cff555f3943cf51ec4a620debe26ac24b758f9c62d2d447fbb64b281a9a609e",
+        "templates/kommo-react-integration/client/src/utils/i18n/i18n.ts": "6965a9694561f8dae319a26449c84fc9e3f0910b3bc3a60bed5deea9cb680afa",
+        "templates/kommo-react-integration/client/src/utils/i18n/i18n.types.ts": "6a957f31e9b77edc66b22fc6ff0e4174b61a35edbb4ce84f5cfc28e39aa74522",
+        "templates/kommo-react-integration/client/src/utils/renderComponentWithAutoUnmount/index.ts": "0436d7b502883ce5237b5be646938d8f0539c5af0b01f4d2146dee8c03e24204",
+        "templates/kommo-react-integration/client/src/utils/renderComponentWithAutoUnmount/renderComponentWithAutoUnmount.ts": "6cd83dc55ade6d7507a007afeeabc6d7858cfc430103d151bb127275b5c631f1",
+        "templates/kommo-react-integration/client/src/shared/constants/INTEGRATION_CODE.ts": "36ec3f230aaa8d402060b1d115d3b5bb86f0d3df7525c3e9f4e0a8514057df4c",
+        "templates/kommo-react-integration/client/src/pages/CardTabPage/CardTabPage.tsx": "44112180cd9174eba8f4ada346c0cec0ad21013b3b59630dec126f4ef60737a3",
+        "templates/kommo-react-integration/client/src/pages/CardTabPage/index.ts": "7661d35a787a5c63ae1fe197bac2b0711c4c1f3642b459c37b6663c15f9cbb45",
+        "templates/kommo-react-integration/client/src/pages/SettingsModalPage/index.ts": "67f371cf132cdc85cc203d4c7ba831f480f522c28f77bd98b95ea0ee55563d84",
+        "templates/kommo-react-integration/client/src/pages/SettingsModalPage/SettingsModalPage.tsx": "9409af233ac88db10984e3c7147ff961c173c9ce5464cf069a0aafc1a2a6b844",
+        "templates/kommo-react-integration/client/src/pages/SidebarPage/index.ts": "af09526fe7c775e4d7c938b9054dec54d68617015592ded70ab56dcbe2fa633c",
+        "templates/kommo-react-integration/client/src/pages/SidebarPage/SidebarPage.tsx": "77ba142763a241c91e2c728ba8ba5ee49a9ae967b7959a2beb5b87ab6e2140a0",
+        "templates/kommo-react-integration/client/src/pages/StandalonePage/index.ts": "2e5410c88da65fd3f9c11fb7b9c4b75aed3e9ef243faa5f9d60be207a255040d",
+        "templates/kommo-react-integration/client/src/pages/StandalonePage/StandalonePage.tsx": "269cdcb24563b080ab70031290fb1a79b7b5775d710acb974813ef5eff7a7c01",
+        "templates/kommo-react-integration/client/src/components/NotificationCreator/index.ts": "c5799662ccc4a15f3a6945a3225686e7cd7a36ca6c14eefda2c3a8b1f7579dfc",
+        "templates/kommo-react-integration/client/src/components/NotificationCreator/NotificationCreator.local.css": "b7184a02b9c124931df2901eb7a27b3c5bc7d1e6f0a32cf915e49c5bd6c8ffcb",
+        "templates/kommo-react-integration/client/src/components/NotificationCreator/NotificationCreator.tsx": "01d4e1e7fd69a9f39c3d32e38798328956e9f34f812ec353c3a4fa0c0dd3003d",
+        "templates/kommo-react-integration/client/src/components/NotificationCreator/NotificationCreator.types.ts": "61ccce6cb833831d17adb41cc49c4d8a8e7be041177ed7553c458af0291238b9",
+        "templates/kommo-react-integration/client/src/callbacks/advancedSettingsCallback/advancedSettingsCallback.tsx": "787d2ec509945045df25729c36d4842d0fae38ba27cd3052872b44bfaf4dd1b8",
+        "templates/kommo-react-integration/client/src/callbacks/advancedSettingsCallback/index.ts": "6b2b4361ca391fc24a3253fe9c598c4a73f8a0fe4c2a8d059668f7f3d8db0e75",
+        "templates/kommo-react-integration/client/src/callbacks/bindActionsCallback/bindActionsCallback.tsx": "f768f0dbdbb75e050308456023a3657d2fed6208feded1c0ae4fb19c17153ea2",
+        "templates/kommo-react-integration/client/src/callbacks/bindActionsCallback/index.ts": "af8607d6e782594ca5ff2f0b92226531228b9eaf0d14d199030540b8c33e8518",
+        "templates/kommo-react-integration/client/src/callbacks/contactsSelectedCallback/contactsSelectedCallback.tsx": "e030ffeb0fea94b63614152b2c665c5f731dce6370d47bdb0f355ae8bc7afbc5",
+        "templates/kommo-react-integration/client/src/callbacks/contactsSelectedCallback/index.ts": "c16f89a03d214923435ed3029ef4e7f60fe8dfda324de5d7032a53a0512f6ced",
+        "templates/kommo-react-integration/client/src/callbacks/destroyCallback/destroyCallback.tsx": "0c178cbfede7fe088c5de2831e2a87d47b73bd05ba80c977732b5963836bcdf9",
+        "templates/kommo-react-integration/client/src/callbacks/destroyCallback/index.ts": "6c685c012e990366c5943c7d387ed1bd7d68fcc0a02f36da1287e2ba72163d37",
+        "templates/kommo-react-integration/client/src/callbacks/dpSettingsCallback/dpSettingsCallback.tsx": "5d6dd76d6b42922313fc18d28bb9f60d04590f39abf2d5a55f99436cf412203a",
+        "templates/kommo-react-integration/client/src/callbacks/dpSettingsCallback/index.ts": "bc61351d8c8d91a51f15d6fd61832f8247fc3fdc4a40dc38e180b94b4706dade",
+        "templates/kommo-react-integration/client/src/callbacks/initCallback/index.ts": "fb4213d33a1576049ac88aec5e141219de1007c595fea2bca1785091f95da217",
+        "templates/kommo-react-integration/client/src/callbacks/initCallback/initCallback.tsx": "e52345d1dbe4608c348fbed94fbee5ba5fdfdcc88029f2191bce51a0904bc028",
+        "templates/kommo-react-integration/client/src/callbacks/initMenuPageCallback/index.ts": "72b7dd0bd309d5e101987aedfd4ddba4138b207566ba15e86b11c3d46bafaf92",
+        "templates/kommo-react-integration/client/src/callbacks/initMenuPageCallback/initMenuPageCallback.tsx": "eafeeb5f19068448ee2e53bbd50dab04280df97d48ef5e02de71e63858a823ec",
+        "templates/kommo-react-integration/client/src/callbacks/leadsSelectedCallback/index.ts": "d0307cef5997bee51737d2eef5e41ee9e403c2673ab282ccb5921cced0a4fd54",
+        "templates/kommo-react-integration/client/src/callbacks/leadsSelectedCallback/leadsSelectedCallback.tsx": "3b7420d34b4fe00e9cd6a5457a61d14f96eb9a742dc215b7db0d730dbbc5f6ea",
+        "templates/kommo-react-integration/client/src/callbacks/linkCardCallback/index.ts": "704d8d34f62672c3256d31660138ef300d12095c12552be94f3395dfe96a4e0e",
+        "templates/kommo-react-integration/client/src/callbacks/linkCardCallback/linkCardCallback.tsx": "1b29446ebf77bfce5b0dfbc118b5a71799744abb3283c76f058fe0f3273f1d15",
+        "templates/kommo-react-integration/client/src/callbacks/loadCatalogElementCallback/index.ts": "b5d6a15efecad6d63d5e5efd3f54f2dc7cc2a6ef66cfb3df21bf9c5eaf8e3432",
+        "templates/kommo-react-integration/client/src/callbacks/loadCatalogElementCallback/loadCatalogElementCallback.tsx": "ae9798028bb7d626dd3be1e6e77a01e79c01c40e8fe9e518778f8f200cfb4731",
+        "templates/kommo-react-integration/client/src/callbacks/loadElementsCallback/index.ts": "0a444a53c35ccff0a18130129108002ee8e377e4d300818542d87492c3d64e0e",
+        "templates/kommo-react-integration/client/src/callbacks/loadElementsCallback/loadElementsCallback.tsx": "a48000c7a0d9b8cd9a8f9682822d590ba12c908e19b4321b392dd79994bad86e",
+        "templates/kommo-react-integration/client/src/callbacks/loadPreloadedDataCallback/index.ts": "ee7bfc7658196f760c6054618a4d0bddd375fe1fb58e8ce088e977abd63b17a8",
+        "templates/kommo-react-integration/client/src/callbacks/loadPreloadedDataCallback/loadPreloadedDataCallback.tsx": "117ccd96cec6ed1886d69096e11b77851b500f176fe0924fab8fc8555166618c",
+        "templates/kommo-react-integration/client/src/callbacks/onAddAsSourceCallback/index.ts": "f87b286732003cd7da0e27f6fe24d664e548c4f0b91c77076e9efdbca2181e29",
+        "templates/kommo-react-integration/client/src/callbacks/onAddAsSourceCallback/onAddAsSourceCallback.tsx": "ff0ff4540a4134986362b6bbcaaca259891b8956415ff276fd747b2f474cabfd",
+        "templates/kommo-react-integration/client/src/callbacks/onSalesbotDesignerSaveCallback/index.ts": "711717439dd247d512b738a6dda2325d38e2a0acb1b788c2701a046da1f06686",
+        "templates/kommo-react-integration/client/src/callbacks/onSalesbotDesignerSaveCallback/onSalesbotDesignerSaveCallback.tsx": "f3872cd23a5e6ea014214b1d12f170c4a58b7a157865d1c7b84223287f6aeba0",
+        "templates/kommo-react-integration/client/src/callbacks/onSaveCallback/index.ts": "8a5507201afec5ee3d6f2a56a944b133ccfa29e0641bc9c4aeead99bd46f1864",
+        "templates/kommo-react-integration/client/src/callbacks/onSaveCallback/onSaveCallback.tsx": "42ed19cdae0d43eb345fe6fd356b4faeb0dbd8965aad8f21ead199a800f4b0c6",
+        "templates/kommo-react-integration/client/src/callbacks/renderCallback/index.ts": "0cf56e71fb14006412eee9124baa4e70f4ba5d0fdd1f281799e1d28729f51a5d",
+        "templates/kommo-react-integration/client/src/callbacks/renderCallback/renderCallback.tsx": "4e4c883ff5384946cec16ed5f092349a99c79b2616fa255678dd3f02a0d6fe57",
+        "templates/kommo-react-integration/client/src/callbacks/salesbotDesignerSettingsCallback/index.ts": "45ca03761721882e4092ddb3ad1b0e3002849f9157c5bddf65b1dfcc4d26180a",
+        "templates/kommo-react-integration/client/src/callbacks/salesbotDesignerSettingsCallback/salesbotDesignerSettingsCallback.tsx": "c3b7e43bab8d05c18d07b682bcd8c94916ed122e435ebeb3ef1ddbaf6aa8e58d",
+        "templates/kommo-react-integration/client/src/callbacks/settingsCallback/index.ts": "615d0ac06b541309fca0e24e57c74f717a202725bd05695089f5d4ed645c8b4a",
+        "templates/kommo-react-integration/client/src/callbacks/settingsCallback/settingsCallback.tsx": "571d0e4fcda7e906b01c679c1e51d2011243367f5542242c99a4aa98a611fa34",
+        "templates/kommo-react-integration/client/src/callbacks/todoSelectedCallback/index.ts": "a8e95f7e20de9bfd7ce54921c1d39c3cbdb681a3b3888f289bb462d39ca23099",
+        "templates/kommo-react-integration/client/src/callbacks/todoSelectedCallback/todoSelectedCallback.tsx": "b6f067d4b00d45e7836cc565c53f5a7269fd5c2be443630cc40412ff3c5ec60c",
+        "templates/kommo-react-integration/client/public/i18n/en.json": "ab0cdbc767fe8cd1af143287636df15efaa0b7abae8ef35c18478e6c046e1e22",
+        "templates/kommo-react-integration/client/public/i18n/es.json": "401b295a262aeeaf836376915dddfc4352393f1f86035ce7da5d0a02885c904a",
+        "templates/kommo-react-integration/client/public/i18n/id.json": "1455a5ac9b255abed749eb98997e093ec189c597e78f3759499322cf9adcb2f8",
+        "templates/kommo-react-integration/client/public/i18n/pt.json": "909c108f4e7c4c5b6930269e5e41184de5d121fbbf4af065e6b651ce9d1513dd",
+        "templates/kommo-react-integration/client/public/i18n/tr.json": "58c341a5cba8d13016df73f9a9b298ea560205b0c7232a726e0eaef65ce0235e",
+        "templates/kommo-react-integration/client/public/images/logo.png": "a0eefb1b135e24f99deee52560c9a55891c3729a11f104ef688794829e7c6a7b",
+        "templates/kommo-react-integration/client/public/images/logo_dp.png": "dbedc0c7e745b110cd95627d478a0e84a55502fb606c70f8c354698391b5e155",
+        "templates/kommo-react-integration/client/public/images/logo_main.png": "ed11124a626282f472255f439e1766d6eaffaedd4bcdb1bd52389f6de035e85a",
+        "templates/kommo-react-integration/client/public/images/logo_medium.png": "9982a8c5cb905a9f3745080dba77e081e8e6a3ea184d9db85931711cca1ca40a",
+        "templates/kommo-react-integration/client/public/images/logo_min.png": "478d990ec8487057348fdfb6072cb6f32af4bc0753e1a3f1a552b2e60fca50f3",
+        "templates/kommo-react-integration/client/public/images/logo_small.png": "cf012c3693e1693d87c15f4bef1d1eac4d06f877bdb73b0914d8d664d3076f3a",
+        "templates/kommo-react-integration/client/deploy/dev/.dev.env": "011997dc05ccbb3062fda37607416bf6b20d16ec955b83fd53eef681b83d0d2c",
+        "templates/kommo-react-integration/client/deploy/dev/Dockerfile": "99fff0fbe1556a615fed04daf5df951471e70a7045e068f12702a9a1feeefdfe",
+        "templates/kommo-react-integration/client/deploy/prod/.prod.env": "91d12deb865ede72013019071cdcf3964763333911f91daa452b7eb7843092bd",
+        "templates/kommo-react-integration/client/deploy/prod/Dockerfile": "fd63effd8f6a3d595e666a12e7a927b1890d135c48e370606b163662843cdbc8",
+        "cli/locales/en.json": "ea887213e2043004adfac7c8c1c8feca7a22670c53ae98c194f2bba71a40c407",
+        "cli/locales/es.json": "58cccb33d459ff591c3d0e4293d37cd214c3cd58f9094360d4be710b1049b8b5",
+        "cli/locales/id.json": "ed64ad623d65070aaa151beaf854124323ae1649562ed6a41e5646cefeb532b5",
+        "cli/locales/pt.json": "08739f994dcbd151197e130659013d07fc8d12b7d28726f19d2685bebe3d4668",
+        "cli/locales/tr.json": "f56287edd055d57850271bc5e4a070d814003dafe68acf958999d9ecdd3cbde6",
+        "cli/prompts/getIsTestFunctionalityEnabled.ts": "5961d216072854e03b4578028ff81c9cbf3c294710ae1825a061564d95bbf536",
+        "cli/prompts/getLocale.ts": "f5e9b3cd0f2c860433dc7a9bf32c98da8ab91068ec28a06d90dfe851224c9d3f",
+        "cli/prompts/getManifest.ts": "e2ce06144cecc98348e741aaf84ad13eff4c8f341aa4d764222a2c612625fbaf",
+        "cli/prompts/getProjectDir.ts": "d92181cff989b6e0769e0abcefb2b4ab685cb88ca64d3e0aa190ffd7f85b7cfe",
+        "cli/transformers/cloneTemplate.ts": "982a849312a62358be8e9a1e1e548f78f65ea68583986f93e3b2641aed02f8ba",
+        "cli/transformers/deleteUnusedLocales.ts": "17ef9dd89b59101c0afc3c355fcf188e4cf74a46d0c869a5e8e24f7e1fa9cfb4",
+        "cli/transformers/injectCallbacks.ts": "0448365dea0ddb2f4e28425d28288220084b373c14e5ff59152c67dbb2f9001c",
+        "cli/transformers/installDeps.ts": "e1fa1e0f0483f744051fcd8adb3eec5cf5c14c69f579e677419ba4a164e9822c",
+        "cli/transformers/updateManifest.ts": "70e91c63e6290d269620e1cc7cc9b95de88ad3dc949f0874c8c29166e902ade2",
+        "cli/utils/i18n.ts": "1694f376622b5eac8fe25146cebfadbf143d2f1a5bfb07d9b11c62f73607abed",
+        "cli/utils/log.ts": "36b9bf7aac0851d65f5444734d01255d572d9b54ca402ed147efdefd32dae05a",
+        "cli/utils/logFinalMessage.ts": "e927aaddc8d14a7119d250cef5a26464441c284ac26728d0a986511c318d2e35",
+        "cli/utils/removeDirFiltered.ts": "15cf70fc007b4433ed9149f3be509914c29b2f9629df46a8330a8d046135bf1a",
+        "cli/prompts/utils/safePromptWrapper.ts": "7dc2c141e34dbee6d12cffc1d31d882ba565fd2075305b542370b2ccee0bad0f",
+        ".github/ISSUE_TEMPLATE/FEATURE_REQUEST.yml": "4fbbcf3b75dca52760a9a156a794049939cd04f8b6096f946aeeca46587a8186",
+        ".github/ISSUE_TEMPLATE/ISSUE.yml": "bad4c8dd803f10a9b8700fb42df572b32ca7cb2b18c3592cc15e6feb3c01613a"
+      },
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "2c640a351090d28808fc66b85b5138f03aea425336c8353a70910a064488a593",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "LICENCE",
+          "sha256": "420418de662406e1218b1db8f47bc56098b60027f068efa2cf716fc1d5746328",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "cli/build.ts",
+          "sha256": "183de6ed70e9d952b6a6a9a2a9ead12bc61f6f8d7c0ad821a0cc7f6ffd9ede56",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "templates/kommo-react-integration/client/src/integration.ts",
+          "sha256": "e157ccec15a3a34a685803360596ff90d9701bb531257a25bad5a671c50773f6",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "templates/kommo-react-integration/client/src/__emptyCallbacks__/destroyCallback/destroyCallback.tsx",
+          "sha256": "ace60ddc9bed9c94f2e7757f75996066b432e7905c07f69108dc252eebf56934",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "templates/kommo-react-integration/client/webpack.config.ts",
+          "sha256": "9ebf881c143b5bbaf0ac8e3da883e809eb1f1f7bffc205e3e37f685fdde67975",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "templates/kommo-react-integration/client/package.json",
+          "sha256": "80e3ae2ab5e191901bbd8f1659a1e97927de305c01ba38caf2dd79151e98552a",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "templates/kommo-react-integration/server/src/server.ts",
+          "sha256": "a1a834d1cda904dc72a7ea1892ac48d7db7155adb2fa782d36afa8381478aa34",
+          "method": "static_document_or_selected_code_sections"
+        }
+      ],
+      "execution": "not_executed_no_dependencies_installed",
+      "treatment": "original_portuguese_synthesis_of_patterns_and_limitations_no_third_party_source_code_copied"
+    },
+    {
+      "id": "EXT-003",
+      "directory": "n8n-nodes-kommo",
+      "repo": "yatolstoy/n8n-nodes-kommo",
+      "topic": "references/integrations/n8n-community-nodes.md",
+      "title": "Nós n8n, itens, tipos e isolamento",
+      "license": "Texto permissivo no LICENSE.md; atribuição n8n no arquivo",
+      "already": [
+        "Webhooks, n8n, idempotência e fila de erro"
+      ],
+      "add": [
+        "Contrato do nó community e item linking",
+        "Preservação de zero, false, arrays e intenção de limpar campos",
+        "Cache por conta/credencial, paginação e erro por item"
+      ],
+      "cautions": [
+        "Helper clearNullableProps descarta zero e reconstrói arrays não vazios como objetos",
+        "Cache consultado usa nome da função como chave, sem conta/credencial"
+      ],
+      "commit": "8d8c993c2fbca8ad64fc59bfcf0953f03f08705d",
+      "inventory_sha256": {
+        ".editorconfig": "7ea76dc406d44f2482f9b34c77c33591fdabf3b8b4b8751044e805df45362da5",
+        ".eslintrc.js": "f93fd2a070337f947eb74ac4cfde26c7e9791a5e9a10757ce82d874432748183",
+        ".eslintrc.prepublish.js": "2301e1ce51fd67ee3aa7f53dfc6dd0396f99fdc386a326bb31e291981203449e",
+        ".gitignore": "2b412b72af212e6ab4124f9ca01b2b56ffff2c22572be61bf882c8862cfd6935",
+        ".prettierrc.js": "77e9e5fadfb208db21d4b06626e67bb75335596eb359490e1d796258a79d4cb6",
+        "CODE_OF_CONDUCT.md": "bb45dbb4df85c0a9142340b543c5293fe088ae2a24534758f0fe6db474e85c14",
+        "gulpfile.js": "b0476d33377c8b3a1a701d307aa1efcb8977b927260343ba97d85746d9a1d9b9",
+        "index.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "LICENSE.md": "a136cbaef279a6800d388f065ba812efb87e323c2cbf562edd2e60f93e123355",
+        "package.json": "7e3860b485aa0daa2b43b324d06f6d01f40a890f7ef67a7bb254e2a064b21180",
+        "pnpm-lock.yaml": "e6215cc7a4a4483f5407671ccc7af54d1f05a40cfde70e5d4eadf9c3ed38f590",
+        "README.md": "158d61e2be0ce170805290901e6ca557422a742124e50dc36dde9274ce0aacff",
+        "tsconfig.json": "6e8052109d66fbd68099c5e252dfc3210a7757c04dcbf1abbbeca4b9c3204640",
+        "tslint.json": "2254817a2c847e46f22011df87d9d89e0b0a5c92bd5b99c6b61425fce2070530",
+        ".vscode/extensions.json": "b42e170603c288c7ed52dcf5891f47337ae9c802484607c178b1aa5e00921d6b",
+        "credentials/kommoLongLivedApi.credentials.ts": "a62c9aaa26f3ee70b7bbfc7ca7befe4c6585b817b308845125b37fd3025e4f51",
+        "credentials/kommoOAuth2Api.credentials.ts": "5707963e372bf6c667743e750bc42ce936c69b6e4118b79c9e5558001c567bf2",
+        "credentials/kommo_logo.svg": "bc9c1fb6bee6182dafa8d46a58ac7bdae0e9a924e5dbd7c656d1a4caa24098cd",
+        "nodes/Kommo/Kommo.node.json": "a9d556f39c5bb46295c2dce500ba78663d8c45a24ec65716cda3ae8ea2e15298",
+        "nodes/Kommo/Kommo.node.ts": "712a6d00a61dc969ea939d35ca3ca4ea145a720ec6ed9a47104b1f6671839616",
+        "nodes/Kommo/kommo_logo.svg": "bc9c1fb6bee6182dafa8d46a58ac7bdae0e9a924e5dbd7c656d1a4caa24098cd",
+        "nodes/Kommo/V1/KommoV1.node.ts": "94fafc05a6b85b0669a32b9e1c28404ec4bd62be4f0220330647f7fb53119cda",
+        "nodes/Kommo/V1/kommo_logo.svg": "bc9c1fb6bee6182dafa8d46a58ac7bdae0e9a924e5dbd7c656d1a4caa24098cd",
+        "nodes/Kommo/V1/helpers/cacheRequest.ts": "208dcb7dab83dccd8b3063f5db0761d16f03c68247a96eabf18a112d4155d019",
+        "nodes/Kommo/V1/helpers/clearNullableProps.ts": "7fcd05387a3e91173c8540573b18f4028c0d52c0735a86196a02185205c1da9d",
+        "nodes/Kommo/V1/helpers/getTimestampFromDateString.ts": "ad8ec298771d6f97326d183186b55c2b0b106e1564c3f73f4967d82e93daa5ae",
+        "nodes/Kommo/V1/helpers/isJson.ts": "5dcb817e979dd072d75349bf26d21a117fd6c563dba5f0110753177cace0290c",
+        "nodes/Kommo/V1/helpers/isNumber.ts": "7422b5378d12d989def92e29a5fd11e4e482cd8fb62962f1992dadd219293d2d",
+        "nodes/Kommo/V1/helpers/makeTagsArray.ts": "91481aa6401bf944b3a7083e0f09a0f97c08b59c69066960d5fc1fd5cbbd95d5",
+        "nodes/Kommo/V1/helpers/statusPropertyOptions.ts": "571527f74d05fd5beeb8e7cd867c4bccb1a65cdf38ff7b161f409dc5f9f8a60f",
+        "nodes/Kommo/V1/helpers/stringToArray.ts": "23d4a34686926863aabcc5ec529528c054c20f919fa92166b5d9d1098e077624",
+        "nodes/Kommo/V1/Interface/account.ts": "ed28325f790fcdc2473b546628f1fefefa7670bfd5d1a6a704ec8f877bab79cc",
+        "nodes/Kommo/V1/Interface/catalog.ts": "bead2ea71678f92e5193a7835b41815c3178f28564d8a5df071fde35c72072e0",
+        "nodes/Kommo/V1/Interface/catalogElement.ts": "2f19eb9cf017ba96c0884d33b125b37f56b935e039de3f0ea2f8e706fd20d75a",
+        "nodes/Kommo/V1/Interface/index.ts": "2e894ea9006dcbc513deb7d570ce681d33f4d1a2311e42ef6171365db28cfe3b",
+        "nodes/Kommo/V1/Interface/lead.ts": "a8d35913df06a7f2edb043ca72ef40d19d55205daa6ed20141cd8712c78e02de",
+        "nodes/Kommo/V1/Interface/leadCustomField.ts": "af18aa966543b673d0544659845af38dde1ffb32e6687a7f5e9a8b0f8be8af71",
+        "nodes/Kommo/V1/Interface/leadGroupCustomField.ts": "9d1549c253db3342fba4148be9e29952e8df00f7831d0cfe6c93d6edfae3f3a3",
+        "nodes/Kommo/V1/Interface/lossReason.ts": "eb530458faad1ebba1d12cbcb3ae6df4922e8ddf7c8abb20de245af527927a2f",
+        "nodes/Kommo/V1/Interface/pipeline.ts": "0150e64f266996f78a458aab7552cfe35a7c1fe75437088ea1831c00a1d6f454",
+        "nodes/Kommo/V1/Interface/status.ts": "79f379ffb47f14054621ab9dfc8315e775a2494c27aa350145ac75a28b1444f9",
+        "nodes/Kommo/V1/Interface/tags.ts": "84cf4d91b2c72d7f8f72af16d5b6f4164d575dda63d3d6d1540e58d3eb3fb393",
+        "nodes/Kommo/V1/Interface/user.ts": "1fb537174f836da95ddf97068618477bb98ee9787267a36a3f01efd840fcd9b7",
+        "nodes/Kommo/V1/methods/index.ts": "d22f954cb9dbfbe61f4499e3014ff6d15a30de8294d22a9a7df2db4095a518a3",
+        "nodes/Kommo/V1/resources/interfaces.ts": "081ab1f7a4eda2bdd8685ff261d757b98d2f764ee69a553d8fb564a79fcc960d",
+        "nodes/Kommo/V1/resources/router.ts": "8d976a5bf1743e1d3783f689b9da54136cd190f73b71419b7e5821fc76c6afeb",
+        "nodes/Kommo/V1/transport/index.ts": "4225b39781a1d1652ebe3170306c1707f9b7c8596b9211dcc73566e1428b3c77",
+        "nodes/Kommo/V1/resources/account/index.ts": "73d3a583c1dbd88b2a5d1be43641edbe630f81d3a54810df96103e91a83f73b7",
+        "nodes/Kommo/V1/resources/companies/index.ts": "69bfc97841f25f081520adfde260452e326ed495ba295d190dfd80d438377773",
+        "nodes/Kommo/V1/resources/companies/model.ts": "7b3f727be264e0c180e39caedcf6a3c9f82660c093a9f7d4347d5428ca79373b",
+        "nodes/Kommo/V1/resources/contacts/index.ts": "b172285368c2db0799bea5ba91c6fe1151787ab3131e32dd48f299b934203a37",
+        "nodes/Kommo/V1/resources/contacts/model.ts": "8ea5089d73c4d4ff16a34bc35ad2c89c3a19fb5a293a8fce08b9b2da5998841d",
+        "nodes/Kommo/V1/resources/leads/index.ts": "4fa28db6a715a473a253d6713c1820665055cd73cea9861ebc60e243a5bfe2e9",
+        "nodes/Kommo/V1/resources/leads/model.ts": "710a3ca4ce3cabd9b37c724df5a5e826128a902489a5a5fca1f1e795123d4e47",
+        "nodes/Kommo/V1/resources/lists/index.ts": "08bb751b3af333fa019498229d53834c5aa0589973d7c88daef8c2bc4e670b93",
+        "nodes/Kommo/V1/resources/lists/model.ts": "8a74f95eea8e6264d9c81a6d16584863749c8d48cbee721896de7390b4a4bab0",
+        "nodes/Kommo/V1/resources/lists/types.ts": "1d7a6df9118804e47cf1d747c83d022df1ac2ba43f9329dd7f4628d841ad5aea",
+        "nodes/Kommo/V1/resources/notes/entity.ts": "31f66e6d31fdf8e9c03fa9561fab034588474e1670d7d224e8bfd27831f6df12",
+        "nodes/Kommo/V1/resources/notes/index.ts": "3810c0b8f15118321f7d5561fdd5903fc0539bb6d387e1e07851a80692858361",
+        "nodes/Kommo/V1/resources/notes/interface.ts": "29c568de19f32df79d7457938ad4143508689f224e9a927eb8f8ece0724331a1",
+        "nodes/Kommo/V1/resources/tasks/index.ts": "a1a651c2836631c1595b3371eb327b14546e4271faab9503bb780c6f6afde397",
+        "nodes/Kommo/V1/resources/tasks/model.ts": "ac1beaf7cec818c58b5023943970c34e5ff60378e2536320fde9857bb369f9de",
+        "nodes/Kommo/V1/resources/tasks/types.ts": "0c194c893567417ba7ad306ef886893d99e8f80f0ddd62647d66b13a70511780",
+        "nodes/Kommo/V1/resources/_components/CatalogSelector.ts": "846d3c11d06e30acf978539f2046a5c1ec87be4c9048f70b4857782f69765fe2",
+        "nodes/Kommo/V1/resources/_components/CustomFieldsDescription.ts": "f8182ad47c1230b9d3547ae365c3ff2458b45244ddeda150836c6f532baa4063",
+        "nodes/Kommo/V1/resources/_components/DateRangeDescription.ts": "e13fa123bb5ba851363278c49db07d3d0fa641706458fedeabd8b9eb9ebc3a75",
+        "nodes/Kommo/V1/resources/_components/FilterDescription.ts": "7999fdc7dc45457c1e08b855ff291046dba8dde0e5f52bea238b1fa49cda4f94",
+        "nodes/Kommo/V1/resources/_components/JsonParametersDescription.ts": "a7bce349a3aa763ed7e83835f82eace8a54c1850d207eaf40c62a5966516a17f",
+        "nodes/Kommo/V1/resources/_components/LimitDescription.ts": "59eb770eea3dbb3a93f073b6bea71c725b6c685de4daab1fd841f5a6049fe3a1",
+        "nodes/Kommo/V1/resources/_components/NumRangeDescription.ts": "3f45fe4d5f7e88fbca578f399139f29e980a6a6c8f945414b97f2eb38657238f",
+        "nodes/Kommo/V1/resources/_components/PageDescription.ts": "8a0971d69a6fdcf143ddafb5720668d5fc4adba6de0d7ec669c0c0623789d6f1",
+        "nodes/Kommo/V1/resources/_components/RequestId.ts": "efad1bc340ee0f3a896497d7c4e7b43c61666722d53b3930a3d6ef2685b4fa43",
+        "nodes/Kommo/V1/resources/_components/ReturnAllDescription.ts": "d13f968b071151414aaa92f1e7f34ee4f552ddeb4e1ee05ef52fd6287ea579b2",
+        "nodes/Kommo/V1/resources/_components/SortDescription.ts": "8b157cdbaf4166f34e45baada545ff5ba4932e3921925a08c2319529915274ab",
+        "nodes/Kommo/V1/resources/_components/StatusColor.ts": "697251bf5ae80068fd7354dada950bd8f7a2ff716026dbf0b0b17600dab00746",
+        "nodes/Kommo/V1/resources/_components/WithDescription.ts": "e681eca2a83590e33d8082869087fbdb1b11e2ba97cc20d0c1571c691b6b9a18",
+        "nodes/Kommo/V1/resources/tasks/create/description.ts": "bf330a5d8984de3619822260e12c3a2eedc7b6d964fddd345bd0c0088247d6ef",
+        "nodes/Kommo/V1/resources/tasks/create/execute.ts": "6cd411efeef02f7f04ff224f4200e75dc6a67a22fca78b0c0c712ae05daf1a56",
+        "nodes/Kommo/V1/resources/tasks/create/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/tasks/get/description.ts": "e573fa789adc762d6a6725f84ac331b058ecf19c3471e263140ca358d938ccca",
+        "nodes/Kommo/V1/resources/tasks/get/execute.ts": "da44fcad350f7ccd7228ee1e5bd04dd143f02127dbe4f71da72d2cae1550c8c3",
+        "nodes/Kommo/V1/resources/tasks/get/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/tasks/update/description.ts": "6f9e7b9cdb3a6bc2c52b4e143fce4d224fbee5309c99e3ba248db6fa944ef771",
+        "nodes/Kommo/V1/resources/tasks/update/execute.ts": "90c36c5b3d89ba0cda92c554bc4ae0d5c9cbc0eb543d50f4d0acdd0bc6affe48",
+        "nodes/Kommo/V1/resources/tasks/update/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/notes/create/description.ts": "483336a4d2fa44b75b901a6884f3fa2f9a6dba5bfac8e7140f0f89b4c75f1cc5",
+        "nodes/Kommo/V1/resources/notes/create/execute.ts": "ba5c88d4a778a3fbcd35ee19d2a77383dc43a27ea914ab4529f287a6f4bd0e1d",
+        "nodes/Kommo/V1/resources/notes/create/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/notes/get/description.ts": "2ae98e25e47a89d1d68a106a52e7b84b0dcfa3305a3c87e216bb0996210c8815",
+        "nodes/Kommo/V1/resources/notes/get/execute.ts": "bc138123a458ebd387e813b54a84d4a47b5ea82e4f07ed9d2b52b2f801351888",
+        "nodes/Kommo/V1/resources/notes/get/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/notes/update/description.ts": "a280ac56f88be317afee2b0db3b72e94abaf42cdf06f0d412fef765665090bed",
+        "nodes/Kommo/V1/resources/notes/update/execute.ts": "9e68a05090d84ae33274a802236e7635f5abe6c77dce1a9f1e46d17e050d898f",
+        "nodes/Kommo/V1/resources/notes/update/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/lists/create/description.ts": "190ac7e0aca40fefd574e2011214d8555a312a1a675b9b89bc68d06855adfbe6",
+        "nodes/Kommo/V1/resources/lists/create/execute.ts": "444d5ba9ac7fd069f584355f8d5376dc5c49f96e57def38170d2988a63c27d38",
+        "nodes/Kommo/V1/resources/lists/create/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/lists/createElement/description.ts": "2b7c95c2a27ff800e5a0cdadc4de9e07bcb8f732579bb418a4447d965f82c399",
+        "nodes/Kommo/V1/resources/lists/createElement/execute.ts": "be118ccedf4f10aed14961d778bf431870c50b0d0651e72a818e99a80cd18629",
+        "nodes/Kommo/V1/resources/lists/createElement/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/lists/get/description.ts": "7ab295bf4d35230c328addb056205fd4eebfd7b14381bd01f4b05feb14dd4690",
+        "nodes/Kommo/V1/resources/lists/get/execute.ts": "cd05a157e091b909d52c97a6053771a8ca3498ed0608d2bf52e0452492c59e16",
+        "nodes/Kommo/V1/resources/lists/get/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/lists/getElements/description.ts": "8df8bfa9af9b618a8a8b7e8332057ce4218b5a5f9b98f1071425adc87ed1c860",
+        "nodes/Kommo/V1/resources/lists/getElements/execute.ts": "6cad111ee989b2543dc739fd5de5f0f8fde87830a21407755d3a0aeb54b3889f",
+        "nodes/Kommo/V1/resources/lists/getElements/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/lists/update/description.ts": "4f488b37e33d120e33cb3016be64602825161942333121b696dad0ba507e6f9f",
+        "nodes/Kommo/V1/resources/lists/update/execute.ts": "c5d797b1e61406234523c9417b776e2bb53c03d4a79f5a78999fae1fad3fc212",
+        "nodes/Kommo/V1/resources/lists/update/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/lists/updateElements/description.ts": "a9b9ba658d7fc8974f16d25b4f7a2616cfad6b7860faa7a062e28679a9798ef1",
+        "nodes/Kommo/V1/resources/lists/updateElements/execute.ts": "47ca3aad8c4a5a5288bf65dd3ef078fb706a41320295c30df04a1e4b73daef01",
+        "nodes/Kommo/V1/resources/lists/updateElements/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/leads/create/description.ts": "6d7e3b5fb4fd085162868fcc0a58943e3094848667a3b2d6fef1570a965a1a6e",
+        "nodes/Kommo/V1/resources/leads/create/execute.ts": "7df6d6a1ac8aeee4fb9f685eee0384450deb625941bb502e2ad63eb338c86ef1",
+        "nodes/Kommo/V1/resources/leads/create/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/leads/get/description.ts": "df201173dc4264442dfe350e545cba182ed7cf22a9ebc7a26d4872417dedc4dc",
+        "nodes/Kommo/V1/resources/leads/get/execute.ts": "9154e672a78da66470ba451446fe47121e4721effa152d89d88216b57965215f",
+        "nodes/Kommo/V1/resources/leads/get/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/leads/update/description.ts": "15665c88ac4ae0bd6bd7c1588e94bc39af3dee93419acb27fbbde4f9ab93ec3b",
+        "nodes/Kommo/V1/resources/leads/update/execute.ts": "5b503d67598ef770d0c30ec62ad266548a79573eacba12a7d417132df6babb54",
+        "nodes/Kommo/V1/resources/leads/update/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/contacts/create/description.ts": "732133b644d0b82697666de2c24bde9f7b8323a694567af53527293ba0ac113f",
+        "nodes/Kommo/V1/resources/contacts/create/execute.ts": "7e18ea69c1c92ebdb040a2b65a7f29a33790967e5128b291c9da4d766f4a9a99",
+        "nodes/Kommo/V1/resources/contacts/create/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/contacts/get/description.ts": "97a45964568514b4d95614e46941b6df7b4df16e4527398e07f050d869c2a894",
+        "nodes/Kommo/V1/resources/contacts/get/execute.ts": "7fed8f0b0842222ecc41b05892448e0227f7aaa1bfe225b6740d938f2b05096a",
+        "nodes/Kommo/V1/resources/contacts/get/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/contacts/update/description.ts": "ba9ffbd79acbdf95d7e8e99b9c901e6a38050725ef962356288700b08c5fed72",
+        "nodes/Kommo/V1/resources/contacts/update/execute.ts": "04bb72094a8fa3937ee9ec073376a84feeb1cf69255f8a96067cadd7e200870b",
+        "nodes/Kommo/V1/resources/contacts/update/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/companies/create/description.ts": "c42c97679e0a5407a27b80f7dff970dfbae6a7f347580694fda534a4bdd61365",
+        "nodes/Kommo/V1/resources/companies/create/execute.ts": "992759dd5d7e5f161269cf4d5ad534f8584acadce38493876f971c795420573f",
+        "nodes/Kommo/V1/resources/companies/create/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/companies/get/description.ts": "3d50c47e0bd7178d47374d2713386d65bb0f2d04a2b8be4baa888c20bb1faf13",
+        "nodes/Kommo/V1/resources/companies/get/execute.ts": "98272ddb73bfa7a21b033f7af0bb0a4dac8061248937edce0d8a7809863356a8",
+        "nodes/Kommo/V1/resources/companies/get/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/companies/update/description.ts": "bb07ee79481c1c558bc8b3bdacfe95f7a5c0c385bd4bd78861cccfe326bee1a5",
+        "nodes/Kommo/V1/resources/companies/update/execute.ts": "cb93a7df81d688edc06928c3d50e44cc187228a3a3a3dc859a1080b4ac5afd0a",
+        "nodes/Kommo/V1/resources/companies/update/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692",
+        "nodes/Kommo/V1/resources/account/getInfo/description.ts": "4827bb672ed24ac700b2fea6ce32fbea3f0f687176c3464f04b4cfa079a7f7d3",
+        "nodes/Kommo/V1/resources/account/getInfo/execute.ts": "15b43ba29d91d1e146ed66b0cc13dac148c61e9b440e0fdfd76c552bd75e87c9",
+        "nodes/Kommo/V1/resources/account/getInfo/index.ts": "0d5df5fdc4e5510a48ed0c64f9effb9e710af7eb7ab0de99606f0b62927ce692"
+      },
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "158d61e2be0ce170805290901e6ca557422a742124e50dc36dde9274ce0aacff",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "LICENSE.md",
+          "sha256": "a136cbaef279a6800d388f065ba812efb87e323c2cbf562edd2e60f93e123355",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "credentials/kommoOAuth2Api.credentials.ts",
+          "sha256": "5707963e372bf6c667743e750bc42ce936c69b6e4118b79c9e5558001c567bf2",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "nodes/Kommo/V1/KommoV1.node.ts",
+          "sha256": "94fafc05a6b85b0669a32b9e1c28404ec4bd62be4f0220330647f7fb53119cda",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "nodes/Kommo/V1/transport/index.ts",
+          "sha256": "4225b39781a1d1652ebe3170306c1707f9b7c8596b9211dcc73566e1428b3c77",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "nodes/Kommo/V1/helpers/clearNullableProps.ts",
+          "sha256": "7fcd05387a3e91173c8540573b18f4028c0d52c0735a86196a02185205c1da9d",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "nodes/Kommo/V1/helpers/cacheRequest.ts",
+          "sha256": "208dcb7dab83dccd8b3063f5db0761d16f03c68247a96eabf18a112d4155d019",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "nodes/Kommo/V1/resources/router.ts",
+          "sha256": "8d976a5bf1743e1d3783f689b9da54136cd190f73b71419b7e5821fc76c6afeb",
+          "method": "static_document_or_selected_code_sections"
+        }
+      ],
+      "execution": "not_executed_no_dependencies_installed",
+      "treatment": "original_portuguese_synthesis_of_patterns_and_limitations_no_third_party_source_code_copied"
+    },
+    {
+      "id": "EXT-004",
+      "directory": "kommo-crm-audit",
+      "repo": "tamibot/kommo-crm-audit",
+      "topic": "references/automation/salesbot-graph-audit.md",
+      "title": "Auditoria estrutural e funcional de Salesbots",
+      "license": "README declara MIT; arquivo de licença não encontrado no snapshot",
+      "already": [
+        "Gatilhos, dependências, cenários negativos e readback"
+      ],
+      "add": [
+        "Grafo de passos e grafo entre bots",
+        "Alcançabilidade, referências, ciclos limitados e inventário de consumidores",
+        "Achado rastreável e armazenamento relacional opcional com snapshot"
+      ],
+      "cautions": [
+        "Formato model.text/_start/_stop do exemplo não define todo Salesbot",
+        "Validador sinaliza goto para número menor; isso não prova ciclo infinito nem cobertura completa",
+        "Fonte sugere capturar chamadas internas; usar como evidência, sem transformá-las em API suportada"
+      ],
+      "commit": "7ca3ff0e7146c3994e9c78af64132e70b927d16c",
+      "inventory_sha256": {
+        ".gitignore": "1dbff9de94230e06520bbf86b3338d0180a4edd98d8ec6756aa1ee725e70c3b1",
+        "CLAUDE.md": "1adc9b6fdbea8c64c50cdc75e4ab8c96d423ce13fe47921631946f980c5755f8",
+        "llms.txt": "6ef0c110144b91bc62e51c24741bfa09030f4b4f2c9cdbe93f0f0b42276c32a2",
+        "README.md": "7b78d1510e617f4a8945bfbe39ae0368c6906cf9db7b59d3bae33cf9b964a614",
+        "requirements.txt": "5ee6ee825fff8bf2b6c9ca82afa02a4a73ca1214c117de864fd29e552e47666e",
+        "credentials/.env.example": "15d79d465d6aed6dd6c88ba4bfc3754ef066eb461c60ac9cfd7f9e260dfe0c4a",
+        "credentials/README.md": "231d41936f4777f2aef440980d69d5ac46e6e2abedc6aca652501734822b6a68",
+        "docs/00_sistema_auditoria.md": "ba66ed378920e524957f0adeb12392db52f0becf827de1ae6d155a7e82668e14",
+        "docs/01_documentacion_funcionamiento.md": "e5aefa2389089c79fb546f223bce2ad56303b71c7b40d4fe159b8f8b0ae93add",
+        "docs/02_plan_accion_guia_bots.md": "82eee8626b308d1b58d1ca42ea5c81328643ea5971518b6125181b4d6d4e2e43",
+        "docs/03_validacion_flujos.md": "ca3117ec447295a98b7d91501c0df14dd3df3ec60111109eec2b70285f5c76ab",
+        "docs/04_sistema_soporte.md": "b045df5eb730b9855e6a8be7df4ed8c8df940b8150fc9917d96f9914768aa57f",
+        "docs/activadores.md": "041ef4d392de563b182aebb631c9583b9661963ee207082a89deef89104bd679",
+        "docs/campos_personalizados.md": "72d0595f1565f623421807505fe673ea77819f6c4cdf69a1a0bd4a030ca2856d",
+        "docs/etapas_pipeline.md": "51da76dc009ab67349c2876796c8b5bd7c315687de039a1628bb5d4dfd5b3878",
+        "docs/flujo_bots.md": "ebd0457984ceba852250d5ed7a4ec091e6a199bdc814b0014d66bca337fe4b3b",
+        "docs/guia_implementacion.md": "cbeef33c2169e6e8592ac02b70d31f814de9b415025f5f1eeb700446d82f7acf",
+        "docs/integracion_postgresql.md": "5f1f891e98ee8ad2493d676eabac4b8784f0ebbba746c651defc94781c126898",
+        "docs/mejoras.md": "37e8351d70dba85042e08a324618616cb3865cfc97c00ab8976361da9d4ba33b",
+        "docs/metodologia_analisis.md": "af781d42485d7f249e0132c359e665d9a47e40f42894b67ab67d669e2ca28bee",
+        "docs/plan_accion.md": "cc935c50384a05211e121944d6a5b1fa221e3e7d9145c06f1df87e514ab84ddc",
+        "docs/referencia_acciones_bot.md": "292a20764efcf37f40ae671ab136f02c59fc1355e7129e663ef1065e0b4f4c28",
+        "docs/reglas_whatsapp.md": "a49d5e83b7a5571ec2879faea198b92ec9fd961dd6483167319c4e5c2bd75eec",
+        "scripts/analizar.py": "9341d898d50e8c5a63a1bff5fe2e8a48cca2864c28604b79759478bdb2c14ba7",
+        "scripts/generar_pdf.py": "cbc2e52b6d4263032458506474e3958bac6d12df1ff2dff2c509c827623ed0c2",
+        "scripts/generar_solucion.py": "254bc1723ceace840b32a396afe93d42a4f7de92d7cd0c62dd8f1e5654b42871",
+        "scripts/kommo_api.py": "43ba1e6b600bd5efab77570932c40dccf33e2f470a9e870900b95f305bee4fe4",
+        "scripts/schema.sql": "33e58223a7dd5b4bc74ec342f44506ee9157ad228b8044eea38df7461d675680",
+        "scripts/validar_bot.py": "b340dafc0c51b39f78679961286bb135e9d14d68b0b039b0dfd6866fef8949c1",
+        "soluciones/errores/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "soluciones/solicitudes/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "data/bots/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "data/bots/ejemplo_bot.json": "562dbd5cf695c5a22da641c57058424bdc9329800cf644956e3fc0fb12e66f4f",
+        "data/capturas/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "data/custom_fields/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "data/pipelines/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "data/validaciones/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "7b78d1510e617f4a8945bfbe39ae0368c6906cf9db7b59d3bae33cf9b964a614",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "docs/metodologia_analisis.md",
+          "sha256": "af781d42485d7f249e0132c359e665d9a47e40f42894b67ab67d669e2ca28bee",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "docs/03_validacion_flujos.md",
+          "sha256": "ca3117ec447295a98b7d91501c0df14dd3df3ec60111109eec2b70285f5c76ab",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "docs/integracion_postgresql.md",
+          "sha256": "5f1f891e98ee8ad2493d676eabac4b8784f0ebbba746c651defc94781c126898",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "scripts/validar_bot.py",
+          "sha256": "b340dafc0c51b39f78679961286bb135e9d14d68b0b039b0dfd6866fef8949c1",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "scripts/analizar.py",
+          "sha256": "9341d898d50e8c5a63a1bff5fe2e8a48cca2864c28604b79759478bdb2c14ba7",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "scripts/schema.sql",
+          "sha256": "33e58223a7dd5b4bc74ec342f44506ee9157ad228b8044eea38df7461d675680",
+          "method": "static_document_or_selected_code_sections"
+        }
+      ],
+      "execution": "not_executed_no_dependencies_installed",
+      "treatment": "original_portuguese_synthesis_of_patterns_and_limitations_no_third_party_source_code_copied"
+    },
+    {
+      "id": "EXT-005",
+      "directory": "kommoCRM-GS-API-sync",
+      "repo": "by-dujiy/kommoCRM-GS-API-sync",
+      "topic": "references/integrations/google-sheets-sync.md",
+      "title": "Sincronização CRM e Google Sheets",
+      "license": "MIT, arquivo LICENSE presente",
+      "already": [
+        "Fonte por campo, identidade, direção e reconciliação"
+      ],
+      "add": [
+        "Comparação com baseline por registro e campo para sincronização bilateral",
+        "Identidade estável da linha, fórmulas, locale e distinção de vazio",
+        "Cursor confirmado após persistência, sobreposição e recuperação de falha parcial"
+      ],
+      "cautions": [
+        "Exemplo é específico de agenda clínica; não herdar entidades ou campos desse negócio",
+        "Cursor max_updated+10 pode deixar intervalo não lido",
+        "Loops sem limite e logs de payload não viram padrão de implementação"
+      ],
+      "commit": "832e6a56ba7004ecd4aa8de6d746740c34841322",
+      "inventory_sha256": {
+        ".gitignore": "b7ce167ef0234e5e7169a5c86187c35c142df8189a4676e89d1ff1d3f8ae113f",
+        "config.py": "e5448970ec71242d5f4a9437d426edabf78c72920d3159138cda573685c7abdc",
+        "LICENSE": "484ba218ca9cdf78a5b53340f47f34f71ef0b32afdb744b31b4ef080ab096203",
+        "README.md": "c79202b9f3603b3ffc569ad94efeb76204fb8299cf21e7ad363cfb8996e94c8d",
+        "requirements.txt": "7c1622abd5adbe1f268d8bf59cd1e6ca49080a10e3fcc68aec153cf2bd790ca6",
+        "run_app.py": "9ee5de73e10d0e29627009387d3101c8cd2fed5691fd704ebdd440612ea1b702",
+        "src/gs_api.py": "dd40135f03e2da45aea9f852b8c0426d3fb9bf2af8e63c93552c6db71fd97ad0",
+        "src/kommo_api.py": "2bb9dd3f773506f8161afbb509bda788201a978caaa0133408442a20853f7bfb",
+        "src/logger.py": "be4c36d5f088198c3003317693cf04f8f73a7830d2a120d97c8bacb447958111",
+        "src/refresh_kommo_token.py": "743651833001de3c438a28cc13da24bf5d74662c58dbc9363bddce013317e6d1",
+        "src/utilities.py": "e8c7f2fc3778f0ff640d4e4c59a8b649755b03844a9703d69d862ff35ac15960",
+        "src/__init__.py": "9cb0ed4499732c9ac7a32338b5b6a97afda7f2642c0d00b8a0d458362702fc0c"
+      },
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "c79202b9f3603b3ffc569ad94efeb76204fb8299cf21e7ad363cfb8996e94c8d",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "484ba218ca9cdf78a5b53340f47f34f71ef0b32afdb744b31b4ef080ab096203",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "run_app.py",
+          "sha256": "9ee5de73e10d0e29627009387d3101c8cd2fed5691fd704ebdd440612ea1b702",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "src/gs_api.py",
+          "sha256": "dd40135f03e2da45aea9f852b8c0426d3fb9bf2af8e63c93552c6db71fd97ad0",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "src/kommo_api.py",
+          "sha256": "2bb9dd3f773506f8161afbb509bda788201a978caaa0133408442a20853f7bfb",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "src/utilities.py",
+          "sha256": "e8c7f2fc3778f0ff640d4e4c59a8b649755b03844a9703d69d862ff35ac15960",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "src/refresh_kommo_token.py",
+          "sha256": "743651833001de3c438a28cc13da24bf5d74662c58dbc9363bddce013317e6d1",
+          "method": "static_document_or_selected_code_sections"
+        }
+      ],
+      "execution": "not_executed_no_dependencies_installed",
+      "treatment": "original_portuguese_synthesis_of_patterns_and_limitations_no_third_party_source_code_copied"
+    },
+    {
+      "id": "EXT-006",
+      "directory": "kommo-onboarding",
+      "repo": "tamibot/kommo-onboarding",
+      "topic": "references/strategy/conversation-led-onboarding.md",
+      "title": "Onboarding baseado em conversas e desenho tipado",
+      "license": "MIT, arquivo LICENSE presente",
+      "already": [
+        "Setup guiado, proposta, campos, metas e autorização"
+      ],
+      "add": [
+        "Amostragem de conversas com evidência e separação de papéis",
+        "Contrato de desenho antes de planilha ou implantação",
+        "Mapeamento por chave lógica e IDs reais, plano por dependências e compensação"
+      ],
+      "cautions": [
+        "Deployer usa setTimeout e gera IDs simulados, sem executar os POST comentados",
+        "Rollback imprime exclusões e remove o mapeamento local, sem DELETE remoto",
+        "Modelo injeta etapas/campos fixos e lê credenciais de planilha; esses padrões não foram incorporados"
+      ],
+      "commit": "e7bcbdc80976d82cd4f795026d2c4c2a2ef1c98a",
+      "inventory_sha256": {
+        ".gitignore": "276e035be9d51909aa3c623ae40b0a9390c2a8176223692b879ce03aba173700",
+        "CODE_OF_CONDUCT.md": "1244c91098c1692e584d3cdc4827a0263e0beb53da8272036b0f7ddb39ad3c1e",
+        "CONTRIBUTING.md": "d290aa7117a21fdb7638f0bea24e99f2b3a2e34873bf6ece8287a3729c4bfd33",
+        "LICENSE": "89d3036c70ccedf29f3c9fa81b3aa0f580f8cc8eb38dd9ba4a7a57df175a7639",
+        "package-lock.json": "0e08f62e35af7158ca85bd697b82b126d0966dcbf6b41a4e9ad818364ff126e2",
+        "package.json": "1d0e8f66c7f2d3cc13a65e9cbb22127f9ad7d0e2d0eb1be3f331fd603acf21ec",
+        "README.md": "bd18c44f2a611947c223afdd66882cb5d0b6e8fbf48cea2121a916b3e5ccc4a5",
+        "turbo.json": "55976c10152f96048bce0c6c3c8af4cb29eaff118b95f0eb983c22564ddbbaf9",
+        ".github/PULL_REQUEST_TEMPLATE.md": "878861f4a385aecf002ef61ecdd110c8652d2577c842e112671ae955fd1d9a51",
+        "docs/00_INDEX.md": "3b3f0b928719d3b1276204d3a0b2e296c8085fca6975621270075b3abf5d335d",
+        "docs/01_Arquitectura_Global.md": "d5a464e1fd51cfbd556c1544ebcf49be96bffa38992cd67e0fc2a7264269faec",
+        "docs/02_Motor_Gemini_IA.md": "85751784e07da9a1cd2f8ee41583578ab1114d37ca4450b2c660f9c8b3830413",
+        "docs/03_Validaciones_Credenciales.md": "34406805e40ea41ed6ca66daebc1c969a8a03629d66ebd14f41f3532df2f118c",
+        "docs/04_Kommo_Deployer.md": "3beb7b23be3ff0bf29791aa5dd0ff9301a35b82f6af604e9e4cfca8c16291fd1",
+        "docs/LLM_CONTEXT.md": "13f5791dea220c46cd980d9c248ce62c4f20b37e89cabfbb764028fd88ba711c",
+        "docs/MANUAL_OPERATIVO.md": "3e6cf7b9eecac0bcae1a3fdde0c46c38f63870b1ab2b8c2367c96794e4371668",
+        "apps/onboarding-engine/.env.example": "5cd089696df41ec04a9f4cefb5602377bbca43397a59ec57874c7279c3d7dcba",
+        "apps/onboarding-engine/index.js": "fa9b8ef30922689f2615be2b1f4176a6a498f27ff91ff06f905eb18fbdc05715",
+        "apps/onboarding-engine/Onboarding_Config.xlsx": "b0dfa52d1f843ca03f393270e7b1e416043ea1beed1b300ad573164fb942fd16",
+        "apps/onboarding-engine/package.json": "2e93e6693cca5fdcbeb10c96c65334112f851317186454770e019c436faf8b3e",
+        "apps/onboarding-engine/output_docs/01_Guia_Tareas.md": "f8cc425d29c4573a0fef3cb4faec3d8061fbbec3c8d6fda97c97a22c3e23fe70",
+        "apps/onboarding-engine/output_docs/02_Credenciales.md": "139530b71d4d764743fca7229b5952e9b894cbf5eda07ab332ce48a3ce55c062",
+        "apps/onboarding-engine/output_docs/03_Etapas.md": "666175818096952b4039aa6a28cabdf59b0e608b679772e906b196558a21be7d",
+        "apps/onboarding-engine/output_docs/04_Campos_Personalizados.md": "31af84293a09ac1233d7905764ccd7424bb6701c70c8f6f750dcd3d0cdf82968",
+        "apps/onboarding-engine/output_docs/05_Agentes_Flujos.md": "ca2c6c688b1ded20b7d2aef0b2ed0a532ce60f8c8337fd6877952e2ada818ff5",
+        "apps/onboarding-engine/output_docs/06_Pruebas.md": "81b46187443751fc5a8705f1569dde5877c46be49602ef859d5c99ba35fab155",
+        "apps/onboarding-engine/output_docs/07_Mapeo_IDs_Kommo.json": "19a36f7118a4e717de45350986795bccda92f22b8b23914bb23dfdd6ac0ec6b9",
+        "apps/onboarding-engine/output_docs/07_Mapeo_IDs_Kommo.md": "c8c21eddfa4b56daf58065704708463353514bf99b3189a3fcaf2584b1b9c127",
+        "apps/onboarding-engine/src/chatParser.js": "f338daeee00251e5a6de799278c9f5ae7b85167c67c0bf94ba981ef975689e6f",
+        "apps/onboarding-engine/src/credentialValidator.js": "b06c545ada56bfbe3ca6f9e0b18ff97a173366cde5144d0b4234e6c5a2d0bde3",
+        "apps/onboarding-engine/src/excelGenerator.js": "30a1a87591f63f961317c334bb4b1049b20c07626953a85a2bf66d299116f1d1",
+        "apps/onboarding-engine/src/geminiService.js": "56ab00a4fb1379047218b568c4e75a5eca91904a754e758badd8ea08868117bd",
+        "apps/onboarding-engine/src/guideGenerator.js": "d433aeee5cfe4019efccf6f500b0ba63358ccb4d2852c54e09c6f5a447b1e3f5",
+        "apps/onboarding-engine/src/kommoDeployer.js": "e6e3a5b59148ade2b5016e1e834039453d5cfddccc591dd6e6d56b27015a18a2",
+        "apps/onboarding-engine/src/kommoRollback.js": "db4c9053b1d4b11a97bb7fd286f4a36d4408c2892519553ce84a083392c041ce",
+        "apps/onboarding-engine/src/markdownGenerator.js": "9170f05e7c4820b7a80e1fd56afeb630e1c2e3d4d32fad5b7d5053ab19afa7c5",
+        "apps/onboarding-engine/src/mockData.js": "8f610d089c7e028e1736d26ac92a1941c48f349aed8d84f54d067b0cfb03b94d",
+        ".github/ISSUE_TEMPLATE/bug_report.md": "61a97c0f0a8c792f4710b70d07ef9fbf75f81ef697d2b50c3133edbb46c3fbd7",
+        ".github/ISSUE_TEMPLATE/feature_request.md": "3cbc06f7d7c22f4ed1d221b38af9a73b6f3c74254da55f2c015d8ed490ce25ed",
+        ".github/workflows/ci.yml": "dc30c8eb798a212ee34204c4e025cdcda42e1663488cb06932b77eedb8c10697"
+      },
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "bd18c44f2a611947c223afdd66882cb5d0b6e8fbf48cea2121a916b3e5ccc4a5",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "89d3036c70ccedf29f3c9fa81b3aa0f580f8cc8eb38dd9ba4a7a57df175a7639",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "docs/04_Kommo_Deployer.md",
+          "sha256": "3beb7b23be3ff0bf29791aa5dd0ff9301a35b82f6af604e9e4cfca8c16291fd1",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "docs/02_Motor_Gemini_IA.md",
+          "sha256": "85751784e07da9a1cd2f8ee41583578ab1114d37ca4450b2c660f9c8b3830413",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "apps/onboarding-engine/src/chatParser.js",
+          "sha256": "f338daeee00251e5a6de799278c9f5ae7b85167c67c0bf94ba981ef975689e6f",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "apps/onboarding-engine/src/kommoDeployer.js",
+          "sha256": "e6e3a5b59148ade2b5016e1e834039453d5cfddccc591dd6e6d56b27015a18a2",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "apps/onboarding-engine/src/kommoRollback.js",
+          "sha256": "db4c9053b1d4b11a97bb7fd286f4a36d4408c2892519553ce84a083392c041ce",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "apps/onboarding-engine/src/geminiService.js",
+          "sha256": "56ab00a4fb1379047218b568c4e75a5eca91904a754e758badd8ea08868117bd",
+          "method": "static_document_or_selected_code_sections"
+        }
+      ],
+      "execution": "not_executed_no_dependencies_installed",
+      "treatment": "original_portuguese_synthesis_of_patterns_and_limitations_no_third_party_source_code_copied"
+    },
+    {
+      "id": "EXT-007",
+      "directory": "Agente-Conversacional-Kommo-CRM-LMStudio-VS-OpenAI",
+      "repo": "KevinInoCol/Agente-Conversacional-Kommo-CRM-LMStudio-VS-OpenAI",
+      "topic": "references/ai/external-rag-agents.md",
+      "title": "Agentes externos, RAG, memória e áudio",
+      "license": "Arquivo de licença não encontrado no snapshot",
+      "already": [
+        "Agente nativo, fontes, limites, ações e handoff"
+      ],
+      "add": [
+        "Arquitetura externa distinta do agente nativo Kommo",
+        "Compatibilidade de tool calling, memória por conta/canal/conversa e recuperação RAG",
+        "Recepção durável, outbox, áudio e controle de envio"
+      ],
+      "cautions": [
+        "Deduplicação em memória por lead:text e BackgroundTasks não garantem recuperação entre processos",
+        "Thread apenas por lead não basta para isolar múltiplas contas/canais",
+        "Downloader tenta reenviar Bearer após 401/403 da URL recebida; requer verificação do destino",
+        "Trocar o LLM por local não torna embeddings/parser/transcrição locais"
+      ],
+      "commit": "20bccb881c5fe8f5dd2a7417448d4aadac1c807c",
+      "inventory_sha256": {
+        ".env.example": "09dfdbd6ee9c5eb684103ee177e265cb3282e4501f6026e81aa392fd40f90bf1",
+        ".gitignore": "066b5dbd8ece3894ebc36f76803cac690b17f2ff7afbc05f75e46c6ca57d7968",
+        "agent.py": "2463d5ba3c21686eb350c0e7a1b52756cd06c9295035906885ddc327dc4c94cf",
+        "app.py": "f70c8b271b88ad6f31cae300c5e0abcd32c444cd3da716029b3d2c94b3ff86eb",
+        "CLAUDE.md": "52bc69088e584865fa37b6feb1e7b902bd9a07cf42c20d16bba318e400dcf01c",
+        "COMANDOS.md": "25a5f4a3e4bb747287e78d9a0b07864659816384e02752193c8917520e5011cc",
+        "README.md": "804c8c03e7d23763fd1d62e2be2feee98268e9696abf0b8e66677cba1785cb74",
+        "requirements.txt": "e2216a464294dea006fa5fde76715bad92be26634bc0d4a0397ebf2732c50d29",
+        "vector_store.py": "8475ff60bb317f47977897e808627fa3debf28faa9c3bb5fcc2f8fbbb730cfa3",
+        "Base_de_Conocimiento/Base de Conocimiento - Alpha State V2.pdf": "42cbbb0f187861a98239d8475a57e255bd72175571811077563edd039f2a14db",
+        "chat_history/postgres_store.py": "d9c6f0156cb3743e15dc066a2e89aa645880bac28dfbe2f1e4396c11ed58e743",
+        "chat_history/__init__.py": "c438520491ac6d24b853fe1fd51b2fafd7e32d99d3cb59f7e1ea4225b07e6fe2",
+        "Kommo Functions/kommo.py": "f41802df7cd75a3ad5b24c91dd6b05ae69876c5fc401778b010a49bff6c5ab76",
+        "Kommo Functions/__init__.py": "478148577903097f23b702c17382c764fdec8ed805dace007b58389104f1e8b6",
+        "Kommo_support_tools/get_custom_fields.py": "2952c7e78f36c7b1b012ec6f48983fdf33f2d14012eb8e50ed76ad71f483831a",
+        "Kommo_support_tools/get_pipelines.py": "f5eb60578e57a66e59388323d3e90426e9e27aa7bbd34b62d45efd2ad1e046b3",
+        "model_config/model.yaml": "1943fae8586f3df7fe3a870121f8e3edb2cb39e2848430b4d75164caa45559f6",
+        "procesamiento_de_audio/descarga_audio.py": "b866ce5d3d46221d6e74286dbbeccb40394198744f20403f60d870fb128b49c7",
+        "procesamiento_de_audio/procesador.py": "7f2c1c4fd085a2dbaa7688b5acebce8187ff924de1914ef20f5fff65ade7ef97",
+        "procesamiento_de_audio/transcriptor.py": "01f02cc3cc7c0f875b05bccbb72cdb8df821fe30e9acccec2ae011875bc399ba",
+        "procesamiento_de_audio/__init__.py": "f60d26d6f3e7c6cd74e0a1c95582eb58353259b2711ba6bc01aa39f8a1f724b0",
+        "prompt/system_prompt.yaml": "20717375a68d84b514407cefe7b6e006b3e3015fba1875aef135c94e3dca0a5e",
+        "RAG/rag.py": "493e8377f99cfc7f4fa056bbadb5afabd42cb318bd409db9749c43379d1386a2",
+        "RAG/__init__.py": "52869e836d6f547116e6899f685d76a5c8668cbcb4cd7c662d7c0e5d430c5691",
+        "tools/buscar_inmuebles.py": "7fc35df4624f4e73681971680aac331706b9bddf921dd93f0de177bf8cacc9cb",
+        "tools/move_lead_to_Cerrar_Venta.py": "229bc0255aa220bba2fe709d9bffaa030c93db1330205763aeef604c40608509",
+        "tools/move_lead_to_Lead_Calificado.py": "87211812f8a5f8c6d2b4b70c45b4ec865b37bae8c0844c7b4c1bcc251cdeb181",
+        "tools/move_lead_to_Lead_Interesado.py": "c4fe79f14c198f16eda77118a3ccdc9aaaa9b2c77a059a8ea3658a3487f32bb1",
+        "tools/retrieval.py": "9548bf4d27ff7baa27da8b7ae90a1c81bc21810a3237f7ecda373a6e236c988f",
+        "tools/update_data_Areas_Comunes.py": "504e95857aa855e6695a2287b5764d8e1d2e4a0ef0ddf37abc22c521cbd9ca69",
+        "tools/update_data_Metodo_de_Pago.py": "accd6782b2b3d2f6785f550ed3dd27709f1f9e118210ccc5cd5002dabeeda89c",
+        "tools/update_data_Metraje.py": "42e2c1e184f5ad6e9129819f5989496f75fb006e819d96b73ce332020edc3ad3",
+        "tools/update_data_Rango_Salarial.py": "92ced52e94cdf27f5dd6946a63321ea6c6da8420721aa1cea582bf2fd3d7beeb",
+        "tools/update_data_Tipo_de_Inmueble.py": "1c28d7059f7ec945d5ba48cd1982b2f56750ce22124e2c21c730be92f0be8f7f",
+        "tools/__init__.py": "7c59f2e10070105087d339d901c567940e546728785a8d8a76be469fbb98e2f8"
+      },
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "804c8c03e7d23763fd1d62e2be2feee98268e9696abf0b8e66677cba1785cb74",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "app.py",
+          "sha256": "f70c8b271b88ad6f31cae300c5e0abcd32c444cd3da716029b3d2c94b3ff86eb",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "agent.py",
+          "sha256": "2463d5ba3c21686eb350c0e7a1b52756cd06c9295035906885ddc327dc4c94cf",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "chat_history/postgres_store.py",
+          "sha256": "d9c6f0156cb3743e15dc066a2e89aa645880bac28dfbe2f1e4396c11ed58e743",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "tools/retrieval.py",
+          "sha256": "9548bf4d27ff7baa27da8b7ae90a1c81bc21810a3237f7ecda373a6e236c988f",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "procesamiento_de_audio/descarga_audio.py",
+          "sha256": "b866ce5d3d46221d6e74286dbbeccb40394198744f20403f60d870fb128b49c7",
+          "method": "static_document_or_selected_code_sections"
+        }
+      ],
+      "execution": "not_executed_no_dependencies_installed",
+      "treatment": "original_portuguese_synthesis_of_patterns_and_limitations_no_third_party_source_code_copied"
+    },
+    {
+      "id": "EXT-008",
+      "directory": "kommo-sdk-data-engineer",
+      "repo": "nascin/kommo-sdk-data-engineer",
+      "topic": "references/data/extraction-and-modeling.md",
+      "title": "Extração, modelos, eventos e qualidade de dados",
+      "license": "Arquivo LICENSE permissivo com cabeçalho Python Packaging Authority; não presume auditoria de autoria",
+      "already": [
+        "Paginação, tipos, cobertura e métricas com fontes"
+      ],
+      "add": [
+        "Camada bruta e tabelas de entidades, relações e campos multivalorados",
+        "Schema drift, saída tabular e semântica de None/erro/página vazia",
+        "Incremental com watermark e reconciliação de exclusões, reentradas e páginas"
+      ],
+      "cautions": [
+        "Retorno None pode representar fim ou exceção em métodos observados",
+        "Paralelismo e sleeps por worker não comprovam limite agregado",
+        "Páginas parciais acumuladas e exceções internas não podem ser declaradas exportação completa"
+      ],
+      "commit": "6a2fcd548fef1af93472a91160d20d35b1115ca0",
+      "inventory_sha256": {
+        ".gitignore": "064a49d73646d64f99d19421df0b49a7c72fbb6c33fea6715dec331baf88fcad",
+        "LICENSE": "ea46e21527e86d367b6de5a22a71e937dd361e0071f89ce07267b44af2aa84a6",
+        "pyproject.toml": "791b7900c3b7ed81ecbaba91e094c405c7ec888a59add8e82a4b435059a45320",
+        "README.md": "ff76dd71f970792b4de58d36b8e0ce74876f144527a77f84d5817f808a6d6f73",
+        "requirements.txt": "53bec0cc4ff5734270e410dfbab22eb9461f391a5ec4626ef71223254c83d303",
+        "kommo_sdk_data_engineer/config.py": "5b167d3ac31a7fd3e84ab4198263fff8cb515a20b2eed143f1e4b44d88649043",
+        "kommo_sdk_data_engineer/kommo.py": "bd4283d2c2a6167b04c1e3de2d449e447b2600b8c2048ca3bc85b294afa67a75",
+        "kommo_sdk_data_engineer/utils.py": "f1822665cb7466e3308057ce6c97485df9db127980367b4581239e3f075a69c4",
+        "kommo_sdk_data_engineer/__init__.py": "4444fffc7d3ac238243dd890b462fbcdf690062a514b775fcc3a7dd4a1f7649a",
+        "kommo_sdk_data_engineer/endpoints/companies.py": "fcbdf50ff6d82d7bd057450b062c20eb2c5f8ff0a02ed32e3e7e863cd333658c",
+        "kommo_sdk_data_engineer/endpoints/contacts.py": "b4c5c8dae3ac942f70f36ea42f95272667a4bf1b4a2fa5112933917c218371fc",
+        "kommo_sdk_data_engineer/endpoints/custom_fields.py": "36b6780282e8039185f94460524577f9794d49d4580f65404b0bdf7acd704c94",
+        "kommo_sdk_data_engineer/endpoints/events.py": "15d25f0e45ff1acb53ced595545bb95ecb4855e5ea3187ac0d7488f34a69e593",
+        "kommo_sdk_data_engineer/endpoints/leads.py": "0ec6f8e25c75341dee51667d33a60a2f58ed6ea596b943b8e0fa569296b4bdde",
+        "kommo_sdk_data_engineer/endpoints/pipelines.py": "ad2c0be6fd5bfa309117fe94d3da39993d930a7266bd29b6953eb3caacd20449",
+        "kommo_sdk_data_engineer/endpoints/users.py": "e5a8aa90011f69571d9106092b952d800fd11efd26740bbbc7ba6f4bd5900c47",
+        "kommo_sdk_data_engineer/endpoints/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kommo_sdk_data_engineer/models/company_models.py": "9eb6079f6008833e4948a02850703dcf514589b4fbe02720d23f26f16733cb1d",
+        "kommo_sdk_data_engineer/models/contact_models.py": "b6eec0daaa149e71999d34c93af619417192fcf16b7e34e7324de3735c96fdab",
+        "kommo_sdk_data_engineer/models/custom_field_models.py": "10bf9fbf040f03600c0a6f47c23f57d42f8c5d27cd6a7418576828074a441008",
+        "kommo_sdk_data_engineer/models/event_models.py": "e5495ba0acf07706f1795bd42b5a80725f7de61674bd1b64ea13a66a1fec4fa5",
+        "kommo_sdk_data_engineer/models/lead_models.py": "433c4e33981292b7f7de4910812392211fa4678bd9e901209ba43ae356f24dda",
+        "kommo_sdk_data_engineer/models/pipeline_models.py": "305f883fc4e1d66a1eb056078662cb1e6734d0772c19b800b1beb35a34b65f12",
+        "kommo_sdk_data_engineer/models/user_models.py": "f78eb973afbf6a75454127416b6a0bdf52a28346d9363151698bca0b1a6dab2a",
+        "kommo_sdk_data_engineer/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "ff76dd71f970792b4de58d36b8e0ce74876f144527a77f84d5817f808a6d6f73",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "ea46e21527e86d367b6de5a22a71e937dd361e0071f89ce07267b44af2aa84a6",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "kommo_sdk_data_engineer/kommo.py",
+          "sha256": "bd4283d2c2a6167b04c1e3de2d449e447b2600b8c2048ca3bc85b294afa67a75",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "kommo_sdk_data_engineer/endpoints/leads.py",
+          "sha256": "0ec6f8e25c75341dee51667d33a60a2f58ed6ea596b943b8e0fa569296b4bdde",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "kommo_sdk_data_engineer/endpoints/events.py",
+          "sha256": "15d25f0e45ff1acb53ced595545bb95ecb4855e5ea3187ac0d7488f34a69e593",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "kommo_sdk_data_engineer/models/event_models.py",
+          "sha256": "e5495ba0acf07706f1795bd42b5a80725f7de61674bd1b64ea13a66a1fec4fa5",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "kommo_sdk_data_engineer/models/custom_field_models.py",
+          "sha256": "10bf9fbf040f03600c0a6f47c23f57d42f8c5d27cd6a7418576828074a441008",
+          "method": "static_document_or_selected_code_sections"
+        }
+      ],
+      "execution": "not_executed_no_dependencies_installed",
+      "treatment": "original_portuguese_synthesis_of_patterns_and_limitations_no_third_party_source_code_copied"
+    },
+    {
+      "id": "EXT-009",
+      "directory": "KommoCRM-Integracao-de-analise-de-tempo-por-etapa-kmm",
+      "repo": "guilhermeDaviDev/KommoCRM-Integracao-de-analise-de-tempo-por-etapa-kmm",
+      "topic": "references/analytics/stage-time-and-sla.md",
+      "title": "Tempo por etapa, reentrada e SLA",
+      "license": "Arquivo de licença não encontrado no snapshot",
+      "already": [
+        "Aging, tempo entre marcos e critérios locais de SLA"
+      ],
+      "add": [
+        "Visitas de etapa e intervalos de responsável, cobertura temporal e censura",
+        "Durabilidade central versus observação de navegador",
+        "Média, percentis, aging aberto e limites sem lacunas"
+      ],
+      "cautions": [
+        "ZIP consulta leads com page:1 e limit:250 e depende de aba aberta/localStorage",
+        "Inicialização usa created_at como início da etapa, sem provar entrada nela",
+        "Limite vermelho é lido mas não usado no cálculo da cor; alteração de owner sobrescreve o intervalo corrente",
+        "Agregação observada mistura durações encerradas e abertas"
+      ],
+      "commit": "e704952fa5de6b13609e63e75190847f1d0195af",
+      "inventory_sha256": {
+        "2.0.zip": "885e7b0d1f9cc99243754784cf0c33f5dafa35b8ca71b286ff6d558e2518ae7b",
+        "README.md": "a7f822023bb4754666bcf99ebe19f037ce5a05a67c8bff3f0279a23910fd6bbf"
+      },
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "sha256": "a7f822023bb4754666bcf99ebe19f037ce5a05a67c8bff3f0279a23910fd6bbf",
+          "method": "static_document_or_selected_code_sections"
+        },
+        {
+          "path": "2.0.zip",
+          "sha256": "885e7b0d1f9cc99243754784cf0c33f5dafa35b8ca71b286ff6d558e2518ae7b",
+          "method": "static_document_or_selected_code_sections"
+        }
+      ],
+      "execution": "not_executed_no_dependencies_installed",
+      "treatment": "original_portuguese_synthesis_of_patterns_and_limitations_no_third_party_source_code_copied",
+      "reviewed_archive_members": [
+        {
+          "path": "manifest.json",
+          "sha256": "90a541e4d22aff1c9fc4c71b3c37ff258a10c517a51bae1567fbb268d47a02a6",
+          "method": "in_memory_static_inspection"
+        },
+        {
+          "path": "script.js",
+          "sha256": "048517bbb63b46e79bd474af6115b5fff7ea28e33ed156e980862ad69ad7c759",
+          "method": "in_memory_static_inspection"
+        },
+        {
+          "path": "i18n/pt.json",
+          "sha256": "aef2382f1d1752f07e7904d82297eb9782abdc4456caf9446bbac12535f2e54e",
+          "method": "in_memory_static_inspection"
+        }
+      ]
+    }
+  ],
+  "new_topics": [
+    "references/integrations/mcp-transport-and-capabilities.md",
+    "references/engineering/widgets-and-react.md",
+    "references/integrations/n8n-community-nodes.md",
+    "references/automation/salesbot-graph-audit.md",
+    "references/integrations/google-sheets-sync.md",
+    "references/strategy/conversation-led-onboarding.md",
+    "references/ai/external-rag-agents.md",
+    "references/data/extraction-and-modeling.md",
+    "references/analytics/stage-time-and-sla.md"
+  ],
+  "expanded_existing_references": [
+    "references/crm/automation-integrations.md",
+    "references/crm/crm-design.md",
+    "references/crm/operations-optimization.md",
+    "references/strategy/revops-and-pipeline.md",
+    "references/strategy/discovery-and-context.md",
+    "references/automation/salesbot-playbooks-and-api.md",
+    "references/ai/native-agents.md",
+    "references/integrations/kommo-mcp.md",
+    "references/setup.md",
+    "references/decision-model.md"
+  ],
+  "original_catalog_entries": [
+    {
+      "id": "PROC-KOMMO-001",
+      "title": "Diagnóstico inicial da conta",
+      "keywords": [
+        "diagnostico",
+        "conta",
+        "ambiente",
+        "leitura",
+        "inventario"
+      ],
+      "path": "references/knowledge/procedures/PROC-KOMMO-001-diagnostico.md",
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "PROC-KOMMO-002",
+      "title": "Conexão segura à API Kommo",
+      "keywords": [
+        "api",
+        "oauth",
+        "token",
+        "login",
+        "autenticacao",
+        "conectar",
+        "verificar"
+      ],
+      "path": "references/knowledge/procedures/PROC-KOMMO-002-conexao-api.md",
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "PROC-KOMMO-003",
+      "title": "Campos personalizados",
+      "keywords": [
+        "campos",
+        "personalizados",
+        "leads",
+        "contacts",
+        "companies",
+        "api",
+        "criar",
+        "campo"
+      ],
+      "path": "references/knowledge/procedures/PROC-KOMMO-003-campos.md",
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "PROC-KOMMO-004",
+      "title": "Pipelines e etapas",
+      "keywords": [
+        "pipeline",
+        "funil",
+        "etapas",
+        "status",
+        "leads",
+        "criar",
+        "configurar"
+      ],
+      "path": "references/knowledge/procedures/PROC-KOMMO-004-pipeline.md",
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "PROC-KOMMO-005",
+      "title": "Salesbot visual e JSON",
+      "keywords": [
+        "salesbot",
+        "bot",
+        "visual",
+        "workflow",
+        "json",
+        "gatilho",
+        "condicionais",
+        "mensagens"
+      ],
+      "path": "references/knowledge/procedures/PROC-KOMMO-005-salesbot.md",
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-001",
+      "title": "Decisão comercial e técnica",
+      "path": "references/decision-model.md",
+      "keywords": [
+        "diagnostico",
+        "causa",
+        "arquitetura",
+        "decisao",
+        "estrategia"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-002",
+      "title": "Conta, conexão e capacidades",
+      "path": "references/crm/account-engineering.md",
+      "keywords": [
+        "conta",
+        "acesso",
+        "campos",
+        "crm",
+        "permissao"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-003",
+      "title": "RevOps e métricas",
+      "path": "references/strategy/revops-and-pipeline.md",
+      "keywords": [
+        "revops",
+        "funil",
+        "conversao",
+        "metricas",
+        "forecast"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-004",
+      "title": "Operações e triagem comercial",
+      "path": "references/strategy/sales-operations.md",
+      "keywords": [
+        "triagem",
+        "higiene",
+        "ganhos",
+        "perdas",
+        "oportunidade",
+        "forecast",
+        "contas",
+        "contexto",
+        "limpeza",
+        "atualizar"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-005",
+      "title": "Salesbot e biblioteca de playbooks",
+      "path": "references/automation/salesbot-playbooks-and-api.md",
+      "keywords": [
+        "salesbot",
+        "playbook",
+        "manual",
+        "gatilho",
+        "json",
+        "api"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-006",
+      "title": "Agentes de IA e ferramentas Kommo",
+      "path": "references/ai/native-agents.md",
+      "keywords": [
+        "ia",
+        "agente",
+        "persona",
+        "fontes",
+        "copilot",
+        "resumo",
+        "creditos"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-007",
+      "title": "MCP e contratos do conector",
+      "path": "references/integrations/kommo-mcp.md",
+      "keywords": [
+        "mcp",
+        "oauth",
+        "autenticacao",
+        "ferramentas",
+        "conector"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-008",
+      "title": "Integrações e canais",
+      "path": "references/crm/automation-integrations.md",
+      "keywords": [
+        "webhook",
+        "n8n",
+        "make",
+        "whatsapp",
+        "formulario",
+        "widget",
+        "atribuicao"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-009",
+      "title": "Execução, lote e recuperação",
+      "path": "references/crm/safe-execution.md",
+      "keywords": [
+        "escrita",
+        "lote",
+        "retry",
+        "timeout",
+        "incidente",
+        "rollback"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-010",
+      "title": "Retenção e expansão",
+      "path": "references/strategy/customer-lifecycle.md",
+      "keywords": [
+        "retencao",
+        "onboarding",
+        "churn",
+        "renovacao",
+        "expansao"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    },
+    {
+      "id": "KE-CONHECIMENTO-011",
+      "title": "Guia visual Salesbot existente",
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/Guia_Salesbot_Kommo.md",
+      "keywords": [
+        "salesbot",
+        "visual",
+        "prints",
+        "menus",
+        "botoes"
+      ],
+      "status": "documented_not_tested",
+      "verified_in_account": false
+    }
+  ],
+  "reusable_template": "assets/templates/integration-contract.json",
+  "validation": {
+    "status": "local_content_validated",
+    "external_code_executed": false,
+    "packages_installed": false,
+    "paid_services_invoked": false,
+    "live_crm_access": false,
+    "prior_cli_limitation": "Previous revision documented 35/39 Python tests on Windows with four failures reproduced in the original runtime code; runtime code is unchanged by this content expansion.",
+    "original_files_accounted_for": 117,
+    "previous_files_byte_identical": 102,
+    "previous_documents_preserved_as_prefix": 13,
+    "structured_files_rebuilt": [
+      "manifest.json",
+      "references/knowledge/catalog.json"
+    ],
+    "original_catalog_entries_preserved": 16,
+    "catalog_entries": 25,
+    "local_links_resolved": 257,
+    "source_repositories_unchanged": 9,
+    "single_skill_entrypoint": true,
+    "all_json_parsed": true,
+    "skill_creator_validator": "passed",
+    "python_integrity_tests": {
+      "passed": 3,
+      "failed": 0
+    },
+    "knowledge_search_checks": {
+      "passed": 9,
+      "failed": 0
+    },
+    "full_cli_suite": "not_repeated_runtime_code_unchanged_prior_limitations_retained"
+  },
+  "backup": "C:\\Users\\Usuário\\Documents\\Codex\\Skill_KommoEngineer\\legado\\backup-kommo-engineer-referencias-20261023-215155-utc",
+  "installation": {
+    "source": "C:\\Users\\Usuário\\Documents\\Codex\\Skill_KommoEngineer\\kommo-engineer",
+    "global_skill": "C:\\Users\\Usuário\\.codex\\skills\\kommo-engineer",
+    "expected_inventory": "identical_after_copy",
+    "external_projects_installed": false
+  }
+}

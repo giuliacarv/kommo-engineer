@@ -1,0 +1,54 @@
+{
+  "template_version": 1,
+  "status": "proposed_not_authorized",
+  "account": {
+    "profile": null,
+    "account_id": null,
+    "subdomain": null,
+    "credential_reference": null
+  },
+  "systems": [],
+  "record_identity": {
+    "source_key": null,
+    "target_entity": null,
+    "target_id": null,
+    "ambiguous_identity_policy": "review"
+  },
+  "field_mappings": [],
+  "directions": [],
+  "conflict_policy": {
+    "baseline_reference": null,
+    "precedence_by_field": [],
+    "unresolved": "review"
+  },
+  "delivery": {
+    "trigger": null,
+    "eligibility": [],
+    "exclusions": [],
+    "idempotency_key": null,
+    "journal_reference": null,
+    "pending_results": []
+  },
+  "extraction": {
+    "filters": {},
+    "ordering": [],
+    "watermark": null,
+    "overlap_policy": null,
+    "coverage": "unknown",
+    "checkpoint_commit_condition": "after_confirmed_persistence_and_reconciliation"
+  },
+  "authorization": {
+    "scope_reference": null,
+    "allowed_effects": []
+  },
+  "verification": {
+    "acceptance_cases": [],
+    "readback_references": [],
+    "observed_state": "not_executed"
+  },
+  "recovery": {
+    "preserved_state_reference": null,
+    "disable_method": null,
+    "compensation_limits": []
+  }
+}

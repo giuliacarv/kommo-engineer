@@ -1,5 +1,247 @@
 {
   "version": 1,
-  "images": [],
-  "note": "Capturas reais pendentes. Não fabricar prints."
+  "images": [
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/00_menu_de_passos.png",
+      "title": "00_menu_de_passos",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "67f7633c4f4c3fd1b8cb3cba5672766961e202529d3b38d81c30da61e59bcabb"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/01_enviar_mensagem_botoes.png",
+      "title": "01_enviar_mensagem_botoes",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "0fd9bb4befac5a827ae052a6ea80bb73b1105a18edd9fea2adbe860661504c30"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/01_enviar_mensagem_url.png",
+      "title": "01_enviar_mensagem_url",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "c6ad31efc05be17c3f2beb3feb48cfd3b5b3138c04b82323dd696f318cb9d8ae"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/02_reacao.png",
+      "title": "02_reacao",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "8bc249a9eb7e62ae3a1677f402c502de037cd43716fcd2e33ab5afae81a93097"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/03_comentario.png",
+      "title": "03_comentario",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "d15e1ef0cacd69ef3c17f7c808f7b97cc0d23748f2e6baee0d8ca2e084e18eef"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/04_mensagem_interna_menu.png",
+      "title": "04_mensagem_interna_menu",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "db692a9053876748a6a985204e11faf8d3f83845a873d50d96b22f3a48e9b6f3"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/05_mensagem_lista.png",
+      "title": "05_mensagem_lista",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "482e47a85c46bde821d8a949ca327426f704d13baa144eb76e724bc2d9ff0956"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/06_condicao_ia.png",
+      "title": "06_condicao_ia",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "1b15bdc8c0614cda002c90db0c5aefecec29113090288d1496ea9f87ffc4e761"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/07_pausar.png",
+      "title": "07_pausar",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "a13fe56e4ceda3690f6b7d4197bbab0887bb66a9b244f00a3788bac646101641"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/08_inscrever_meta_expandido.png",
+      "title": "08_inscrever_meta_expandido",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "34228bfce6af2480ab6c0c768585374351e61afc01264586b99e9d0318601b2a"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/08_inscrever_meta_resumo.png",
+      "title": "08_inscrever_meta_resumo",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "7206a2683fa963314832b2745596d370844e5e9ad35c8bceb2c115e1eb5e59e7"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/09_acao_menu.png",
+      "title": "09_acao_menu",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "df068c6ac94bf9903b399d7c774df730c1796e5f38ac86f4a8e418c4b1e9f83c"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/10_condicao.png",
+      "title": "10_condicao",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "3eb7fee607edc17adfc2b4009f9ef68ad161561ad8acfe5778bab36c0ca915c0"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/11_validacao_menu.png",
+      "title": "11_validacao_menu",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "b57b28a3b2d84f214832424cf94afd0b63efd24d3da1669fc3ad1e6265bdf690"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/12_ir_outra_etapa_menu.png",
+      "title": "12_ir_outra_etapa_menu",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "0c20b4faf4a365528354d4dca946b9c46c1f08de0ddc3353b1417012bf773c18"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/13_iniciar_salesbot_menu.png",
+      "title": "13_iniciar_salesbot_menu",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "43e237b33911dd91de37048641fd1337e249879f46afee005e9b7f1ae7d8306a"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/14_codigo.png",
+      "title": "14_codigo",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "65a2d0d29df9d8e84739e94a5baecc220b1ded87634e24a2d01c5b8f3d7d1c3b"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/15_widget_menu.png",
+      "title": "15_widget_menu",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "6fe1b586db4d08e57cf6b0fbda4482a75ec1c9514eee71c6c38525e91fc7af97"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/16_round_robin.png",
+      "title": "16_round_robin",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "5a0b82c70e4767c78d9f4969c94bfc2e4756a70c37bb584a65832f3cec0d1009"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/17_parar_salesbot_menu.png",
+      "title": "17_parar_salesbot_menu",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "1bcde86fa5053c6b596e79b5faa6c5bcb1763362131512e4797999e37f136d69"
+    },
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/imagens/extra_canais.png",
+      "title": "extra_canais",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "e073ac87a94fae0498ebc4ed9bb65ef9caa5d361007f96261599d4dc8d0160ca"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/opcoes_gatilhos/Captura de tela 2026-10-23 153631.png",
+      "title": "Captura de tela 2026-10-23 153631",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "bd18b0326e69ff1738e603cf25785aaac7ee6df3cdb277a69dc54debc2cdae91"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/opcoes_gatilhos/Captura de tela 2026-10-23 153832.png",
+      "title": "Captura de tela 2026-10-23 153832",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "1563fd88b8282ef43fe988a7f1f1e68ed18f8b217f1c5e7bbba1c0f55af03445"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/opcoes_gatilhos/Captura de tela 2026-10-23 154103.png",
+      "title": "Captura de tela 2026-10-23 154103",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "eb428e4e00a48b0a29b5536fbeba57613a7ed320b0afa12fb7ee3a4c342ff363"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/opcoes_gatilhos/Captura de tela 2026-10-23 154749.png",
+      "title": "Captura de tela 2026-10-23 154749",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "7e9f5147f3ecfabf3fe8facd9803ec4ff36b00d85f2b8f9036baa21fceb21fd1"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155407.png",
+      "title": "Captura de tela 2026-10-23 155407",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "8bc249a9eb7e62ae3a1677f402c502de037cd43716fcd2e33ab5afae81a93097"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155424.png",
+      "title": "Captura de tela 2026-10-23 155424",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "d15e1ef0cacd69ef3c17f7c808f7b97cc0d23748f2e6baee0d8ca2e084e18eef"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155438.png",
+      "title": "Captura de tela 2026-10-23 155438",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "c6ad31efc05be17c3f2beb3feb48cfd3b5b3138c04b82323dd696f318cb9d8ae"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155447.png",
+      "title": "Captura de tela 2026-10-23 155447",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "0fd9bb4befac5a827ae052a6ea80bb73b1105a18edd9fea2adbe860661504c30"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155454.png",
+      "title": "Captura de tela 2026-10-23 155454",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "482e47a85c46bde821d8a949ca327426f704d13baa144eb76e724bc2d9ff0956"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155518.png",
+      "title": "Captura de tela 2026-10-23 155518",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "1b15bdc8c0614cda002c90db0c5aefecec29113090288d1496ea9f87ffc4e761"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155526.png",
+      "title": "Captura de tela 2026-10-23 155526",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "a13fe56e4ceda3690f6b7d4197bbab0887bb66a9b244f00a3788bac646101641"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155536.png",
+      "title": "Captura de tela 2026-10-23 155536",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "7206a2683fa963314832b2745596d370844e5e9ad35c8bceb2c115e1eb5e59e7"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155539.png",
+      "title": "Captura de tela 2026-10-23 155539",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "34228bfce6af2480ab6c0c768585374351e61afc01264586b99e9d0318601b2a"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155627.png",
+      "title": "Captura de tela 2026-10-23 155627",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "3eb7fee607edc17adfc2b4009f9ef68ad161561ad8acfe5778bab36c0ca915c0"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155722.png",
+      "title": "Captura de tela 2026-10-23 155722",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "5a0b82c70e4767c78d9f4969c94bfc2e4756a70c37bb584a65832f3cec0d1009"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155741.png",
+      "title": "Captura de tela 2026-10-23 155741",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "65a2d0d29df9d8e84739e94a5baecc220b1ded87634e24a2d01c5b8f3d7d1c3b"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/Captura de tela 2026-10-23 155824.png",
+      "title": "Captura de tela 2026-10-23 155824",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "e073ac87a94fae0498ebc4ed9bb65ef9caa5d361007f96261599d4dc8d0160ca"
+    },
+    {
+      "path": "recursos do kommo/interface (screenshots)/salesbot_bots_automacoes/passos_salesbot/salesbot_passos.png",
+      "title": "salesbot_passos",
+      "status": "supplied_not_operationally_verified",
+      "sha256": "04b0e0b3096911200ed313cd53f9b26a396ce30d3ce887c5684ebcf0c2e79430"
+    }
+  ],
+  "note": "Recursos fornecidos já presentes no pacote; índice de arquivos, sem homologação operacional nem inspeção de cada captura nesta integração.",
+  "guides": [
+    {
+      "path": "recursos do kommo/Guia_Salesbot_Kommo_2026/Guia_Salesbot_Kommo.md",
+      "status": "supplied_reference_not_operationally_verified",
+      "date_stated_by_source": "2026-10-23"
+    }
+  ]
 }

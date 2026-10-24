@@ -1,6 +1,6 @@
 # Workflow and CRM integration architecture
 
-Use for new or revised routing, integrations, automations, lifecycle logic, field changes, or handoffs between systems. This is a design checklist; Kommo-specific mechanics belong to the `kommo-crm` skill.
+Use for new or revised routing, integrations, automations, lifecycle logic, field changes, or handoffs between systems. This is a design checklist; Kommo-specific mechanics are defined in [account engineering](../crm/account-engineering.md).
 
 ## Specify the workflow
 
@@ -35,4 +35,4 @@ For any retryable action, specify a stable idempotency key or an equivalent dupl
 
 ## Platform translation
 
-General workflow concepts transfer across CRMs; commands, object models, APIs, and permission models do not. Translate an approved design through the relevant platform's current technical skill and current official documentation. Never copy HubSpot CLI instructions, Salesforce object assumptions, or another vendor's tool schemas into a Kommo runbook.
+General workflow concepts transfer across CRMs; commands, object models, APIs, and permission models do not. Translate an approved design through the internal account-engineering references and current official documentation for each affected platform. Never copy HubSpot CLI instructions, Salesforce object assumptions, or another vendor's tool schemas into a Kommo runbook.
