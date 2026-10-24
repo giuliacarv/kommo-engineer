@@ -84,7 +84,7 @@ def getroot(raw, new=False, init_existing=False):
     if not new and not init_existing and not (p/".kommo-engineer"/"project.json").is_file():
         raise KEError("Projeto Kommo Engineer não encontrado nessa pasta")
     if init_existing and not p.is_dir(): raise KEError("--use-existing-dir requer pasta existente")
-    return p
+    return p.resolve()
 
 def data_dir(root):
     return root/".kommo-engineer"
@@ -524,15 +524,15 @@ def snapshot_verify(root, goal=None):
                             elif Path(rel_evidence).is_absolute() or ".." in Path(rel_evidence).parts:
                                 reasons.append("Caminho de evidência inválido")
                             else:
-                                required.add("state/" + rel_evidence.replace("\\\\", "/"))
+                                required.add("state/" + rel_evidence.replace("\\", "/"))
                     if captured_goal.get("id") != gid:
                         reasons.append("ID da meta capturada divergente")
                 if not required.issubset(paths):
                     reasons.append("Documentos obrigatórios ausentes do manifesto")
                 try:
                     current_goal = readj(gp(root, gid) / "state.json")
-                    if current_goal.get("status") == "completed" and current_goal.get("snapshot_id") != sid:
-                        reasons.append("Snapshot não corresponde ao vínculo da meta concluída")
+                    # Historic snapshots remain valid after a formal reopening.
+                    # project_validate checks the currently selected snapshot separately.
                 except (KEError, OSError, KeyError):
                     reasons.append("Meta do snapshot não encontrada ou inválida")
         except (KEError, OSError, ValueError, KeyError, TypeError, AttributeError) as e:
@@ -634,16 +634,9 @@ def project_validate(root):
     return dict(valid=not errs,errors=errs,goals=len(list_goals(root)) if (d/"goals").exists() else 0)
 
 def knowledge_find(query):
-    cat=readj(SKILL/"references"/"knowledge"/"catalog.json")
-    toks=set(re.findall(r"\w+",query.casefold()))
-    results=[]
-    for item in cat["procedures"]:
-        hay=" ".join([item["id"],item["title"]," ".join(item.get("keywords",[]))]).casefold()
-        score=sum(1 for tok in toks if tok in hay)
-        if score>0:
-            results.append(dict(id=item["id"],title=item["title"],path=item["path"],
-                                status=item["status"],score=score))
-    return sorted(results,key=lambda x:-x["score"])
+    from knowledge import find
+    return find(query)
+
 
 def report_build(root):
     goals=list_goals(root)

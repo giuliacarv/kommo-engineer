@@ -398,6 +398,1211 @@
       ],
       "status": "documented_not_tested",
       "verified_in_account": false
+    },
+    {
+      "id": "UI-KOMMO-001",
+      "title": "00 menu de passos",
+      "path": "references/knowledge/ui/UI-KOMMO-001.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "00",
+        "menu",
+        "de",
+        "passos",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/67f7633c4f4c3fd1b8cb3cba5672766961e202529d3b38d81c30da61e59bcabb.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-002",
+      "title": "01 enviar mensagem botoes",
+      "path": "references/knowledge/ui/UI-KOMMO-002.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "01",
+        "enviar",
+        "mensagem",
+        "botoes",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/0fd9bb4befac5a827ae052a6ea80bb73b1105a18edd9fea2adbe860661504c30.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-003",
+      "title": "01 enviar mensagem url",
+      "path": "references/knowledge/ui/UI-KOMMO-003.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "01",
+        "enviar",
+        "mensagem",
+        "url",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/c6ad31efc05be17c3f2beb3feb48cfd3b5b3138c04b82323dd696f318cb9d8ae.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-004",
+      "title": "02 reacao",
+      "path": "references/knowledge/ui/UI-KOMMO-004.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "02",
+        "reacao",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/8bc249a9eb7e62ae3a1677f402c502de037cd43716fcd2e33ab5afae81a93097.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-005",
+      "title": "03 comentario",
+      "path": "references/knowledge/ui/UI-KOMMO-005.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "03",
+        "comentario",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/d15e1ef0cacd69ef3c17f7c808f7b97cc0d23748f2e6baee0d8ca2e084e18eef.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-006",
+      "title": "04 mensagem interna menu",
+      "path": "references/knowledge/ui/UI-KOMMO-006.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "04",
+        "mensagem",
+        "interna",
+        "menu",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/db692a9053876748a6a985204e11faf8d3f83845a873d50d96b22f3a48e9b6f3.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-007",
+      "title": "05 mensagem lista",
+      "path": "references/knowledge/ui/UI-KOMMO-007.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "05",
+        "mensagem",
+        "lista",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/482e47a85c46bde821d8a949ca327426f704d13baa144eb76e724bc2d9ff0956.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-008",
+      "title": "06 condicao ia",
+      "path": "references/knowledge/ui/UI-KOMMO-008.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "06",
+        "condicao",
+        "ia",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/1b15bdc8c0614cda002c90db0c5aefecec29113090288d1496ea9f87ffc4e761.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-009",
+      "title": "07 pausar",
+      "path": "references/knowledge/ui/UI-KOMMO-009.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "07",
+        "pausar",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/a13fe56e4ceda3690f6b7d4197bbab0887bb66a9b244f00a3788bac646101641.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-010",
+      "title": "08 inscrever meta expandido",
+      "path": "references/knowledge/ui/UI-KOMMO-010.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "08",
+        "inscrever",
+        "meta",
+        "expandido",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/34228bfce6af2480ab6c0c768585374351e61afc01264586b99e9d0318601b2a.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-011",
+      "title": "08 inscrever meta resumo",
+      "path": "references/knowledge/ui/UI-KOMMO-011.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "08",
+        "inscrever",
+        "meta",
+        "resumo",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/7206a2683fa963314832b2745596d370844e5e9ad35c8bceb2c115e1eb5e59e7.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-012",
+      "title": "09 acao menu",
+      "path": "references/knowledge/ui/UI-KOMMO-012.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "09",
+        "acao",
+        "menu",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/df068c6ac94bf9903b399d7c774df730c1796e5f38ac86f4a8e418c4b1e9f83c.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-013",
+      "title": "10 condicao",
+      "path": "references/knowledge/ui/UI-KOMMO-013.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "10",
+        "condicao",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/3eb7fee607edc17adfc2b4009f9ef68ad161561ad8acfe5778bab36c0ca915c0.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-014",
+      "title": "11 validacao menu",
+      "path": "references/knowledge/ui/UI-KOMMO-014.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "11",
+        "validacao",
+        "menu",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/b57b28a3b2d84f214832424cf94afd0b63efd24d3da1669fc3ad1e6265bdf690.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-015",
+      "title": "12 ir outra etapa menu",
+      "path": "references/knowledge/ui/UI-KOMMO-015.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "12",
+        "ir",
+        "outra",
+        "etapa",
+        "menu",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/0c20b4faf4a365528354d4dca946b9c46c1f08de0ddc3353b1417012bf773c18.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-016",
+      "title": "13 iniciar salesbot menu",
+      "path": "references/knowledge/ui/UI-KOMMO-016.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "13",
+        "iniciar",
+        "salesbot",
+        "menu",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/43e237b33911dd91de37048641fd1337e249879f46afee005e9b7f1ae7d8306a.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-017",
+      "title": "14 codigo",
+      "path": "references/knowledge/ui/UI-KOMMO-017.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "14",
+        "codigo",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/65a2d0d29df9d8e84739e94a5baecc220b1ded87634e24a2d01c5b8f3d7d1c3b.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-018",
+      "title": "15 widget menu",
+      "path": "references/knowledge/ui/UI-KOMMO-018.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "15",
+        "widget",
+        "menu",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/6fe1b586db4d08e57cf6b0fbda4482a75ec1c9514eee71c6c38525e91fc7af97.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-019",
+      "title": "16 round robin",
+      "path": "references/knowledge/ui/UI-KOMMO-019.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "16",
+        "round",
+        "robin",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/5a0b82c70e4767c78d9f4969c94bfc2e4756a70c37bb584a65832f3cec0d1009.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-020",
+      "title": "17 parar salesbot menu",
+      "path": "references/knowledge/ui/UI-KOMMO-020.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "17",
+        "parar",
+        "salesbot",
+        "menu",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/1bcde86fa5053c6b596e79b5faa6c5bcb1763362131512e4797999e37f136d69.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-021",
+      "title": "extra canais",
+      "path": "references/knowledge/ui/UI-KOMMO-021.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "extra",
+        "canais",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/e073ac87a94fae0498ebc4ed9bb65ef9caa5d361007f96261599d4dc8d0160ca.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-022",
+      "title": "Captura de tela 2026-10-23 153631",
+      "path": "references/knowledge/ui/UI-KOMMO-022.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "153631",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/bd18b0326e69ff1738e603cf25785aaac7ee6df3cdb277a69dc54debc2cdae91.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-023",
+      "title": "Captura de tela 2026-10-23 153832",
+      "path": "references/knowledge/ui/UI-KOMMO-023.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "153832",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/1563fd88b8282ef43fe988a7f1f1e68ed18f8b217f1c5e7bbba1c0f55af03445.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-024",
+      "title": "Captura de tela 2026-10-23 154103",
+      "path": "references/knowledge/ui/UI-KOMMO-024.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "154103",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/eb428e4e00a48b0a29b5536fbeba57613a7ed320b0afa12fb7ee3a4c342ff363.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-025",
+      "title": "Captura de tela 2026-10-23 154749",
+      "path": "references/knowledge/ui/UI-KOMMO-025.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "154749",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/7e9f5147f3ecfabf3fe8facd9803ec4ff36b00d85f2b8f9036baa21fceb21fd1.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-026",
+      "title": "Captura de tela 2026-10-23 155407",
+      "path": "references/knowledge/ui/UI-KOMMO-026.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155407",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/8bc249a9eb7e62ae3a1677f402c502de037cd43716fcd2e33ab5afae81a93097.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-027",
+      "title": "Captura de tela 2026-10-23 155424",
+      "path": "references/knowledge/ui/UI-KOMMO-027.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155424",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/d15e1ef0cacd69ef3c17f7c808f7b97cc0d23748f2e6baee0d8ca2e084e18eef.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-028",
+      "title": "Captura de tela 2026-10-23 155438",
+      "path": "references/knowledge/ui/UI-KOMMO-028.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155438",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/c6ad31efc05be17c3f2beb3feb48cfd3b5b3138c04b82323dd696f318cb9d8ae.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-029",
+      "title": "Captura de tela 2026-10-23 155447",
+      "path": "references/knowledge/ui/UI-KOMMO-029.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155447",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/0fd9bb4befac5a827ae052a6ea80bb73b1105a18edd9fea2adbe860661504c30.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-030",
+      "title": "Captura de tela 2026-10-23 155454",
+      "path": "references/knowledge/ui/UI-KOMMO-030.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155454",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/482e47a85c46bde821d8a949ca327426f704d13baa144eb76e724bc2d9ff0956.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-031",
+      "title": "Captura de tela 2026-10-23 155518",
+      "path": "references/knowledge/ui/UI-KOMMO-031.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155518",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/1b15bdc8c0614cda002c90db0c5aefecec29113090288d1496ea9f87ffc4e761.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-032",
+      "title": "Captura de tela 2026-10-23 155526",
+      "path": "references/knowledge/ui/UI-KOMMO-032.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155526",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/a13fe56e4ceda3690f6b7d4197bbab0887bb66a9b244f00a3788bac646101641.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-033",
+      "title": "Captura de tela 2026-10-23 155536",
+      "path": "references/knowledge/ui/UI-KOMMO-033.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155536",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/7206a2683fa963314832b2745596d370844e5e9ad35c8bceb2c115e1eb5e59e7.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-034",
+      "title": "Captura de tela 2026-10-23 155539",
+      "path": "references/knowledge/ui/UI-KOMMO-034.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155539",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/34228bfce6af2480ab6c0c768585374351e61afc01264586b99e9d0318601b2a.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-035",
+      "title": "Captura de tela 2026-10-23 155627",
+      "path": "references/knowledge/ui/UI-KOMMO-035.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155627",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/3eb7fee607edc17adfc2b4009f9ef68ad161561ad8acfe5778bab36c0ca915c0.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-036",
+      "title": "Captura de tela 2026-10-23 155722",
+      "path": "references/knowledge/ui/UI-KOMMO-036.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155722",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/5a0b82c70e4767c78d9f4969c94bfc2e4756a70c37bb584a65832f3cec0d1009.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-037",
+      "title": "Captura de tela 2026-10-23 155741",
+      "path": "references/knowledge/ui/UI-KOMMO-037.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155741",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/65a2d0d29df9d8e84739e94a5baecc220b1ded87634e24a2d01c5b8f3d7d1c3b.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-038",
+      "title": "Captura de tela 2026-10-23 155824",
+      "path": "references/knowledge/ui/UI-KOMMO-038.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "Captura",
+        "de",
+        "tela",
+        "2026-10-23",
+        "155824",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/e073ac87a94fae0498ebc4ed9bb65ef9caa5d361007f96261599d4dc8d0160ca.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "UI-KOMMO-039",
+      "title": "salesbot passos",
+      "path": "references/knowledge/ui/UI-KOMMO-039.md",
+      "status": "supplied_not_operationally_verified",
+      "keywords": [
+        "salesbot",
+        "passos",
+        "interface",
+        "print"
+      ],
+      "screenshots": [
+        "assets/visual/04b0e0b3096911200ed313cd53f9b26a396ce30d3ce887c5684ebcf0c2e79430.png"
+      ],
+      "prerequisites": [
+        "confirmar conta, plano e canal"
+      ],
+      "related": []
+    },
+    {
+      "id": "NODE-KOMMO-001",
+      "title": "Enviar mensagem",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-001.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Enviar mensagem",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/0fd9bb4befac5a827ae052a6ea80bb73b1105a18edd9fea2adbe860661504c30.png",
+        "assets/visual/c6ad31efc05be17c3f2beb3feb48cfd3b5b3138c04b82323dd696f318cb9d8ae.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-002",
+      "title": "Reação",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-002.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Reação",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/8bc249a9eb7e62ae3a1677f402c502de037cd43716fcd2e33ab5afae81a93097.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-003",
+      "title": "Comentário",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-003.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Comentário",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/d15e1ef0cacd69ef3c17f7c808f7b97cc0d23748f2e6baee0d8ca2e084e18eef.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-004",
+      "title": "Enviar mensagem interna",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-004.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Enviar mensagem interna",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/db692a9053876748a6a985204e11faf8d3f83845a873d50d96b22f3a48e9b6f3.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-005",
+      "title": "Mensagem em Lista (WhatsApp)",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-005.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Mensagem em Lista (WhatsApp)",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/482e47a85c46bde821d8a949ca327426f704d13baa144eb76e724bc2d9ff0956.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-006",
+      "title": "Condição de IA",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-006.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Condição de IA",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/1b15bdc8c0614cda002c90db0c5aefecec29113090288d1496ea9f87ffc4e761.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-007",
+      "title": "Pausar",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-007.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Pausar",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/a13fe56e4ceda3690f6b7d4197bbab0887bb66a9b244f00a3788bac646101641.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-008",
+      "title": "Inscrever-se (Meta)",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-008.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Inscrever-se (Meta)",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/34228bfce6af2480ab6c0c768585374351e61afc01264586b99e9d0318601b2a.png",
+        "assets/visual/7206a2683fa963314832b2745596d370844e5e9ad35c8bceb2c115e1eb5e59e7.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-009",
+      "title": "Ação",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-009.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Ação",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/df068c6ac94bf9903b399d7c774df730c1796e5f38ac86f4a8e418c4b1e9f83c.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-010",
+      "title": "Condição",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-010.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Condição",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/3eb7fee607edc17adfc2b4009f9ef68ad161561ad8acfe5778bab36c0ca915c0.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-011",
+      "title": "Validação",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-011.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Validação",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/b57b28a3b2d84f214832424cf94afd0b63efd24d3da1669fc3ad1e6265bdf690.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-012",
+      "title": "Ir para outra etapa",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-012.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Ir para outra etapa",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/0c20b4faf4a365528354d4dca946b9c46c1f08de0ddc3353b1417012bf773c18.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-013",
+      "title": "Iniciar Salesbot",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-013.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Iniciar Salesbot",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/43e237b33911dd91de37048641fd1337e249879f46afee005e9b7f1ae7d8306a.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-014",
+      "title": "Etapa adaptada (cód.)",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-014.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Etapa adaptada (cód.)",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/65a2d0d29df9d8e84739e94a5baecc220b1ded87634e24a2d01c5b8f3d7d1c3b.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-015",
+      "title": "Widget",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-015.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Widget",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/6fe1b586db4d08e57cf6b0fbda4482a75ec1c9514eee71c6c38525e91fc7af97.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-016",
+      "title": "Round Robin",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-016.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Round Robin",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/5a0b82c70e4767c78d9f4969c94bfc2e4756a70c37bb584a65832f3cec0d1009.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "NODE-KOMMO-017",
+      "title": "Parar Salesbot",
+      "path": "references/knowledge/salesbot/NODE-KOMMO-017.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "Parar Salesbot",
+        "salesbot",
+        "nó",
+        "menu"
+      ],
+      "screenshots": [
+        "assets/visual/1bcde86fa5053c6b596e79b5faa6c5bcb1763362131512e4797999e37f136d69.png"
+      ],
+      "related": [],
+      "prerequisites": [
+        "editor Salesbot autorizado",
+        "canal observado"
+      ]
+    },
+    {
+      "id": "UI-CONDICAO-CAMPO",
+      "title": "Condição > Definir campo > Contato",
+      "path": "references/knowledge/procedures/UI-CONDICAO-CAMPO.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "condição",
+        "condicao",
+        "definir campo",
+        "contato",
+        "entidade"
+      ],
+      "screenshots": [
+        "assets/visual/3eb7fee607edc17adfc2b4009f9ef68ad161561ad8acfe5778bab36c0ca915c0.png"
+      ],
+      "related": [
+        "NODE-KOMMO-010"
+      ],
+      "gaps": [
+        "Submenu completo não observado"
+      ]
+    },
+    {
+      "id": "UI-GATILHOS",
+      "title": "Qual gatilho escolher?",
+      "path": "references/knowledge/procedures/UI-GATILHOS.md",
+      "status": "documented_not_tested",
+      "keywords": [
+        "gatilho",
+        "gatilhos",
+        "trigger",
+        "iniciar"
+      ],
+      "screenshots": [
+        "assets/visual/bd18b0326e69ff1738e603cf25785aaac7ee6df3cdb277a69dc54debc2cdae91.png",
+        "assets/visual/1563fd88b8282ef43fe988a7f1f1e68ed18f8b217f1c5e7bbba1c0f55af03445.png",
+        "assets/visual/eb428e4e00a48b0a29b5536fbeba57613a7ed320b0afa12fb7ee3a4c342ff363.png",
+        "assets/visual/7e9f5147f3ecfabf3fe8facd9803ec4ff36b00d85f2b8f9036baa21fceb21fd1.png"
+      ],
+      "related": [
+        "NODE-KOMMO-013"
+      ],
+      "gaps": [
+        "Evento e suporte exigem verificação na conta"
+      ]
     }
   ]
 }
