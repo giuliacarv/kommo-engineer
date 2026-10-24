@@ -1,5 +1,7 @@
 # Conexão por conta e diagnóstico de acesso
 
+Para um procedimento executável de criação da integração e configuração em Codex, Agy e Claude Code, use o [guia de acesso MCP](../integrations/mcp-access-setup.md). Esta referência cobre diagnóstico e identidade por conta.
+
 ## Descobrir antes de pedir credencial
 
 Confirme URL/subdomínio alvo e ferramentas realmente expostas. Com MCP já conectado, use a ferramenta de identidade da conta e compare com o alvo. Liste capacidades pelo schema/descrição e pelo resultado observado; não presuma escrita porque o servidor se chama Kommo.
