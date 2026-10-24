@@ -14,7 +14,7 @@ import tempfile
 import uuid
 from pathlib import Path
 
-VERSION = "0.4.0-dev"
+VERSION = "0.5.0-rc.1"
 SKILL = Path(__file__).resolve().parent.parent
 SAFE_TOKEN_RE = re.compile(r"(?i)(bearer\s+\S+|(?:api[_ -]?key|access[_ -]?token|refresh[_ -]?token|password|secret)\s*[:=]\s*['\"]?\S+)")
 GOAL_RE = re.compile(r"^META-\d{3,}$")
@@ -78,7 +78,7 @@ def getroot(raw, new=False, init_existing=False):
         raise KEError("Recusa operar na raiz do disco ou na pasta HOME")
     # Do not follow a link in the project path, including junction-like links available to pathlib.
     for part in [p,*p.parents]:
-        if part.exists() and part.is_symlink():
+        if part.exists() and (part.is_symlink() or getattr(part,"is_junction",lambda:False)()):
             raise KEError("Pasta ou ancestral simbólico não permitido")
     if new and p.exists(): raise KEError("Projeto já existe. Não sobrescrevo.")
     if not new and not init_existing and not (p/".kommo-engineer"/"project.json").is_file():
@@ -230,13 +230,13 @@ def create_project(root, name, business, goal, simulation=False, use_existing=Fa
             answers[k] = dict(value=v, status="proposed" if simulation else "confirmed",
                               source="fixture" if simulation else "usuario",
                               confirmed_at=None if simulation else now())
-    project = dict(schema_version=1, project_id=uid(), name=name,
+    project = dict(schema_version=2, project_id=uid(), name=name,
                    created_at=now(), updated_at=now(), revision=1,
                    setup_status="in_progress",
                    environment="simulation" if simulation else "unverified",
                    account_id=None, answers=answers)
     project["setup_status"] = setup_summary(project)["status"]
-    state = dict(schema_version=1, revision=1, project_id=project["project_id"],
+    state = dict(schema_version=2, revision=1, project_id=project["project_id"],
                  active_goal_id=None, last_goal_id=None,
                  next_action="Concluir o setup" if not simulation else "Revisar o resultado da simulação",
                  updated_at=now())
@@ -359,11 +359,12 @@ def goal_create(root,title,objective,criteria,depends=None):
         plan="# "+gid+" — "+sanitize(title)+"\n\n## Objetivo\n\n"+sanitize(objective)+"\n\n## Plano v001\n\n1. Validar pré-requisitos.\n2. Executar ações autorizadas.\n3. Conferir critérios de aceite e evidências.\n"
         (p/"plan-v001.md").write_text(plan,encoding="utf-8")
         putj(p/"acceptance.json",dict(criteria=[dict(id=i+1,text=sanitize(c),status="pending",evidence=None) for i,c in enumerate(criteria)]),once=True)
-        putj(p/"state.json",dict(schema_version=1,id=gid,title=sanitize(title),status="planned",revision=1,plan_version=1,
+        putj(p/"state.json",dict(schema_version=2,id=gid,title=sanitize(title),status="planned",revision=1,plan_version=1,
                                  dependencies=depends,objective=sanitize(objective),next_action="Preparar e aprovar execução",
                                  snapshot_id=None,updated_at=now()),once=True)
         state=readj(data_dir(root)/"state.json")
-        state.update(active_goal_id=gid,next_action=f"Planejar {gid}",revision=state["revision"]+1,updated_at=now())
+        if not state.get("active_goal_id"):
+            state.update(active_goal_id=gid,next_action=f"Planejar {gid}",revision=state["revision"]+1,updated_at=now())
         putj(data_dir(root)/"state.json",state)
         event(root,"goal_created",f"Criada {gid}",goal=gid)
     return dict(goal_id=gid,status="planned")
@@ -397,25 +398,27 @@ def goal_accept(root,goal,criterion,evidence):
         entries=acc["criteria"]
         if not (1<=criterion<=len(entries)):raise KEError("Critério inexistente")
         g=readj(p/"state.json")
-        if g["status"]=="completed": raise KEError("Meta já concluída")
+        if g["status"] in ("completed","cancelled","deferred"): raise KEError("Reabra a meta antes de anexar evidência")
         evpath=p/"artifacts"/f"accept-{criterion}-{uid()}{source.suffix}"
         write_bytes_once(evpath,raw)
-        entries[criterion-1]["status"]="verified"
-        entries[criterion-1]["evidence"]=str(evpath.relative_to(root))
+        entries[criterion-1]["status"]="evidence_attached"
+        entries[criterion-1].pop("observation",None)
+        entries[criterion-1]["test_executed"]=False
+        entries[criterion-1]["evidence"]=evpath.relative_to(root).as_posix()
         entries[criterion-1]["hash"]=sha(evpath)
         putj(p/"acceptance.json",acc)
-        if all(e["status"]=="verified" for e in entries):
+        if all(e["status"] in ("observed_pass","human_approved") for e in entries):
             g["status"]="ready_for_acceptance"
         g["revision"]+=1;g["updated_at"]=now()
         putj(p/"state.json",g)
-        event(root,"criterion_verified",f"Critério {criterion} ligado à evidência",goal=goal)
-    return dict(goal=goal,criterion=criterion,status="verified")
+        event(root,"criterion_attached",f"Critério {criterion} ligado à evidência",goal=goal)
+    return dict(goal=goal,criterion=criterion,status="evidence_attached")
 
 def make_snapshot(root,goal):
     p=gp(root,goal)
     gs=readj(p/"state.json")
     acc=readj(p/"acceptance.json")
-    if not acc["criteria"] or any(c["status"]!="verified" for c in acc["criteria"]):
+    if not acc["criteria"] or any(c["status"] not in ("observed_pass","human_approved") for c in acc["criteria"]):
         raise KEError("Critérios não verificados; fechamento bloqueado")
     if gs["status"] not in ("ready_for_acceptance","in_progress"):
         raise KEError("Meta não está pronta para aceite")
@@ -430,6 +433,8 @@ def make_snapshot(root,goal):
         f=ensure_safe_relative(root,Path(c["evidence"]))
         if sha(f)!=c["hash"]:raise KEError("Evidência foi alterada depois do aceite")
         wanted.append(f)
+    wanted.extend(x for x in (p/"steps").glob("*.json"))
+    wanted.extend(x for x in (data_dir(root)/"decisions.jsonl",p/"handoff.md") if x.is_file())
     items=[]
     for f in wanted:
         rel=f.relative_to(root)
@@ -519,7 +524,7 @@ def snapshot_verify(root, goal=None):
                     else:
                         for c in criteria:
                             rel_evidence = c.get("evidence") if isinstance(c, dict) else None
-                            if c.get("status") != "verified" or not rel_evidence:
+                            if c.get("status") not in ("verified","observed_pass","human_approved") or not rel_evidence:
                                 reasons.append("Aceite sem evidência confirmada na captura")
                             elif Path(rel_evidence).is_absolute() or ".." in Path(rel_evidence).parts:
                                 reasons.append("Caminho de evidência inválido")
@@ -546,6 +551,10 @@ def goal_close(root,goal):
     p=gp(root,goal)
     with locked(root):
         sid=None
+        from ke_extended import dependencies
+        if dependencies(sys.modules[__name__],root,goal)["blocked"]:raise KEError("Dependências não satisfeitas")
+        acc=readj(p/"acceptance.json")
+        if any(c["status"] not in ("observed_pass","human_approved") for c in acc["criteria"]):raise KEError("Registre teste e resultado observado antes de fechar")
         # Marker permits diagnosing partial multi-file completion.
         marker=begin_pending(root,"goal_close",goal=goal)
         try:
@@ -555,7 +564,7 @@ def goal_close(root,goal):
                      revision=g["revision"]+1,updated_at=now())
             putj(p/"state.json",g)
             state=readj(data_dir(root)/"state.json")
-            state.update(active_goal_id=None,last_goal_id=goal,
+            state.update(active_goal_id=None if state.get("active_goal_id")==goal else state.get("active_goal_id"),last_goal_id=goal,
                          next_action="Revisar o resultado e planejar a próxima meta",
                          revision=state["revision"]+1,updated_at=now())
             putj(data_dir(root)/"state.json",state)
@@ -582,6 +591,11 @@ def project_validate(root):
     d=data_dir(root)
     errs=[]
     try:
+        from schema_runtime import validate as schema_validate
+        for name in ("project","state"):
+            schema_validate(readj(d/(name+".json")),readj(SKILL/"schemas"/(name+".schema.json")))
+        for gfile in (d/"goals").glob("META-*/state.json"):
+            schema_validate(readj(gfile),readj(SKILL/"schemas/goal.schema.json"))
         p=readj(d/"project.json")
         s=readj(d/"state.json")
         if p["project_id"]!=s["project_id"]:errs.append("project_id divergente")
@@ -639,29 +653,9 @@ def knowledge_find(query):
 
 
 def report_build(root):
-    goals=list_goals(root)
-    completed=[g for g in goals if g["status"]=="completed"]
-    lines=["# Relatório — Entregas verificadas","","> Documento baseado exclusivamente no registro local; resultados comerciais não medidos são indicados como pendentes.",""]
-    for g in completed:
-        st=readj(gp(root,g["id"])/"state.json")
-        lines.extend([f"## {g['id']} — {g['title']}","",f"Objetivo: {st['objective']}",
-                      f"Snapshot documental: `{st['snapshot_id']}`.","","Resultado comercial: **a medir**, salvo evidências externas revisadas.",""])
-    if not completed:lines+=["Nenhuma meta foi concluída com evidências.",""]
-    train=["# Treinamento operacional","",
-           "> Complete com passos verificados na conta e com screenshots reais, jamais procedimentos inventados.",""]
-    for g in completed:train.extend([f"## {g['id']} — {g['title']}","",
-                                     "Instruções verificadas de uso: **pendentes de documentação específica da conta**.",""])
-    d=data_dir(root)/"deliveries"
-    with locked(root):
-        d.mkdir(exist_ok=True)
-        for name,content in (("relatorio.md",lines),("treinamento.md",train),
-                              ("playbook.md",["# Playbook\n"]+lines+["\n---\n"]+train)):
-            dest=d/name
-            if dest.exists():
-                shutil.copy2(dest,d/(name+".previous"))
-            atomic_write(dest,("\n".join(content)+"\n").encode())
-        event(root,"report_built","Relatório, treinamento e playbook consolidados")
-    return dict(files=[str(d/n) for n in ("relatorio.md","treinamento.md","playbook.md")],completed_goals=len(completed))
+    from deliveries import build
+    return build(sys.modules[__name__],root)
+
 
 def smoke_prepare(root):
     proj=create_project(root,"Aurora Fictícia — Teste","Consultoria fictícia","Validar persistência",simulation=True)
@@ -676,6 +670,8 @@ def smoke_prepare(root):
     artifact=data_dir(root)/"fixtures"/"synthetic.json"
     putj(artifact,dict(simulation=True,remote_changes=False,goal=goal),once=True)
     goal_accept(root,goal,1,str(artifact))
+    from ke_extended import observe
+    observe(sys.modules[__name__],root,goal,1,"Leitura e hash do artefato sintético","Artefato presente e coerente com a fixture", "offline")
     closed=goal_close(root,goal)
     marker=uid()
     putj(data_dir(root)/"smoke-marker.json",dict(marker=marker,project_id=proj["project_id"],goal=goal),once=True)
@@ -736,9 +732,12 @@ def main(argv=None):
     sm=sub.add_parser("smoke");ms=sm.add_subparsers(dest="action",required=True)
     for action in ("prepare","verify"):
         s=ms.add_parser(action);s.add_argument("--project",required=True);s.add_argument("--offline",action="store_true",required=True)
+    import ke_extended
+    ke_extended.configure(sub,psub,ssub,gsub,ks,rs)
     args=ap.parse_args(argv)
     try:
-        if args.command=="doctor":
+        if ke_extended.handles(args):result=ke_extended.run(args,sys.modules[__name__])
+        elif args.command=="doctor":
             result=dict(version=VERSION,python=sys.version.split()[0],compatible=sys.version_info>=(3,11),
                         skill=str(SKILL),local_only=True)
         elif args.command=="knowledge":result=knowledge_find(args.query)

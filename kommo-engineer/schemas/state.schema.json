@@ -26,7 +26,8 @@
       ]
     },
     "revision": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "next_action": {
       "type": "string"

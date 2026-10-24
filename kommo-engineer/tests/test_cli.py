@@ -88,6 +88,8 @@ class TestKommoEngineer(unittest.TestCase):
         code,_,_=call("goal","accept","--project",self.root,"--goal",goal,
                       "--criterion","1","--evidence",data)
         self.assertEqual(code,0)
+        code,_,_=call("goal","observe","--project",self.root,"--goal",goal,"--criterion","1","--method","Fixture local","--result","Conteúdo conferido","--level","offline")
+        self.assertEqual(code,0)
         code,closed,_=call("goal","close","--project",self.root,"--goal",goal)
         self.assertEqual(code,0)
         self.assertTrue(closed["snapshot_verified"])

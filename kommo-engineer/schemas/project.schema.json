@@ -18,10 +18,15 @@
       "type": "string"
     },
     "schema_version": {
-      "type": "integer"
+      "type": "integer",
+      "enum": [
+        1,
+        2
+      ]
     },
     "revision": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "setup_status": {
       "type": "string"
