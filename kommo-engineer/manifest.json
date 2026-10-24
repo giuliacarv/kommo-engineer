@@ -8,13 +8,13 @@
   "manifest_self_excluded": true,
   "notes": "Scripts locais; API, navegador e Kommo real não homologados.",
   "files": {
-    "SKILL.md": "6098867c92348877409a92623986f6a33d3921837b4581189f8d83d1806f2775",
+    "SKILL.md": "19bce85e8695a73a906ca66f60271366d27e8acee26431d8eebb0adce039430a",
     "agents/openai.yaml": "a98d9b52d51f0f622cceb5345bc9cbeb670e737fb1bc3295a369c23e823f19ea",
     "docs/content-integration.json": "27dadea86d12143b9c1db60ff24083ce0a86f39791dd8f1d51e6d40315eef1d6",
     "docs/content-integration.md": "b9eece2fdd643dc5945904481e0f803c42dddafc82feeeb96022bad1c21b08ad",
     "docs/external-reference-review.json": "d847950401900960266e67ff18f41655457a939063f1f66aa65bc85092190b16",
     "docs/external-reference-review.md": "1e31fa9abcce4946b9f5d84313d2ae7490efc49805cad6b4b72cc6842078f38a",
-    "docs/release-notes.md": "0729ca1f1dc3ff7372f86bce1e4bc96fc9988a7963cf80c4e2d3678cfd331304",
+    "docs/release-notes.md": "7d8b72ee09ce33bf9d93a5e6a91e4fbcbf844764026dbf3988ed2c8ac91103bf",
     "docs/windows-install.md": "01b98bf770435b7cc2289d7755b271fd650f5c5a4a841d8608159a98669bdc89",
     "references/architecture.md": "cfc9b5e9df66f55553f1e2e6549ddbbbc97f64821b8c92b53cb29c13096b0da9",
     "references/audit.md": "d858b2dfef1bd7fed5141842e1d3fd2c499aa09172165c455b7656b85a425a23",
@@ -53,7 +53,7 @@
     "references/automation/salesbot-playbooks-and-api.md": "a252cfe2a4cac9426a7d36c71bbc339da25ecacf7e24b1e636458c16532661c4",
     "references/crm/account-engineering.md": "72c9a014afb600eba93760d207b43517b0d1173337f33efb402ace88b6bd9a64",
     "references/crm/automation-integrations.md": "99132f44c8cb6557a557713a7db121c4de16b9271e0907aa97f1d72741428de6",
-    "references/crm/connection.md": "0157d6ad7b4f68bbe502f2617cd5366f3b3987d5193f62de6e4e9cd4ba0dc784",
+    "references/crm/connection.md": "c395fe4ea3adaded9edc316fae6707d8b529dc670f9fbc844bf36b444cd677ce",
     "references/crm/crm-design.md": "6152e2b8754698be9583bf8569070e4a832871a9e3f5261a675157caca349e4d",
     "references/crm/operations-optimization.md": "dc59a4995b2d36882f88db3ec866650085dc55c4d0d9b4bc5235074758df3be6",
     "references/crm/safe-execution.md": "940ab2182d270774564e837f594ba9c6cd8f1568727690d7b7293244237e3305",
@@ -62,7 +62,7 @@
     "references/data/extraction-and-modeling.md": "4c83ec9410acc79c6cda57c736f80c97b8568c69b1537964dc31de29a2e25148",
     "references/engineering/widgets-and-react.md": "5b87e302616cbaa6da5f7355a772aff7eda2b0b3e0f3afadae311d1b2da8cf03",
     "references/integrations/google-sheets-sync.md": "63e703676575f9dcb9b881c0db7862f76eff89dec1b858aa20e7ea9e6b47bea6",
-    "references/integrations/kommo-mcp.md": "893a0cb253ffef8f7da11cc09e0f58924dc537e0fc361525c586bd0dba2cd4f1",
+    "references/integrations/kommo-mcp.md": "c4b2bb598a16a852f945a8b1881c973cf79bdcd9bbddc5eced9c1552652f544d",
     "references/integrations/mcp-transport-and-capabilities.md": "a13dda9730cb6d45f13d9c8a0909471bd35c5240df7076973843ad0869eed38f",
     "references/integrations/n8n-community-nodes.md": "375110738c96893f5d76c5767d4e082f3cca007575613cbe8dbe929121e24faa",
     "references/knowledge/catalog.json": "26575d7a61cc3011ba966109c7305dd2f67cf38859eccd259cb15d6338550210",
@@ -136,6 +136,9 @@
     "assets/templates/procedure.md": "fce917b11ce0515c1d2a9c021892f48e304e6f763010f5d5d62aa9469052d530",
     "assets/templates/screenshot.md": "6d906c5838f8e536d5603bcb86f62b439c7c65f5c039d86a02648cf467c094e2",
     "assets/templates/goal/plan.md": "7d4ab21b361845e82d6e68f938fccd6957d546db6f05ee0b6e597c2ad7f4eacb",
-    "assets/templates/project/AGENTS.md": "5c2482c7c842a315f8a6a466b304ace7bf8254a4946ccea3cb770bc56f4eb9d2"
+    "assets/templates/project/AGENTS.md": "5c2482c7c842a315f8a6a466b304ace7bf8254a4946ccea3cb770bc56f4eb9d2",
+    "references/integrations/mcp-access-setup.md": "6a09433077cb7864b5b131b725d0fbd360dc8c7fa8b4f85d4cc566dd8702424d",
+    "scripts/kommo-credential-windows.ps1": "6f391161027dc42ac41b15fcfd8b5d9ea82cc29aa6b484413e18c6456b9968f1",
+    "scripts/launch-kommo-mcp-windows.ps1": "e954d800c595feda515f084225a14cf100d1eae2591db923c9c6ba80fa4f7e41"
   }
 }

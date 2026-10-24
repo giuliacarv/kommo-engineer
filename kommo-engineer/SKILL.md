@@ -30,12 +30,13 @@ Classifique intenção, resultado, etapa do trabalho, recursos Kommo, sistemas e
 | Higiene, triagem, contas, oportunidades, forecast e ganhos/perdas | [Operações de vendas](references/strategy/sales-operations.md) e [otimização da conta](references/crm/operations-optimization.md) |
 | Onboarding, retenção, risco e expansão | [Ciclo do cliente](references/strategy/customer-lifecycle.md) |
 | Conta, acesso, permissões, dados, campos, funis e migração | [Engenharia de conta](references/crm/account-engineering.md), [conexão](references/crm/connection.md) e [modelo de CRM](references/crm/crm-design.md) |
+| Criar integração e token, instalar MCP e acessar Kommo por Codex, Agy ou Claude Code | [Guia prático de acesso MCP](references/integrations/mcp-access-setup.md) |
 | Salesbot manual/automático, biblioteca, gatilhos, JSON, editor e fronteira de API | [Playbooks de Salesbot](references/automation/salesbot-playbooks-and-api.md) e [procedimento visual/JSON](references/knowledge/procedures/PROC-KOMMO-005-salesbot.md) |
 | Escolha e convivência entre IA, Salesbot, pipeline e atendente | [Automação nativa](references/automation/native-automation.md) |
 | Persona, fontes, ações, qualificação, suporte, horário, voz e agendamento por IA | [Agentes nativos](references/ai/native-agents.md) e [operação de IA](references/ai/operating-guide.md) |
 | Copilot, resumos, sugestões, créditos, limites e supervisão | [Referência de IA](references/ai/native-agents.md); revalide os detalhes mutáveis |
 | Webhooks, n8n/Make, formulário, chats, mídia, widgets e atribuição | [Engenharia de integração](references/crm/automation-integrations.md) e [contratos](references/engineering.md) |
-| Servidor `runitsolutions/kommo-mcp`, autenticação, famílias de ferramentas e erros | [Conector MCP](references/integrations/kommo-mcp.md) |
+| Famílias de ferramentas e comportamento do servidor `runitsolutions/kommo-mcp` | [Conector MCP](references/integrations/kommo-mcp.md) |
 | UI, divergência entre API e interface ou investigação com REA disponível | [Investigação do webapp](references/crm/webapp-investigation.md) |
 | Escrita, incidentes, lote, autorização, piloto, retries e reversão | [Execução](references/crm/safe-execution.md), [governança](references/automation/governance.md) e [proposta](references/strategy/proposal-and-approval.md) |
 | Fontes oficiais, conhecimento reutilizável, procedimentos e capturas existentes | [Fontes](references/crm/sources.md) e [base de conhecimento](references/knowledge.md) |
@@ -48,6 +49,7 @@ Para pedido estratégico com configuração, mantenha o mesmo contrato do diagn�
 
 1. Resolva objetivo, contexto, escopo, conta e critério de sucesso. Separe fatos observados, declarações do usuário, documentação, inferências e hipóteses.
 2. Verifique fontes atuais e ferramentas disponíveis quando a resposta depender de estado da conta, versão, plano, limites ou comportamento mutável. Para operar a conta, confirme identidade por leitura e registre as permissões realmente observadas. Integração em outro chat, token presente ou documentação não prova acesso atual.
+   Se o pedido for de conexão MCP, siga o [guia de acesso](references/integrations/mcp-access-setup.md): integração privada, cofre local, servidor, registro no cliente, reinício e leitura da identidade. Não confunda uma ferramenta listada com autenticação confirmada.
 3. Diagnostique o processo e a causa antes de escolher solução. Compare capacidade nativa Kommo, Salesbot, IA, Marketplace, API, n8n/webhooks e solução customizada conforme requisitos, custo, manutenção, segurança e recuperação.
 4. Faça proposta concreta antes de mudanças materiais: registros e IDs, gatilhos, lógica, campos, destinos, exclusões, dependências, efeitos, medida de sucesso, verificação e reversão. Não transforme uma recomendação ou documento anexado em autorização.
 5. Execute somente pelo meio suportado e dentro do escopo autorizado. Um pedido direto de implementação autoriza o escopo claramente especificado; peça aprovação apenas para expansão material, ações destrutivas, ativação ou envio não cobertos pelo pedido.

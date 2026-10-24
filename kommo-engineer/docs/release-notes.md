@@ -1,5 +1,12 @@
 # Kommo Engineer 0.4.0-dev — revisão cumulativa em desenvolvimento
 
+## Acesso MCP: atualização de 24/10/2026
+
+- Novo [guia de acesso MCP](../references/integrations/mcp-access-setup.md): integração privada na UI Kommo, token longo no cofre Windows, build do servidor, configuração Codex/Agy/Claude Code, confirmação por camadas e diagnóstico de falhas.
+- `scripts/kommo-credential-windows.ps1` recebe token com entrada mascarada por subdomínio e confirma gravação no Gerenciador de Credenciais; `scripts/launch-kommo-mcp-windows.ps1` injeta o segredo apenas no processo local do servidor.
+- Removido do guia do conector o exemplo que colocava token literal em JSON. O catálogo de ferramentas continua dependente da versão efetivamente instalada.
+- A publicação da skill e a validação estrutural não certificam autenticação de uma conta nem direitos de escrita. Cada cliente precisa de verificação própria de identidade.
+
 ## Incluído
 - Skill Codex unificada com estratégia comercial, engenharia Kommo e recuperação seletiva de módulos.
 - Setup guiado com campos padronizados e CLI de persistência.
