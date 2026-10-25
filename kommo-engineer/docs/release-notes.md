@@ -1,5 +1,13 @@
 # Kommo Engineer 0.4.0-dev — revisão cumulativa em desenvolvimento
 
+## Escrita controlada via MCP — atualização 25/10/2026
+
+- A skill agora escolhe leitura ou escrita conforme o pedido, sem impor modo somente leitura quando a pessoa solicita edição. O guia `mcp-write-access.md` separa escopos Kommo, token, operações implementadas pelo servidor MCP, allowlist do cliente e autorização da alteração.
+- Documentada a configuração de uma integração privada com escopo CRM, clientes Codex/Agy/Claude Code, diagnóstico de catálogo GET, HTTP 401/403 e a regra de não gerar token novo apenas por mudança da allowlist.
+- Escrita operacional deve ser estreita e fazer leitura anterior, resolução de duplicidade, checagem de versão, leitura de retorno e reconciliação antes de retry. Habilitar tools não é uma escrita no CRM.
+- Nenhuma escrita em conta Kommo foi homologada por esta atualização documental; permissão efetiva depende dos escopos e direitos da conta.
+
+
 ## Acesso MCP: atualização de 24/10/2026
 
 - Novo [guia de acesso MCP](../references/integrations/mcp-access-setup.md): integração privada na UI Kommo, token longo no cofre Windows, build do servidor, configuração Codex/Agy/Claude Code, confirmação por camadas e diagnóstico de falhas.
