@@ -6,6 +6,8 @@ Antes de mudar a conta, ter resultado, conta alvo, objetos/IDs, operação, depe
 
 Mudança simples/reversível pode ser executada com inspeção e leitura posterior proporcionais. Para mudança estrutural, lote, migração ou comunicação, tornar o impacto concreto e revisável antes da execução; apresentar o diff quando aplicável. Exclusão, envio, ativação e outras consequências precisam estar cobertos pela instrução humana. Não usar escopo/allowlist genérica para contornar restrição específica do projeto.
 
+Para MCP, diferencie habilitar ferramentas de executar uma escrita: um pedido para adicionar capacidade autoriza configurar o servidor/cliente, mas uma alteração de CRM exige alvo e mudança concretos. Se o pedido disser qual registro e quais campos mudar, execute essa operação sem pedir a mesma autorização de novo. Use o contrato real da tool, leitura prévia, controle de versão quando disponível, checagem de duplicidade em criação e readback. Não faça registro fictício nem retry cego.
+
 Plano de lote útil:
 
 `account_id + subdomain | objetivo | operações e IDs | antes/depois | precondições/hash | consumidores | autorização | limites | recuperação | aceite`
@@ -58,3 +60,4 @@ Rastrear em ordem do sintoma: conta/acesso → dado/vínculo → evento/gatilho 
 | 429 recorrente | Requisições por consumidor, N+1, paginação/cache e retries |
 
 Em incidente, conter somente o componente afetado no escopo autorizado, preservar evidência, estimar alcance, corrigir e reconciliar/reprocessar sem duplicar. Não desligar todas as automações por conveniência. Após duas tentativas significativas sem progresso, parar essa operação e informar causa, evidência e próximo passo necessário.
+
