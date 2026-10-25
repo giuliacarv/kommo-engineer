@@ -1,18 +1,18 @@
-# Acessar Kommo por MCP: da integração à leitura confirmada
+# Acessar Kommo por MCP: conexão e operação confirmadas
 
-**Skill ≠ servidor MCP ≠ token ≠ conexão ativa.** A skill orienta; o servidor oferece ferramentas; o cliente (Codex, Agy ou Claude Code) inicia o servidor; o token autentica na conta. Faça cada etapa e confira o resultado antes de avançar. Se já houver um MCP Kommo disponível, comece pelo passo 5; não crie outra integração automaticamente.
+**Skill ≠ servidor MCP ≠ token ≠ conexão ativa.** A skill orienta; a integração concede escopos; o token carrega a autorização; o servidor implementa ferramentas; o cliente (Codex, Agy ou Claude Code) expõe o catálogo. Confira cada camada. Se já houver um MCP Kommo, comece pela inspeção do servidor e do catálogo; não crie outra integração automaticamente.
 
-Este roteiro usa **Windows + servidor local `runitsolutions/kommo-mcp`** como exemplo completo. O projeto pode usar outro servidor, como um MCP de leitura com allowlist: nesse caso, preserve o contrato de inicialização e os nomes reais das ferramentas. Não troque o MCP de uma conta por outro sem conferir escopo, manutenção e permissões.
+Este roteiro usa **Windows + servidor local `runitsolutions/kommo-mcp`** como exemplo completo. O projeto pode usar outro servidor, com leitura ou escrita limitada por allowlist: preserve o contrato de inicialização e os nomes reais das ferramentas. Não substitua o MCP de uma conta por outro sem conferir escopos, manutenção, capacidades e permissões.
 
 ## 1. Criar a integração na interface atual do Kommo
 
 1. Entre na **conta correta** em `https://<subdominio>.kommo.com/` com perfil administrador. Anote o subdomínio; ele é a parte antes de `.kommo.com`.
 2. Abra **Configurações → Central de integrações → + Criar integração** (em inglês, **Settings → Integrations → Create integration**). Se a UI mudar, procure a área de integrações da conta.
-3. Escolha uma **integração privada**, dê um nome que identifique seu uso e selecione somente os escopos necessários. Para token de longa duração, deixe **URL de redirecionamento** vazia. Salve.
+3. Escolha uma **integração privada**, dê um nome que identifique seu uso e, em **Permitir acesso (Allow access)**, selecione somente os escopos necessários. A interface pode vir com todos os escopos marcados por padrão; remova os que não forem necessários. Para criar ou atualizar registros, habilite o escopo de CRM/API de CRM exibido pela interface; a API também respeita os direitos do usuário e do endpoint. Não habilite conversas, envio de mensagens, arquivos ou exclusão de arquivos sem necessidade concreta. Para token de longa duração, deixe **URL de redirecionamento** vazia. Salve.
 4. Abra a integração criada e a aba **Chaves e escopos** (**Keys and scopes**). Clique em **Gerar token de longa duração**, escolha a expiração e copie o token uma única vez para o armazenamento seguro. A documentação atual permite validade de **1 dia a 5 anos**; esse token não tem `refresh_token`.
 5. Se o token foi colado em chat, arquivo versionado, log ou captura compartilhada, gere um substituto e revogue o exposto antes de usar a conexão.
 
-Fontes Kommo: [integração privada](https://developers.kommo.com/docs/private-integration) e [token de longa duração](https://developers.kommo.com/docs/long-lived-token). O token herda direitos administrativos: uma allowlist no MCP reduz o que o agente pode chamar, mas não reduz o poder do segredo se ele vazar.
+Fontes Kommo: [integração privada](https://developers.kommo.com/docs/private-integration) e [token de longa duração](https://developers.kommo.com/docs/long-lived-token). O token longo da integração privada atua com direitos administrativos. A allowlist do MCP reduz as operações chamáveis pelo agente, mas não reduz o poder do segredo se ele vazar. Se editar escopos de uma integração já autorizada, a Kommo informa que usuários existentes precisam conceder o novo acesso novamente; confira a autorização efetiva antes de substituir a credencial. Não gere novo token só porque mudou o servidor, o catálogo ou a allowlist.
 
 ## 2. Guardar o token no Windows, sem colocá-lo no cliente MCP
 
@@ -57,7 +57,7 @@ startup_timeout_sec = 30
 tool_timeout_sec = 30
 ```
 
-Salve, **reinicie o Codex** e confira o servidor e as ferramentas na nova sessão (`codex mcp list` no CLI, quando disponível). Se usar `enabled_tools`, preencha **somente nomes observados** no catálogo do servidor. Uma entrada TOML válida não prova autenticação.
+Salve, **reinicie o Codex** e confira o servidor e as ferramentas na nova sessão (`codex mcp list` no CLI, quando disponível). Se usar `enabled_tools`, preencha **somente nomes observados** no catálogo do servidor. Quando a tarefa pede edição, inclua os nomes exatos das ferramentas de criação/atualização que o servidor oferece, junto às leituras necessárias; uma allowlist só de GET continuará impedindo edição mesmo com token autorizado. Não use curinga para contornar a inspeção. Após alterar a configuração, reinicie o Codex e confirme o catálogo. Uma entrada TOML válida não prova autenticação nem escopo.
 
 ### Agy (Google Antigravity)
 
@@ -93,7 +93,7 @@ Em uma sessão Claude Code, use `/mcp` para status e aprovação quando solicita
 1. **Configuração:** o cliente mostra `kommo_conta` sem erro de arquivo/caminho.
 2. **Transporte:** o servidor inicia e o cliente lista ferramentas MCP reais. Um nome de skill instalado não comprova esta etapa.
 3. **Autenticação e identidade:** chame a ferramenta de conta realmente exposta, por exemplo `kommo_account_get` se ela existir, ou faça um único `GET https://<subdominio>.kommo.com/api/v4/account` com o token no processo local. Compare `id`, `name` e `subdomain` ao alvo; divergência interrompe o trabalho.
-4. **Capacidade necessária:** leia um único recurso autorizado para a tarefa. A leitura da conta não prova acesso a leads, conversas, arquivos ou escrita.
+4. **Capacidade necessária:** leia um único recurso autorizado para a tarefa. A leitura da conta não prova acesso a leads, conversas, arquivos ou escrita. Para configuração, não faça registro de teste; aguarde uma tarefa concreta e autorizada antes de chamar uma ferramenta de escrita.
 
 Registre só resultado saneado: nome da conta, ID, subdomínio, data, nome do servidor, ferramentas observadas e escopo efetivamente testado. Nunca registre o token, resposta de cliente com dados pessoais ou cabeçalho `Authorization`.
 
@@ -102,9 +102,10 @@ Registre só resultado saneado: nome da conta, ID, subdomínio, data, nome do se
 | Só apareceu `PS ...>` | O comando ainda não foi executado; cole o comando completo e pressione Enter. |
 | Entrada mascarada, depois falha ao salvar | O cofre não confirmou a gravação; repita o helper e não declare instalado. |
 | MCP listado, mas sem ferramentas | Confira `dist/index.js`, Node, caminhos, stderr, aprovação e reinício do cliente. |
-| Ferramenta existe, mas diz credencial ausente | Confira o alvo `Kommo:<subdominio>.kommo.com`, usuário Windows que iniciou o cliente e reinicie o cliente. |
-| HTTP 401 | Confira token expirado/revogado e conta; gere substituto no cofre. Token longo não faz refresh OAuth. |
-| HTTP 403 ou 429 | Confira acesso/escopo ou limite; reduza chamadas. Não assuma que o token é inválido. |
+| Ferramenta existe, mas diz credencial ausente | Confira o alvo `Kommo:<subdominio>.kommo.com`, usuário Windows que iniciou o cliente. Reinicie somente se o servidor lê a credencial no startup ou se a configuração mudou; não peça token novo sem evidência de ausência, expiração ou revogação. |
+| HTTP 401 | Confira subdomínio, expiração e revogação. Substitua no cofre somente se expiração, revogação ou incompatibilidade de conta estiver confirmada. Token longo não faz refresh OAuth. |
+| HTTP 403 ou 429 | Confira escopo CRM, autorização após mudança de escopos e direitos do usuário. 403 não prova token inválido e não justifica rotação automática; 429 é limite de chamadas. |
 | Conta diferente | Pare as consultas e selecione perfil MCP isolado para a conta correta. |
 
 Um token de longa duração previamente exposto precisa ser substituído. Não tente recuperá-lo do chat, do histórico do PowerShell ou de logs.
+
