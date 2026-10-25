@@ -8,6 +8,24 @@ Registre implementação, commit/versão instalada, runtime, transporte, process
 
 Leia argumentos, tipos, opções, paginação, envelope e erro da ferramenta efetiva. Uma interface conversacional `ask_kommo` pode apenas traduzir intenções predefinidas; não prova acesso a toda operação do CRM. Anotações read-only/destructive são pistas do contrato, não substituem autorização nem limitação efetiva do segredo.
 
+## Leitura, escrita e allowlists de cliente
+
+Uma instalação MCP pode expor leitura, escrita ou ambas. Não marque toda conexão como somente leitura por padrão quando o usuário precisa editar. Também não habilite toda ferramenta de escrita por conveniência: confirme a capacidade necessária e os nomes/schema reais no catálogo.
+
+| Camada | O que autoriza ou limita | Como confirmar |
+|---|---|---|
+| Integração Kommo | Escopos concedidos, como CRM, além dos direitos do usuário da conta | Configuração em Permitir acesso e resposta da API |
+| Token | Identidade/escopos efetivamente concedidos à integração | Cofre local e chamada autenticada; nunca cole o token em chat ou decodificador online |
+| Servidor MCP | Métodos/endpoints que o código implementa e tools anunciadas | Inspecione catálogo, schema, método, rota e efeitos |
+| Cliente MCP | Tools que o app disponibiliza; Codex pode usar enabled_tools | Compare a allowlist com nomes reais e reinicie/recarregue o app |
+| Pedido do usuário | Registro, operação e campos que podem ser alterados | Execute apenas a ação concreta autorizada; habilitar tools não altera registros |
+
+Para um pedido de edição, ofereça ferramentas pontuais de criar/atualizar se o servidor suporta, e inclua os nomes observados na allowlist do cliente. Remover ferramentas da allowlist não modifica o código do servidor; adicionar nome que o catálogo não anuncia não cria capacidade. Uma anotação readOnly/destructive é pista, não controle de segurança.
+
+Mudança no catálogo do servidor não exige token novo. Se a permissão da integração mudar, escopos já concedidos podem continuar limitados; a documentação da Kommo orienta conceder o novo acesso novamente. Confirme a resposta e a autorização efetiva. 401 indica problema de autenticação; 403 exige checar escopo, direitos e endpoint. Nunca tente consertar 403 criando tokens em série.
+
+Na conexão, não faça escrita só para testar. Uma atualização real autorizada deve ler o alvo, verificar ID e versão, aplicar somente os campos pedidos e reler o registro. Para criação, procure duplicidade antes do POST. Timeout ou retorno ambíguo exige reconciliação antes de nova tentativa. Exclusão, mensagens, lote, automações e mudança de schema são capacidades distintas e exigem tools e autorização próprios.
+
 ## Transporte e conexão observável
 
 | Caminho | O que conferir | Falha que distingue |
@@ -39,3 +57,4 @@ Para datas de calendário, converta início e fim no fuso de negócio e use limi
 Aceite: catálogo observado e identidade correta, uma leitura relevante com cobertura conhecida e relatório reproduzível numa amostra. Escrita e compatibilidade de cada cliente exigem avaliação no ambiente correspondente.
 
 Origem metodológica: [EXT-001](../external-sources.md#ext-001). Inspeção estática do snapshot local; nenhuma implantação ou chamada de CRM foi executada.
+
